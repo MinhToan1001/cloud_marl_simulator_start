@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="5" failures="0" skipped="0" tests="5" time="3.504" timestamp="2026-11-09T14:03:40.911999+07:00" hostname="DESKTOP-NC78VN5"><testcase classname="" name="tests.api.test_api" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\HocTap\hk7\VMWare\cloud_marl_simulator_start\tests\api\test_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\api\test_api.py:5: in &lt;module&gt;
+    from fastapi.testclient import TestClient
+E   ModuleNotFoundError: No module named 'fastapi'</error></testcase><testcase classname="" name="tests.integration.test_app_load_manifest" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\HocTap\hk7\VMWare\cloud_marl_simulator_start\tests\integration\test_app_load_manifest.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\integration\test_app_load_manifest.py:8: in &lt;module&gt;
+    import yaml
+E   ModuleNotFoundError: No module named 'yaml'</error></testcase><testcase classname="" name="tests.marl.test_evaluation" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\HocTap\hk7\VMWare\cloud_marl_simulator_start\tests\marl\test_evaluation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\marl\test_evaluation.py:9: in &lt;module&gt;
+    from marl.evaluation import evaluate, scenario_config
+src\marl\evaluation.py:16: in &lt;module&gt;
+    from .ippo import load_policy
+src\marl\ippo.py:15: in &lt;module&gt;
+    from .env import ENV_VERSION, OBSERVATION_SIZE
+src\marl\env.py:7: in &lt;module&gt;
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'</error></testcase><testcase classname="" name="tests.marl.test_ippo" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\HocTap\hk7\VMWare\cloud_marl_simulator_start\tests\marl\test_ippo.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\marl\test_ippo.py:9: in &lt;module&gt;
+    from marl.env import MultiClusterEnv
+src\marl\env.py:7: in &lt;module&gt;
+    import gymnasium as gym
+E   ModuleNotFoundError: No module named 'gymnasium'</error></testcase><testcase classname="" name="tests.marl.test_marl_env" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\HocTap\hk7\VMWare\cloud_marl_simulator_start\tests\marl\test_marl_env.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\marl\test_marl_env.py:5: in &lt;module&gt;
+    from gymnasium.utils.env_checker import check_env
+E   ModuleNotFoundError: No module named 'gymnasium'</error></testcase></testsuite></testsuites>

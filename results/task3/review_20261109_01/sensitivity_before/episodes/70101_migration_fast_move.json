@@ -1,0 +1,820 @@
+{
+  "config": {
+    "seconds": 6,
+    "decision_s": 0.25,
+    "dag_arrival_s": 0,
+    "cpu_cores": [
+      1.0,
+      1.25,
+      1.5
+    ],
+    "memory_bytes": [
+      268435456,
+      402653184,
+      536870912
+    ],
+    "latency_s": [
+      [
+        0,
+        0.015,
+        0.03
+      ],
+      [
+        0.015,
+        0,
+        0.02
+      ],
+      [
+        0.03,
+        0.02,
+        0
+      ]
+    ],
+    "bandwidth_Bps": [
+      [
+        null,
+        2000000.0,
+        1000000.0
+      ],
+      [
+        2000000.0,
+        null,
+        1500000.0
+      ],
+      [
+        1000000.0,
+        1500000.0,
+        null
+      ]
+    ],
+    "price_per_byte": [
+      [
+        0,
+        1e-07,
+        2e-07
+      ],
+      [
+        1e-07,
+        0,
+        1e-07
+      ],
+      [
+        2e-07,
+        1e-07,
+        0
+      ]
+    ],
+    "intra_latency_s": 0,
+    "readiness_s": 0.2,
+    "grace_s": 0.3,
+    "cooldown_s": 1,
+    "migration_timeout_s": 3.0,
+    "max_moves": 8,
+    "max_concurrent_moves": 1,
+    "pending_retries": 15,
+    "pending_timeout_s": 20.0,
+    "workflow_queue_limit": 256,
+    "workflow_sla_s": 0.4,
+    "workflow_timeout_s": 2,
+    "cpu_range": [
+      0.85,
+      1.15
+    ],
+    "ram_range": [
+      0.85,
+      1.15
+    ],
+    "bandwidth_range": [
+      0.75,
+      1.25
+    ],
+    "latency_range": [
+      0.8,
+      1.2
+    ],
+    "readiness_range": [
+      0.7,
+      1.5
+    ],
+    "background_cpu_range": [
+      0.05,
+      0.35
+    ],
+    "background_ram_fraction": 0,
+    "ram_latency_penalty": 2.0,
+    "ram_error_coefficient": 0.05,
+    "invocation_memory_bytes": 4096,
+    "memory_baseline_fraction": 0.9649505615234375,
+    "profile_id": "cluster-a-real-003-low-load-v1",
+    "profile_sha256": "",
+    "objectives": [
+      1.0,
+      0.2,
+      0.3,
+      2.0
+    ]
+  },
+  "dag": {
+    "name": "one",
+    "services": [
+      {
+        "name": "a",
+        "cpu_request": 0.05,
+        "memory_bytes": 8388608,
+        "work_core_s": 0.05,
+        "cpu_limit": 1.0,
+        "concurrency": 2,
+        "queue_limit": 128
+      }
+    ],
+    "edges": []
+  },
+  "trace": {
+    "source": "SIMULATED",
+    "seed": 70101,
+    "scenario": "migration_fast_move",
+    "cpu_capacity": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "ram_capacity": [
+      1073741824,
+      1073741824,
+      1073741824
+    ],
+    "background_ram_bytes": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "workflow_arrivals_s": [
+      0.2083678041064254,
+      0.4090941447206814,
+      0.6125560978781759,
+      0.8004314757471723,
+      1.0130371108840208,
+      1.2008671370216422,
+      1.4025966311141917,
+      1.6094334371174597,
+      1.8120561915971987,
+      2.0068796025453755,
+      2.2073091945725785,
+      2.4062003535441665,
+      2.6052103427030366,
+      2.807514373959981,
+      3.0139314528929915,
+      3.2133268554380914,
+      3.4149206583072824,
+      3.6030655553354576,
+      3.811211693993987,
+      4.008450055692383,
+      4.2130333144235905,
+      4.413355058128701,
+      4.6137314997766,
+      4.801205143069979
+    ],
+    "faults": [],
+    "environment": [
+      {
+        "latency_s": [
+          [
+            0,
+            0.01,
+            0.01
+          ],
+          [
+            0.01,
+            0,
+            0.01
+          ],
+          [
+            0.01,
+            0.01,
+            0
+          ]
+        ],
+        "bandwidth_Bps": [
+          [
+            null,
+            1000000.0,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            null,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            1000000.0,
+            null
+          ]
+        ],
+        "background_cpu": [
+          0.1,
+          1.4,
+          0.1
+        ]
+      }
+    ]
+  },
+  "placement": {
+    "a": 0
+  },
+  "ticks": [
+    {
+      "start_s": 0.0,
+      "end_s": 0.25,
+      "reward": -0.12520139859172455,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 2
+      }
+    },
+    {
+      "start_s": 0.25,
+      "end_s": 0.5,
+      "reward": -0.12913058113595297,
+      "components": null,
+      "interval": null,
+      "actions": {}
+    },
+    {
+      "start_s": 0.5,
+      "end_s": 0.75,
+      "reward": -0.13044064448888923,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 0.75,
+      "end_s": 1.0,
+      "reward": -0.13109584455024267,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 1.0,
+      "end_s": 1.25,
+      "reward": -4.129673153693088,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 1.25,
+      "end_s": 1.5,
+      "reward": -4.380843263099801,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 1.5,
+      "end_s": 1.75,
+      "reward": -4.381030578457597,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 1.75,
+      "end_s": 2.0,
+      "reward": -4.381171145190431,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 2.0,
+      "end_s": 2.25,
+      "reward": -4.794154280103518,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 2.25,
+      "end_s": 2.5,
+      "reward": -5.134164513849095,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 2.5,
+      "end_s": 2.75,
+      "reward": -5.134236156468045,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 2.75,
+      "end_s": 3.0,
+      "reward": -5.134295912184143,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 3.0,
+      "end_s": 3.25,
+      "reward": -5.531270945705259,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 3.25,
+      "end_s": 3.5,
+      "reward": -5.531314291521722,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 3.5,
+      "end_s": 3.75,
+      "reward": -5.531351860585031,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 3.75,
+      "end_s": 4.0,
+      "reward": -5.531384732770487,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 4.0,
+      "end_s": 4.25,
+      "reward": -5.531413736606864,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 4.25,
+      "end_s": 4.5,
+      "reward": -5.531439517811522,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 4.5,
+      "end_s": 4.75,
+      "reward": -5.53146258504997,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 4.75,
+      "end_s": 5.0,
+      "reward": -5.531483347164711,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 5.0,
+      "end_s": 5.25,
+      "reward": -5.531502103260467,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 5.25,
+      "end_s": 5.5,
+      "reward": -5.531519123620281,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 5.5,
+      "end_s": 5.75,
+      "reward": -5.531534634689765,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    },
+    {
+      "start_s": 5.75,
+      "end_s": 6,
+      "reward": -5.531548826928589,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0
+      }
+    }
+  ],
+  "workflow_ledger": [
+    {
+      "id": 0,
+      "arrival": 0.2083678041064254,
+      "finish": 1.0076414634921687,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 1,
+      "arrival": 0.4090941447206814,
+      "finish": 1.4090941447206806,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 2,
+      "arrival": 0.6125560978781759,
+      "finish": 2.0076414634921678,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 3,
+      "arrival": 0.8004314757471723,
+      "finish": 2.40909414472068,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 4,
+      "arrival": 1.0130371108840208,
+      "finish": 3.007641463492167,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 5,
+      "arrival": 1.2008671370216422,
+      "finish": 3.200867137021642,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 6,
+      "arrival": 1.4025966311141917,
+      "finish": 3.402596631114192,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 7,
+      "arrival": 1.6094334371174597,
+      "finish": 3.6094334371174597,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 8,
+      "arrival": 1.8120561915971987,
+      "finish": 3.8120561915971987,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 9,
+      "arrival": 2.0068796025453755,
+      "finish": 4.006879602545375,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 10,
+      "arrival": 2.2073091945725785,
+      "finish": 4.207309194572579,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 11,
+      "arrival": 2.4062003535441665,
+      "finish": 4.4062003535441665,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 12,
+      "arrival": 2.6052103427030366,
+      "finish": 4.605210342703037,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 13,
+      "arrival": 2.807514373959981,
+      "finish": 4.807514373959981,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 14,
+      "arrival": 3.0139314528929915,
+      "finish": 5.013931452892992,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 15,
+      "arrival": 3.2133268554380914,
+      "finish": 5.213326855438091,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 16,
+      "arrival": 3.4149206583072824,
+      "finish": 5.414920658307283,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 17,
+      "arrival": 3.6030655553354576,
+      "finish": 5.603065555335458,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 18,
+      "arrival": 3.811211693993987,
+      "finish": 5.811211693993987,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 19,
+      "arrival": 4.008450055692383,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 20,
+      "arrival": 4.2130333144235905,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 21,
+      "arrival": 4.413355058128701,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 22,
+      "arrival": 4.6137314997766,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 23,
+      "arrival": 4.801205143069979,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    }
+  ],
+  "events": [
+    {
+      "time_s": 0.0,
+      "event": "DAG_ARRIVAL",
+      "dag": "one"
+    },
+    {
+      "time_s": 0.0,
+      "event": "MOVE",
+      "service": "a",
+      "target": 1
+    },
+    {
+      "time_s": 0.2,
+      "event": "TARGET_READY",
+      "service": "a",
+      "active": 1
+    },
+    {
+      "time_s": 0.5,
+      "event": "MIGRATION_COMPLETED",
+      "service": "a"
+    },
+    {
+      "time_s": 3.200867137021642,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 5,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.402596631114192,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 6,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.6094334371174597,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 7,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.8120561915971987,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 8,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.006879602545375,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 9,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.207309194572579,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 10,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.4062003535441665,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 11,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.605210342703037,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 12,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.807514373959981,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 13,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.013931452892992,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 14,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.213326855438091,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 15,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.414920658307283,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 16,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.603065555335458,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 17,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.811211693993987,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 18,
+      "reason": "workflow_timeout"
+    }
+  ],
+  "summary": {
+    "source": "SIMULATED",
+    "seed": 70101,
+    "case": "migration_fast_move",
+    "arrivals_hash": "cf904880ae69cf999c7a2e86afc9b56c920e337fdce0001ae5bb608805f9356a",
+    "trace_hash": "5d855d044f74ea96933acc992a938668e8ab5e71e2db19fe93a31c3bc3bb2790",
+    "dag_hash": "e90b40ce61837e9eab73442700d427513267bccc1585c1dd313d3785637e7add",
+    "workflow_arrivals": 24,
+    "workflow_completed": 5,
+    "workflow_failed": 14,
+    "workflow_unfinished": 5,
+    "service_invocations": 24,
+    "invocations_completed": 5,
+    "invocations_failed": 0,
+    "invocations_cancelled": 14,
+    "e2e_mean_s": 1.3595252093162775,
+    "e2e_p95_s": 1.994604352608146,
+    "e2e_p99_s": 1.994604352608146,
+    "completed_latency_samples": 5,
+    "traffic_bytes": 0.0,
+    "traffic_cost": 0.0,
+    "cpu_usage_std": 0.43888615801781766,
+    "ram_usage_std": 0.003566520775167984,
+    "cpu_reservation_std": 0.01571348402636772,
+    "ram_reservation_std": 0.003682847818679936,
+    "cpu_utilization": 0.37700604516997616,
+    "ram_utilization": 0.002731359211810533,
+    "cpu_reservation": 0.012037037037037034,
+    "ram_reservation": 0.0028211805555555555,
+    "resource_waste": 4.4910671872510916e-05,
+    "sla_violation_resolved": 1.0,
+    "sla_violations": 19,
+    "sla_censored": 5,
+    "throughput_workflows_s": 0.8333333333333334,
+    "migration_started": 1,
+    "migration_completed": 1,
+    "migration_failed": 0,
+    "migration_latency_mean_s": 0.5,
+    "migration_downtime_service_s": 0.0,
+    "overloaded_cluster_s": 0.0,
+    "pending_service_s": 0.0,
+    "overloaded_ticks": 0,
+    "pending_ticks": 0,
+    "queue_mean_s": 1.294933553585358,
+    "errors_by_type": {
+      "workflow_timeout": 14
+    },
+    "workflow_time_mean_s": 1.7811604573120887,
+    "transfer_mean_s": null,
+    "reward_sum": -104.3626631775272,
+    "first_tick_reward": -0.12520139859172455,
+    "late_idle_reward": -86.57407656831947
+  }
+}

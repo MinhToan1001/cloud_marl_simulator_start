@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "jitter": 0.15,
+  "clusters": [
+    {"name": "A", "capacity": 60, "base_latency_ms": 40, "cpu_cores": 2, "requests_per_core": 30, "memory_mb": 512, "idle_memory_mb": 128, "memory_per_request_mb": 1, "queue_limit": 120},
+    {"name": "B", "capacity": 90, "base_latency_ms": 45, "cpu_cores": 3, "requests_per_core": 30, "memory_mb": 768, "idle_memory_mb": 192, "memory_per_request_mb": 1, "queue_limit": 180},
+    {"name": "C", "capacity": 120, "base_latency_ms": 50, "cpu_cores": 4, "requests_per_core": 30, "memory_mb": 1024, "idle_memory_mb": 256, "memory_per_request_mb": 1, "queue_limit": 240}
+  ],
+  "phases": [
+    {"name": "stable", "seconds": 45, "start_rate": 90, "end_rate": 90},
+    {"name": "ramp_up", "seconds": 45, "start_rate": 90, "end_rate": 190},
+    {"name": "spike", "seconds": 45, "start_rate": 350, "end_rate": 350},
+    {"name": "recovery", "seconds": 45, "start_rate": 180, "end_rate": 180}
+  ]
+}

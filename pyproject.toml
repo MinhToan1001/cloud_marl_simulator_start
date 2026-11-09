@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloud-marl-simulator"
+version = "1.0.0"
+description = "Multi-cluster simulator, IPPO and lightweight K3s telemetry tools"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false

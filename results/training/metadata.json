@@ -1,0 +1,125 @@
+{
+  "data_source": "simulation",
+  "algorithm": "IPPO",
+  "device": "cpu",
+  "completed_episodes": 300,
+  "environment_steps": 54000,
+  "best_episode": 20,
+  "best_validation_mean_step_reward": 0.5109455215939511,
+  "elapsed_seconds": 147.79600000000005,
+  "training_seed_range": [
+    1000,
+    1299
+  ],
+  "validation_seeds": [
+    20001,
+    20002,
+    20003
+  ],
+  "resumed_from": "results\\training\\checkpoints\\last.pt",
+  "simulation_config": {
+    "seed": 42,
+    "jitter": 0.15,
+    "clusters": [
+      {
+        "name": "A",
+        "capacity": 60,
+        "base_latency_ms": 40,
+        "cpu_cores": 2,
+        "requests_per_core": 30,
+        "memory_mb": 512,
+        "idle_memory_mb": 128,
+        "memory_per_request_mb": 1,
+        "queue_limit": 120
+      },
+      {
+        "name": "B",
+        "capacity": 90,
+        "base_latency_ms": 45,
+        "cpu_cores": 3,
+        "requests_per_core": 30,
+        "memory_mb": 768,
+        "idle_memory_mb": 192,
+        "memory_per_request_mb": 1,
+        "queue_limit": 180
+      },
+      {
+        "name": "C",
+        "capacity": 120,
+        "base_latency_ms": 50,
+        "cpu_cores": 4,
+        "requests_per_core": 30,
+        "memory_mb": 1024,
+        "idle_memory_mb": 256,
+        "memory_per_request_mb": 1,
+        "queue_limit": 240
+      }
+    ],
+    "phases": [
+      {
+        "name": "stable",
+        "seconds": 45,
+        "start_rate": 90,
+        "end_rate": 90
+      },
+      {
+        "name": "ramp_up",
+        "seconds": 45,
+        "start_rate": 90,
+        "end_rate": 190
+      },
+      {
+        "name": "spike",
+        "seconds": 45,
+        "start_rate": 350,
+        "end_rate": 350
+      },
+      {
+        "name": "recovery",
+        "seconds": 45,
+        "start_rate": 180,
+        "end_rate": 180
+      }
+    ]
+  },
+  "training_config": {
+    "seed": 7,
+    "episodes": 300,
+    "train_seed_start": 1000,
+    "validation_seeds": [
+      20001,
+      20002,
+      20003
+    ],
+    "hidden_size": 32,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.2,
+    "value_coef": 0.5,
+    "entropy_coef": 0.02,
+    "max_grad_norm": 0.5,
+    "update_epochs": 4,
+    "minibatch_size": 64,
+    "validation_interval": 20,
+    "torch_threads": 1,
+    "action_step": 0.03,
+    "inference_mode": "sample",
+    "reward": {
+      "throughput": 2.0,
+      "latency": 0.4,
+      "error": 4.0,
+      "queue": 0.5,
+      "overload": 0.2,
+      "imbalance": 0.3,
+      "switching": 0.1,
+      "terminal_queue": 1.0,
+      "latency_scale_ms": 1000.0
+    }
+  },
+  "python": "3.11.5",
+  "torch": "2.5.1+cu121",
+  "numpy": "2.2.6",
+  "checkpoint_interval_episodes": 20,
+  "inference_mode": "sample"
+}

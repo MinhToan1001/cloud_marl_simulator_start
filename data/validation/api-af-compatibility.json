@@ -1,0 +1,37 @@
+{
+  "data_source": "simulation",
+  "transport": "real localhost HTTP via Uvicorn",
+  "created_at_utc": "2026-11-07T14:04:45.888899+00:00",
+  "results": "D:\\HocTap\\hk7\\VMWare\\cloud_marl_simulator_start\\results\\evaluation",
+  "checks": [
+    {
+      "endpoint": "status",
+      "http_status": 200,
+      "data_source": "simulation",
+      "is_simulation": true,
+      "rows": 0
+    },
+    {
+      "endpoint": "clusters",
+      "http_status": 200,
+      "data_source": "simulation",
+      "is_simulation": true,
+      "rows": 3
+    },
+    {
+      "endpoint": "metrics?limit=2",
+      "http_status": 200,
+      "data_source": "simulation",
+      "is_simulation": true,
+      "rows": 2
+    },
+    {
+      "endpoint": "comparison?scenario=mixed",
+      "http_status": 200,
+      "data_source": "simulation",
+      "is_simulation": true,
+      "rows": 3
+    }
+  ],
+  "openapi_paths": 4
+}

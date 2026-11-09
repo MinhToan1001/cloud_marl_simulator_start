@@ -1,0 +1,26 @@
+{
+  "A4": "DONE",
+  "checks": {
+    "all_required_GET_success": true,
+    "node_ready": true,
+    "namespace_active": true,
+    "calibration_owner_chain": true,
+    "calibration_pod_and_endpoint_ready": true,
+    "full_pod_requests_limits_inventory": true,
+    "metrics_fresh_at_capture": true,
+    "calibration_pod_metrics_present": true,
+    "schema_parity": true,
+    "calibration_pod_metrics_fresh_at_capture": true,
+    "three_policy_shadow_no_writes": true
+  },
+  "closed_loop_ready": false,
+  "captured_utc": "2026-11-09T12:12:43.063793+00:00",
+  "snapshot_sha256": "7f25edb35251078cae18cc098db5a1f10c44fea5f35600a71f466d78ddb597e7",
+  "live_app_metrics_measured": false,
+  "limitations": [
+    "B/C chưa có thật",
+    "App queue/RPS/latency không được đo ở A4; không gửi tải/app request",
+    "Prototype mapping không chứng minh đã triển khai DAG V2",
+    "Policy ngoài miền train budgets; KEEP-only không chứng minh optimality"
+  ]
+}

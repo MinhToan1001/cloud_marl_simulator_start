@@ -1,0 +1,23 @@
+{
+  "empirical_scope": "one Sample API pod, successful_server_work latency; smoothed pod resource metrics",
+  "observed_rps_range": [
+    0.27328710947026363,
+    3.2988002429303647
+  ],
+  "empirical_parameters": [
+    "cpu_idle_cores",
+    "cpu_cores_per_rps",
+    "memory_baseline_bytes",
+    "service_latency_mean_ms"
+  ],
+  "maximum_capacity_identified": false,
+  "simulated_assumptions": [
+    "namespace budgets A/B/C (not actual node capacities)",
+    "extra workload profiles",
+    "CPU work cost from configured 5ms, not saturation data",
+    "CPU limit/queue capacity",
+    "background/WAN/readiness/availability",
+    "warmup/grace/cooldown/migration costs"
+  ],
+  "policy_scope": "research simulation; not calibrated multi-cluster production policy"
+}

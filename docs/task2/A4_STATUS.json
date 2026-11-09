@@ -1,0 +1,39 @@
+{
+  "A4_status": "DONE",
+  "cluster_operational_state": "READY_VERIFIED_AT_CAPTURE",
+  "verification_mode": "USER_EXECUTED_GET_AGENT_VERIFIED_SNAPSHOT_AND_SHADOW",
+  "independently_collected_by_agent": false,
+  "snapshot_and_shadow_verified_by_agent": true,
+  "collection_executed_by": "user stack bằng script GET chuẩn bị sẵn",
+  "captured_at_utc": "2026-11-09T12:12:43.063793+00:00",
+  "captured_at_asia_saigon": "2026-11-09T19:12:43.063793+07:00",
+  "recorded_at_utc": "2026-11-09T12:18:41.698215+00:00",
+  "snapshot": "../../results/task2/placement_v1_20261109_03_closeout/a4_fresh_20261109_03/snapshot.json",
+  "snapshot_sha256": "7f25edb35251078cae18cc098db5a1f10c44fea5f35600a71f466d78ddb597e7",
+  "readiness": "../../results/task2/placement_v1_20261109_03_closeout/a4_fresh_20261109_03/analysis_verified/readiness.json",
+  "shadow": "../../results/task2/placement_v1_20261109_03_closeout/a4_fresh_20261109_03/analysis_verified/shadow.json",
+  "remaining_A4_checklist": [],
+  "checks": {
+    "all_required_GET_success": true,
+    "node_ready": true,
+    "namespace_active": true,
+    "calibration_owner_chain": true,
+    "calibration_pod_and_endpoint_ready": true,
+    "full_pod_requests_limits_inventory": true,
+    "metrics_fresh_at_capture": true,
+    "calibration_pod_metrics_present": true,
+    "schema_parity": true,
+    "calibration_pod_metrics_fresh_at_capture": true,
+    "three_policy_shadow_no_writes": true
+  },
+  "closed_loop_ready": false,
+  "closed_loop_limitations": [
+    "B/C chưa có thật",
+    "App queue/RPS/latency không được đo ở A4; không gửi tải/app request",
+    "Prototype mapping không chứng minh đã triển khai DAG V2",
+    "Policy ngoài miền train budgets; KEEP-only không chứng minh optimality"
+  ],
+  "A5_status": "PENDING_EXPLICIT_LOAD_APPROVAL",
+  "application_requests_sent": 0,
+  "infrastructure_operations_executed": 0
+}

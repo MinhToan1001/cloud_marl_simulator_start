@@ -1,0 +1,42 @@
+{
+  "source": "simulated_fixture",
+  "plan": {
+    "mode": "offline_shadow",
+    "executable": false,
+    "service": "service_0",
+    "proposed_action": 2,
+    "validated_action": 2,
+    "reason": "accepted",
+    "operations": [
+      {
+        "operation": "verify_identity_and_reserve_resources",
+        "target_cluster": "B"
+      },
+      {
+        "operation": "prepare_target_deployment",
+        "target_cluster": "B"
+      },
+      {
+        "operation": "wait_ready_and_health",
+        "target_cluster": "B"
+      },
+      {
+        "operation": "switch_serving_endpoint",
+        "target_cluster": "B"
+      },
+      {
+        "operation": "wait_grace_period",
+        "target_cluster": "B"
+      },
+      {
+        "operation": "release_source_after_verification",
+        "target_cluster": "B"
+      }
+    ],
+    "rollback": [
+      "keep_source_until_target_ready",
+      "restore_source_endpoint_if_healthy",
+      "release_failed_target_reservation"
+    ]
+  }
+}

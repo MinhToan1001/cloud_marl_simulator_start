@@ -1,0 +1,36 @@
+{
+  "status": "PENDING_EXPLICIT_APPROVAL",
+  "canonical_plan": "docs/task2/REPORT.md#a5-load-plan",
+  "live_load_executed": false,
+  "profile_v2_created": false,
+  "warmup": {
+    "rps": 0.5,
+    "seconds": 180
+  },
+  "stages": [
+    {
+      "rps": 0.5,
+      "seconds": 120
+    },
+    {
+      "rps": 1,
+      "seconds": 120
+    },
+    {
+      "rps": 2,
+      "seconds": 120
+    },
+    {
+      "rps": 3,
+      "seconds": 120
+    },
+    {
+      "rps": 4,
+      "seconds": 120
+    }
+  ],
+  "repetitions": 3,
+  "cooldown_min_seconds": 120,
+  "saturation_capacity_until_knee_observed": null,
+  "validation": "Giữ độc lập theo run/repetition, không xáo trộn window chồng lấn: fit repeat 1/2, hold repeat 3; kiểm old→new và new→old; báo lỗi cả hai chiều, không mặc định V2 tốt hơn."
+}

@@ -1,0 +1,1460 @@
+{
+  "schema": {
+    "version": "placement-v2",
+    "max_services": 5,
+    "actions": [
+      "KEEP",
+      "A",
+      "B",
+      "C"
+    ],
+    "actor_features": [
+      {
+        "name": "episode_time",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "dag_present",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "self.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "self.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "self.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "self.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "self.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "self.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "self.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "self.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "cluster.0.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.0.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.0.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.1.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.1.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.2.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.2.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.parent",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.child",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.edge_bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "neighbor.0.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.0.has_ready_endpoint",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.parent",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.child",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.edge_bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "neighbor.1.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.1.has_ready_endpoint",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.parent",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.child",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.edge_bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "neighbor.2.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.2.has_ready_endpoint",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.parent",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.child",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.edge_bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "neighbor.3.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.3.has_ready_endpoint",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.parent",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.child",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.edge_bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "neighbor.4.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "neighbor.4.has_ready_endpoint",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "network.0.mean_out_rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.0.mean_out_bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.1.mean_out_rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.1.mean_out_bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.2.mean_out_rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.2.mean_out_bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      }
+    ],
+    "critic_features": [
+      {
+        "name": "episode_time",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "dag_present",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "service.0.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.0.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.0.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "service.0.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "service.0.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "service.1.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "service.1.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.1.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.1.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "service.1.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "service.1.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "service.2.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "service.2.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.2.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.2.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "service.2.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "service.2.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "service.3.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "service.3.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.3.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.3.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "service.3.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "service.3.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "service.4.exists",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.role_id",
+        "unit": "index",
+        "scale": 5
+      },
+      {
+        "name": "service.4.state.UNPLACED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.state.PREPARING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.state.READY",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.state.MIGRATING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.state.PENDING",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.state.REJECTED",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.active.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.active.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.active.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.endpoint_ready.0",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.endpoint_ready.1",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.endpoint_ready.2",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.cpu_request",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.memory_request",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.4.work",
+        "unit": "core-second",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.cpu_limit",
+        "unit": "core",
+        "scale": 1.0
+      },
+      {
+        "name": "service.4.cooldown_remaining",
+        "unit": "second",
+        "scale": 30
+      },
+      {
+        "name": "service.4.move_count",
+        "unit": "count",
+        "scale": 8
+      },
+      {
+        "name": "service.4.queue_length",
+        "unit": "count",
+        "scale": 128
+      },
+      {
+        "name": "cluster.0.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.0.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.0.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.0.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.1.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.1.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.1.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.cpu_capacity",
+        "unit": "core",
+        "scale": 4
+      },
+      {
+        "name": "cluster.2.ram_capacity",
+        "unit": "byte",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.2.cpu_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.ram_usage",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.cpu_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.ram_reservation",
+        "unit": "ratio",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.available",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.overloaded",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "cluster.2.oom_risk",
+        "unit": "bool",
+        "scale": 1.0
+      },
+      {
+        "name": "edge.0.0.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.0.1.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.0.2.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.0.3.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.0.4.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.1.0.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.1.1.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.1.2.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.1.3.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.1.4.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.2.0.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.2.1.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.2.2.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.2.3.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.2.4.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.3.0.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.3.1.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.3.2.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.3.3.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.3.4.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.4.0.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.4.1.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.4.2.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.4.3.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "edge.4.4.bytes",
+        "unit": "byte",
+        "scale": 1048576
+      },
+      {
+        "name": "network.0.0.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.0.0.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.0.0.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.0.0.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.0.1.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.0.1.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.0.1.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.0.1.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.0.2.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.0.2.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.0.2.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.0.2.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.1.0.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.1.0.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.1.0.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.1.0.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.1.1.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.1.1.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.1.1.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.1.1.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.1.2.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.1.2.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.1.2.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.1.2.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.2.0.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.2.0.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.2.0.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.2.0.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.2.1.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.2.1.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.2.1.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.2.1.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      },
+      {
+        "name": "network.2.2.rtt",
+        "unit": "second",
+        "scale": 1
+      },
+      {
+        "name": "network.2.2.bandwidth",
+        "unit": "byte/second",
+        "scale": 10000000.0
+      },
+      {
+        "name": "network.2.2.unlimited",
+        "unit": "bool",
+        "scale": 1
+      },
+      {
+        "name": "network.2.2.price",
+        "unit": "cost/byte",
+        "scale": 1e-06
+      }
+    ],
+    "bandwidth_none_encoding": 0,
+    "padding": 0,
+    "dtype": "float32",
+    "schema_hash": "934b66378221ba50d0347189ca27a135d2139127257da8e5d4edd329f6de45dd"
+  },
+  "code_fingerprints": {
+    "__init__.py": "1fd8bcf40802737edd6e9f6ee6e5cad6835bd62606f6e44ec7ac1f853c13a58c",
+    "config.py": "25fbd244b7b84eb6e3deb68d0d0fc7b7ab11b624170ef5f32471b7f7d7fffde1",
+    "dag.py": "92d3bd7e7e38b5b8ab6ab1c5749627de2b0eba867d4dd9a2168724abba257efb",
+    "env.py": "23876563537ce94eab1c47a05acb2da61c93458c485d128db800baeec70cfe96",
+    "policies.py": "40f170e4e36299d7a340c91baa23551e016995b283a7888d3d8041fb139ab554",
+    "schema.py": "45f4f7f9495ef6dba8b63b06e847415ef37483d3375ecd9690e9e3b39160c5ff",
+    "trace.py": "a245756acbfb9a7544bae442cfab65613847e1160a40905c243427ce07f20ee3"
+  },
+  "payload": null
+}

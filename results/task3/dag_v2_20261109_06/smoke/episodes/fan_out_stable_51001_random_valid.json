@@ -1,0 +1,4708 @@
+{
+  "metrics": {
+    "source": "SIMULATED",
+    "dag": "fan_out",
+    "scenario": "stable",
+    "seed": 51001,
+    "method": "random_valid",
+    "trace_sha256": "7326a89664903de0b5dd12bb3a8c9a7500e9b28181be927d9f232b846e3f5334",
+    "workflow_arrivals": 32,
+    "workflow_completed": 32,
+    "workflow_failed": 0,
+    "workflow_unfinished": 0,
+    "service_invocations": 96,
+    "invocations_completed": 96,
+    "invocations_failed": 0,
+    "invocations_cancelled": 0,
+    "e2e_mean_s": 0.11840225599536972,
+    "e2e_p95_s": 0.9164573187727223,
+    "e2e_p99_s": 1.2422526136625027,
+    "completed_latency_samples": 32,
+    "traffic_bytes": 184320.0,
+    "traffic_cost": 0.02088959999999999,
+    "cpu_usage_std": 0.06800159698766593,
+    "ram_usage_std": 0.056967626602267764,
+    "cpu_reservation_std": 0.026997150985110147,
+    "ram_reservation_std": 0.05903676322294567,
+    "cpu_utilization": 0.2167890545623127,
+    "ram_utilization": 0.17669159920047073,
+    "cpu_reservation": 0.03758733950513751,
+    "ram_reservation": 0.07947714195986419,
+    "resource_waste": 0.0003385002267373315,
+    "sla_violation_resolved": 0.09375,
+    "sla_violations": 3,
+    "sla_censored": 0,
+    "throughput_workflows_s": 1.0666666666666667,
+    "migration_started": 12,
+    "migration_completed": 12,
+    "migration_failed": 0,
+    "migration_latency_mean_s": 0.7869226254172084,
+    "migration_overlap_service_s": 9.4430715050065,
+    "workflow_time_s": 3.7888721918518296,
+    "migration_downtime_service_s": 0.0,
+    "overloaded_cluster_s": 0.0,
+    "pending_service_s": 2.0,
+    "overloaded_ticks": 0,
+    "pending_ticks": 1,
+    "queue_mean_s": 0.000270557501906743,
+    "errors_by_type": {}
+  },
+  "decisions": [
+    {
+      "time_s": 0.0,
+      "agent_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decision_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {}
+    },
+    {
+      "time_s": 1.0,
+      "agent_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decision_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {}
+    },
+    {
+      "time_s": 2.0,
+      "agent_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decision_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {}
+    },
+    {
+      "time_s": 3.0,
+      "agent_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decision_mask": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {}
+    },
+    {
+      "time_s": 4.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 3
+      }
+    },
+    {
+      "time_s": 5.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 1,
+        "agent_2": 2
+      }
+    },
+    {
+      "time_s": 6.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 3,
+        "agent_2": 3
+      }
+    },
+    {
+      "time_s": 7.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 2,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 8.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 9.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 3
+      }
+    },
+    {
+      "time_s": 10.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 11.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 12.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 13.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 3,
+        "agent_1": 2,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 14.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 2,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 15.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 2
+      }
+    },
+    {
+      "time_s": 16.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 17.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 18.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 19.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 2,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 20.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 3,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 21.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 22.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 1
+      }
+    },
+    {
+      "time_s": 23.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 24.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 25.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 1,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 26.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 2,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 27.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 28.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 0
+      }
+    },
+    {
+      "time_s": 29.0,
+      "agent_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "decision_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "action_mask": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0,
+        "agent_2": 2
+      }
+    }
+  ],
+  "events": [
+    {
+      "time_s": 4.0,
+      "event": "DAG_ARRIVAL",
+      "dag": "fan_out"
+    },
+    {
+      "time_s": 4.0,
+      "event": "PENDING",
+      "service": "service-a",
+      "retries": 1
+    },
+    {
+      "time_s": 4.0,
+      "event": "PENDING",
+      "service": "service-b",
+      "retries": 1
+    },
+    {
+      "time_s": 4.0,
+      "event": "PLACE",
+      "service": "gateway",
+      "target": 2
+    },
+    {
+      "time_s": 4.274245665279225,
+      "event": "DEPLOYMENT_READY",
+      "service": "gateway"
+    },
+    {
+      "time_s": 5.0,
+      "event": "PLACE",
+      "service": "service-a",
+      "target": 0
+    },
+    {
+      "time_s": 5.0,
+      "event": "PLACE",
+      "service": "service-b",
+      "target": 1
+    },
+    {
+      "time_s": 5.224236990566279,
+      "event": "DEPLOYMENT_READY",
+      "service": "service-b"
+    },
+    {
+      "time_s": 5.362285220406122,
+      "event": "DEPLOYMENT_READY",
+      "service": "service-a"
+    },
+    {
+      "time_s": 6.0,
+      "event": "MOVE",
+      "service": "service-a",
+      "target": 2
+    },
+    {
+      "time_s": 6.0,
+      "event": "proposal_rejected",
+      "service": "service-b",
+      "action": 3,
+      "reason": "migration_concurrency"
+    },
+    {
+      "time_s": 6.362285220406122,
+      "event": "TARGET_READY",
+      "service": "service-a",
+      "active": 2
+    },
+    {
+      "time_s": 6.862285220406122,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-a"
+    },
+    {
+      "time_s": 7.0,
+      "event": "MOVE",
+      "service": "gateway",
+      "target": 1
+    },
+    {
+      "time_s": 7.274245665279225,
+      "event": "TARGET_READY",
+      "service": "gateway",
+      "active": 1
+    },
+    {
+      "time_s": 7.774245665279225,
+      "event": "MIGRATION_COMPLETED",
+      "service": "gateway"
+    },
+    {
+      "time_s": 9.0,
+      "event": "MOVE",
+      "service": "service-b",
+      "target": 2
+    },
+    {
+      "time_s": 9.224236990566279,
+      "event": "TARGET_READY",
+      "service": "service-b",
+      "active": 2
+    },
+    {
+      "time_s": 9.724236990566279,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-b"
+    },
+    {
+      "time_s": 13.0,
+      "event": "MOVE",
+      "service": "gateway",
+      "target": 2
+    },
+    {
+      "time_s": 13.0,
+      "event": "proposal_rejected",
+      "service": "service-a",
+      "action": 2,
+      "reason": "migration_concurrency"
+    },
+    {
+      "time_s": 13.274245665279224,
+      "event": "TARGET_READY",
+      "service": "gateway",
+      "active": 2
+    },
+    {
+      "time_s": 13.774245665279224,
+      "event": "MIGRATION_COMPLETED",
+      "service": "gateway"
+    },
+    {
+      "time_s": 14.0,
+      "event": "MOVE",
+      "service": "service-a",
+      "target": 1
+    },
+    {
+      "time_s": 14.362285220406122,
+      "event": "TARGET_READY",
+      "service": "service-a",
+      "active": 1
+    },
+    {
+      "time_s": 14.862285220406122,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-a"
+    },
+    {
+      "time_s": 15.0,
+      "event": "MOVE",
+      "service": "service-b",
+      "target": 1
+    },
+    {
+      "time_s": 15.224236990566279,
+      "event": "TARGET_READY",
+      "service": "service-b",
+      "active": 1
+    },
+    {
+      "time_s": 15.724236990566279,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-b"
+    },
+    {
+      "time_s": 19.0,
+      "event": "MOVE",
+      "service": "gateway",
+      "target": 1
+    },
+    {
+      "time_s": 19.274245665279224,
+      "event": "TARGET_READY",
+      "service": "gateway",
+      "active": 1
+    },
+    {
+      "time_s": 19.774245665279224,
+      "event": "MIGRATION_COMPLETED",
+      "service": "gateway"
+    },
+    {
+      "time_s": 20.0,
+      "event": "MOVE",
+      "service": "service-a",
+      "target": 2
+    },
+    {
+      "time_s": 20.36228522040612,
+      "event": "TARGET_READY",
+      "service": "service-a",
+      "active": 2
+    },
+    {
+      "time_s": 20.86228522040612,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-a"
+    },
+    {
+      "time_s": 22.0,
+      "event": "MOVE",
+      "service": "service-b",
+      "target": 0
+    },
+    {
+      "time_s": 22.22423699056628,
+      "event": "TARGET_READY",
+      "service": "service-b",
+      "active": 0
+    },
+    {
+      "time_s": 22.72423699056628,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-b"
+    },
+    {
+      "time_s": 25.0,
+      "event": "MOVE",
+      "service": "gateway",
+      "target": 0
+    },
+    {
+      "time_s": 25.274245665279224,
+      "event": "TARGET_READY",
+      "service": "gateway",
+      "active": 0
+    },
+    {
+      "time_s": 25.774245665279224,
+      "event": "MIGRATION_COMPLETED",
+      "service": "gateway"
+    },
+    {
+      "time_s": 26.0,
+      "event": "MOVE",
+      "service": "service-a",
+      "target": 1
+    },
+    {
+      "time_s": 26.36228522040612,
+      "event": "TARGET_READY",
+      "service": "service-a",
+      "active": 1
+    },
+    {
+      "time_s": 26.86228522040612,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-a"
+    },
+    {
+      "time_s": 29.0,
+      "event": "MOVE",
+      "service": "service-b",
+      "target": 1
+    },
+    {
+      "time_s": 29.22423699056628,
+      "event": "TARGET_READY",
+      "service": "service-b",
+      "active": 1
+    },
+    {
+      "time_s": 29.72423699056628,
+      "event": "MIGRATION_COMPLETED",
+      "service": "service-b"
+    }
+  ],
+  "resources": [
+    {
+      "time_s": 4.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.1842471540393274,
+        0.345358696868222,
+        0.1321458260007484
+      ],
+      "ram_usage": [
+        28003725.6,
+        35658072.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ram_reservation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 5.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2413098219455362,
+        0.310234316169333,
+        0.16502964448211707
+      ],
+      "ram_usage": [
+        28003725.6,
+        35658072.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.0,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        0.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 6.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2339202137819752,
+        0.31188689619954063,
+        0.2164389813792524
+      ],
+      "ram_usage": [
+        60382093.6,
+        68036440.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ram_reservation": [
+        33554432.0,
+        33554432.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 7.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.276675166964901,
+        0.39135117541215175,
+        0.1754790480326309
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 8.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.12979080497170847,
+        0.24795125594553835,
+        0.5579116363414477
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 9.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.09926253107120007,
+        0.26927101202297005,
+        0.4197828961513874
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 10.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2900251628348803,
+        0.12093291550830154,
+        0.18227339121210223
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 11.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.21939673710686722,
+        0.17925411451569626,
+        0.1743873582664696
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 12.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.20941473576238862,
+        0.3257291388442544,
+        0.3037904560024977
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 13.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2700152075403931,
+        0.2748367511731255,
+        0.49345400775055664
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 14.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.22341136367222436,
+        0.27165719824456047,
+        0.4563249827039634
+      ],
+      "ram_usage": [
+        28003725.6,
+        35658072.0,
+        157224698.3
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.0,
+        0.15000000000000002
+      ],
+      "ram_reservation": [
+        0.0,
+        0.0,
+        100663296.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 15.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.30576316412684557,
+        0.15225491627048282,
+        0.36056132787870604
+      ],
+      "ram_usage": [
+        28003725.6,
+        68036440.0,
+        124846330.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "ram_reservation": [
+        0.0,
+        33554432.0,
+        67108864.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 16.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.23016314634105092,
+        0.28214386091530064,
+        0.5672535963351943
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 17.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.11466004347530818,
+        0.08315713304727437,
+        0.26598537184986515
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 18.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.1490551978360257,
+        0.2828216623951026,
+        0.2789453377961704
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 19.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.23903909218269495,
+        0.38548045874907555,
+        0.4516489165998458
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 20.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.25918652170749146,
+        0.1938633688584767,
+        0.21574781619416702
+      ],
+      "ram_usage": [
+        28003725.6,
+        132793176.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.15000000000000002,
+        0.0
+      ],
+      "ram_reservation": [
+        0.0,
+        100663296.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 21.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.24015958650595184,
+        0.2417245907316728,
+        0.25862565513900687
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 22.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.33573290835079245,
+        0.2318158877738004,
+        0.30574876831144326
+      ],
+      "ram_usage": [
+        28003725.6,
+        100414808.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.0,
+        0.1,
+        0.05
+      ],
+      "ram_reservation": [
+        0.0,
+        67108864.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 23.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2912518341867842,
+        0.07812377563125839,
+        0.5033302813291577
+      ],
+      "ram_usage": [
+        60382093.6,
+        68036440.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ram_reservation": [
+        33554432.0,
+        33554432.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 24.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.10809632137163805,
+        0.3460012034342834,
+        0.3770828239083162
+      ],
+      "ram_usage": [
+        60382093.6,
+        68036440.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ram_reservation": [
+        33554432.0,
+        33554432.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 25.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2788220176862725,
+        0.15978783356417864,
+        0.2062129892163574
+      ],
+      "ram_usage": [
+        60382093.6,
+        68036440.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "ram_reservation": [
+        33554432.0,
+        33554432.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 26.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.10117396826607754,
+        0.10732967146422534,
+        0.2986332531934153
+      ],
+      "ram_usage": [
+        92760461.6,
+        35658072.0,
+        92467962.30000001
+      ],
+      "cpu_reservation": [
+        0.1,
+        0.0,
+        0.05
+      ],
+      "ram_reservation": [
+        67108864.0,
+        0.0,
+        33554432.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 27.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.3222781447835237,
+        0.37205668729761576,
+        0.27860569672510077
+      ],
+      "ram_usage": [
+        92760461.6,
+        68036440.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.1,
+        0.05,
+        0.0
+      ],
+      "ram_reservation": [
+        67108864.0,
+        33554432.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 28.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.053231762053673776,
+        0.32863685481498367,
+        0.2249702565730051
+      ],
+      "ram_usage": [
+        92760461.6,
+        68036440.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.1,
+        0.05,
+        0.0
+      ],
+      "ram_reservation": [
+        67108864.0,
+        33554432.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 29.0,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2992377798612041,
+        0.16779590911768882,
+        0.1810464293102605
+      ],
+      "ram_usage": [
+        92760461.6,
+        68036440.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.1,
+        0.05,
+        0.0
+      ],
+      "ram_reservation": [
+        67108864.0,
+        33554432.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "time_s": 30,
+      "cpu_capacity": [
+        0.9762131976656274,
+        1.1420841069866945,
+        1.6864610366663395
+      ],
+      "ram_capacity": [
+        280037256.0,
+        356580720.0,
+        600895943.0
+      ],
+      "cpu_usage": [
+        0.2992377798612041,
+        0.16779590911768882,
+        0.1810464293102605
+      ],
+      "ram_usage": [
+        60382093.6,
+        100414808.0,
+        60089594.300000004
+      ],
+      "cpu_reservation": [
+        0.05,
+        0.1,
+        0.0
+      ],
+      "ram_reservation": [
+        33554432.0,
+        67108864.0,
+        0.0
+      ],
+      "overloaded": [
+        false,
+        false,
+        false
+      ],
+      "oom_risk": [
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "workflow_ledger": [
+    {
+      "workflow_id": 0,
+      "arrival_s": 4.166666666666667,
+      "finish_s": 5.40891928032917,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": true,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 0,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 5.3678249503045965,
+        "service-b": 5.3977171327133835,
+        "service-a": 5.40891928032917
+      }
+    },
+    {
+      "workflow_id": 1,
+      "arrival_s": 4.5,
+      "finish_s": 5.416457318772722,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": true,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 0,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 5.373364680203071,
+        "service-b": 5.404376664229321,
+        "service-a": 5.416457318772722
+      }
+    },
+    {
+      "workflow_id": 2,
+      "arrival_s": 4.833333333333333,
+      "finish_s": 5.423995357216275,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": true,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 0,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 5.378904410101546,
+        "service-b": 5.411036195745259,
+        "service-a": 5.423995357216275
+      }
+    },
+    {
+      "workflow_id": 3,
+      "arrival_s": 5.5,
+      "finish_s": 5.546634059923048,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 0,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 5.505539729898475,
+        "service-b": 5.535431912307262,
+        "service-a": 5.546634059923048
+      }
+    },
+    {
+      "workflow_id": 4,
+      "arrival_s": 6.25,
+      "finish_s": 6.291054387732689,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 0,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 6.255539729898475,
+        "service-b": 6.286057168839804,
+        "service-a": 6.291054387732689
+      }
+    },
+    {
+      "workflow_id": 5,
+      "arrival_s": 6.75,
+      "finish_s": 6.786057168839804,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 6.755539729898475,
+        "service-a": 6.761179459796949,
+        "service-b": 6.786057168839804
+      }
+    },
+    {
+      "workflow_id": 6,
+      "arrival_s": 7.166666666666667,
+      "finish_s": 7.202099980497861,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 7.172206396565142,
+        "service-a": 7.177846126463616,
+        "service-b": 7.202099980497861
+      }
+    },
+    {
+      "workflow_id": 7,
+      "arrival_s": 7.5,
+      "finish_s": 7.536405022192075,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 7.507379095368649,
+        "service-b": 7.514858190737298,
+        "service-a": 7.536405022192075
+      }
+    },
+    {
+      "workflow_id": 8,
+      "arrival_s": 7.833333333333333,
+      "finish_s": 7.869738355525408,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 7.840712428701982,
+        "service-b": 7.848191524070631,
+        "service-a": 7.869738355525408
+      }
+    },
+    {
+      "workflow_id": 9,
+      "arrival_s": 9.25,
+      "finish_s": 9.294562412800952,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 2
+      },
+      "finishes": {
+        "gateway": 9.25634698302585,
+        "service-a": 9.294562412800952,
+        "service-b": 9.294562412800952
+      }
+    },
+    {
+      "workflow_id": 10,
+      "arrival_s": 9.75,
+      "finish_s": 9.794562412800952,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 2
+      },
+      "finishes": {
+        "gateway": 9.75634698302585,
+        "service-a": 9.794562412800952,
+        "service-b": 9.794562412800952
+      }
+    },
+    {
+      "workflow_id": 11,
+      "arrival_s": 15.166666666666666,
+      "finish_s": 15.204192895950511,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 2
+      },
+      "finishes": {
+        "gateway": 15.17220639656514,
+        "service-b": 15.177846126463615,
+        "service-a": 15.204192895950511
+      }
+    },
+    {
+      "workflow_id": 12,
+      "arrival_s": 15.5,
+      "finish_s": 15.546205447020014,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 15.505539729898475,
+        "service-a": 15.546205447020014,
+        "service-b": 15.546205447020014
+      }
+    },
+    {
+      "workflow_id": 13,
+      "arrival_s": 15.833333333333334,
+      "finish_s": 15.879538780353348,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 15.838873063231809,
+        "service-a": 15.879538780353348,
+        "service-b": 15.879538780353348
+      }
+    },
+    {
+      "workflow_id": 14,
+      "arrival_s": 16.5,
+      "finish_s": 16.547075672733037,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 16.505539729898473,
+        "service-a": 16.547075672733037,
+        "service-b": 16.547075672733037
+      }
+    },
+    {
+      "workflow_id": 15,
+      "arrival_s": 18.25,
+      "finish_s": 18.293366477993104,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 18.255539729898473,
+        "service-a": 18.293366477993104,
+        "service-b": 18.293366477993104
+      }
+    },
+    {
+      "workflow_id": 16,
+      "arrival_s": 18.75,
+      "finish_s": 18.793366477993104,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 2,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 18.755539729898473,
+        "service-a": 18.793366477993104,
+        "service-b": 18.793366477993104
+      }
+    },
+    {
+      "workflow_id": 17,
+      "arrival_s": 19.5,
+      "finish_s": 19.52206551620407,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 19.50732183873469,
+        "service-a": 19.52206551620407,
+        "service-b": 19.52206551620407
+      }
+    },
+    {
+      "workflow_id": 18,
+      "arrival_s": 20.125,
+      "finish_s": 20.142626709791465,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 1,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 20.130842236597154,
+        "service-a": 20.142626709791465,
+        "service-b": 20.142626709791465
+      }
+    },
+    {
+      "workflow_id": 19,
+      "arrival_s": 20.375,
+      "finish_s": 20.405475413173306,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 20.380842236597154,
+        "service-b": 20.386784473194307,
+        "service-a": 20.405475413173306
+      }
+    },
+    {
+      "workflow_id": 20,
+      "arrival_s": 20.625,
+      "finish_s": 20.655475413173306,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 20.630842236597154,
+        "service-b": 20.636784473194307,
+        "service-a": 20.655475413173306
+      }
+    },
+    {
+      "workflow_id": 21,
+      "arrival_s": 20.875,
+      "finish_s": 20.905475413173306,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 20.880842236597154,
+        "service-b": 20.886784473194307,
+        "service-a": 20.905475413173306
+      }
+    },
+    {
+      "workflow_id": 22,
+      "arrival_s": 21.25,
+      "finish_s": 21.28206326490151,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 21.25615279763079,
+        "service-b": 21.26240559526158,
+        "service-a": 21.28206326490151
+      }
+    },
+    {
+      "workflow_id": 23,
+      "arrival_s": 21.75,
+      "finish_s": 21.78206326490151,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 1
+      },
+      "finishes": {
+        "gateway": 21.75615279763079,
+        "service-b": 21.76240559526158,
+        "service-a": 21.78206326490151
+      }
+    },
+    {
+      "workflow_id": 24,
+      "arrival_s": 22.5,
+      "finish_s": 22.530796410357286,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 22.506085821499145,
+        "service-a": 22.530114443930888,
+        "service-b": 22.530796410357286
+      }
+    },
+    {
+      "workflow_id": 25,
+      "arrival_s": 23.5,
+      "finish_s": 23.53579234410118,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 23.505539729898473,
+        "service-b": 23.529714438348837,
+        "service-a": 23.53579234410118
+      }
+    },
+    {
+      "workflow_id": 26,
+      "arrival_s": 24.5,
+      "finish_s": 24.537823125822555,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 1,
+        "service-a": 2,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 24.506958734917877,
+        "service-b": 24.532976583361158,
+        "service-a": 24.537823125822555
+      }
+    },
+    {
+      "workflow_id": 27,
+      "arrival_s": 25.5,
+      "finish_s": 25.54236794241016,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 0,
+        "service-a": 2,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 25.507943504388223,
+        "service-b": 25.515987008776445,
+        "service-a": 25.54236794241016
+      }
+    },
+    {
+      "workflow_id": 28,
+      "arrival_s": 26.5,
+      "finish_s": 26.52816142876421,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 0,
+        "service-a": 1,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 26.506330836049802,
+        "service-b": 26.512761672099604,
+        "service-a": 26.52816142876421
+      }
+    },
+    {
+      "workflow_id": 29,
+      "arrival_s": 28.166666666666668,
+      "finish_s": 28.194818145467966,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 0,
+        "service-a": 1,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 28.172668661598237,
+        "service-b": 28.178770656529807,
+        "service-a": 28.194818145467966
+      }
+    },
+    {
+      "workflow_id": 30,
+      "arrival_s": 28.5,
+      "finish_s": 28.5281514788013,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 0,
+        "service-a": 1,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 28.50600199493157,
+        "service-b": 28.51210398986314,
+        "service-a": 28.5281514788013
+      }
+    },
+    {
+      "workflow_id": 31,
+      "arrival_s": 28.833333333333332,
+      "finish_s": 28.86148481213463,
+      "status": "COMPLETED",
+      "failure": "",
+      "sla_violation": false,
+      "nodes": {
+        "gateway": "DONE",
+        "service-a": "DONE",
+        "service-b": "DONE"
+      },
+      "bindings": {
+        "gateway": 0,
+        "service-a": 1,
+        "service-b": 0
+      },
+      "finishes": {
+        "gateway": 28.8393353282649,
+        "service-b": 28.84543732319647,
+        "service-a": 28.86148481213463
+      }
+    }
+  ],
+  "invocation_ledger": [
+    {
+      "workflow": 0,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 5.362285220406122,
+      "started": 5.362285220406122,
+      "status": "DONE"
+    },
+    {
+      "workflow": 1,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 5.362285220406122,
+      "started": 5.3678249503045965,
+      "status": "DONE"
+    },
+    {
+      "workflow": 2,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 5.362285220406122,
+      "started": 5.373364680203071,
+      "status": "DONE"
+    },
+    {
+      "workflow": 0,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -1.4137996329210978e-16,
+      "ready_at": 5.391057601197446,
+      "started": 5.391057601197446,
+      "status": "DONE"
+    },
+    {
+      "workflow": 1,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -1.4127154307486123e-16,
+      "ready_at": 5.39659733109592,
+      "started": 5.3977171327133835,
+      "status": "DONE"
+    },
+    {
+      "workflow": 0,
+      "service": "service-a",
+      "cluster": 0,
+      "remaining": -2.1553939189011828e-16,
+      "ready_at": 5.401381241885617,
+      "started": 5.401381241885617,
+      "status": "DONE"
+    },
+    {
+      "workflow": 2,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -2.1011838102769076e-16,
+      "ready_at": 5.402137060994395,
+      "started": 5.404376664229321,
+      "status": "DONE"
+    },
+    {
+      "workflow": 1,
+      "service": "service-a",
+      "cluster": 0,
+      "remaining": -2.7625471354930653e-16,
+      "ready_at": 5.406920971784092,
+      "started": 5.40891928032917,
+      "status": "DONE"
+    },
+    {
+      "workflow": 2,
+      "service": "service-a",
+      "cluster": 0,
+      "remaining": -2.7668839441830073e-16,
+      "ready_at": 5.4124607016825665,
+      "started": 5.416457318772722,
+      "status": "DONE"
+    },
+    {
+      "workflow": 3,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 5.5,
+      "started": 5.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 3,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -2.0990154059319366e-16,
+      "ready_at": 5.528772380791324,
+      "started": 5.528772380791324,
+      "status": "DONE"
+    },
+    {
+      "workflow": 3,
+      "service": "service-a",
+      "cluster": 0,
+      "remaining": -2.7668839441830073e-16,
+      "ready_at": 5.539096021479495,
+      "started": 5.539096021479495,
+      "status": "DONE"
+    },
+    {
+      "workflow": 4,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 6.25,
+      "started": 6.25,
+      "status": "DONE"
+    },
+    {
+      "workflow": 4,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.7824283715661693e-16,
+      "ready_at": 6.279384380944959,
+      "started": 6.279384380944959,
+      "status": "DONE"
+    },
+    {
+      "workflow": 4,
+      "service": "service-a",
+      "cluster": 0,
+      "remaining": 1.3097162243624894e-16,
+      "ready_at": 6.283591391289573,
+      "started": 6.283591391289573,
+      "status": "DONE"
+    },
+    {
+      "workflow": 5,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 6.75,
+      "started": 6.75,
+      "status": "DONE"
+    },
+    {
+      "workflow": 5,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 6.7556397298984745,
+      "started": 6.7556397298984745,
+      "status": "DONE"
+    },
+    {
+      "workflow": 5,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.7867651802561113e-16,
+      "ready_at": 6.779384380944959,
+      "started": 6.779384380944959,
+      "status": "DONE"
+    },
+    {
+      "workflow": 6,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 7.166666666666667,
+      "started": 7.166666666666667,
+      "status": "DONE"
+    },
+    {
+      "workflow": 6,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 7.1723063965651415,
+      "started": 7.1723063965651415,
+      "status": "DONE"
+    },
+    {
+      "workflow": 6,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.93421667571414e-16,
+      "ready_at": 7.194720885129212,
+      "started": 7.194720885129212,
+      "status": "DONE"
+    },
+    {
+      "workflow": 7,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.93421667571414e-16,
+      "ready_at": 7.5,
+      "started": 7.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 7,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.93421667571414e-16,
+      "ready_at": 7.507479095368649,
+      "started": 7.507479095368649,
+      "status": "DONE"
+    },
+    {
+      "workflow": 7,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 7.5308652922936,
+      "started": 7.5308652922936,
+      "status": "DONE"
+    },
+    {
+      "workflow": 8,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.93421667571414e-16,
+      "ready_at": 7.833333333333333,
+      "started": 7.833333333333333,
+      "status": "DONE"
+    },
+    {
+      "workflow": 8,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.93421667571414e-16,
+      "ready_at": 7.840812428701982,
+      "started": 7.840812428701982,
+      "status": "DONE"
+    },
+    {
+      "workflow": 8,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 7.864198625626933,
+      "started": 7.864198625626933,
+      "status": "DONE"
+    },
+    {
+      "workflow": 9,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.726049858596923e-16,
+      "ready_at": 9.25,
+      "started": 9.25,
+      "status": "DONE"
+    },
+    {
+      "workflow": 9,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.0408340855860843e-16,
+      "ready_at": 9.28581555008771,
+      "started": 9.28581555008771,
+      "status": "DONE"
+    },
+    {
+      "workflow": 9,
+      "service": "service-b",
+      "cluster": 2,
+      "remaining": 1.0408340855860843e-16,
+      "ready_at": 9.28581555008771,
+      "started": 9.28581555008771,
+      "status": "DONE"
+    },
+    {
+      "workflow": 10,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.726049858596923e-16,
+      "ready_at": 9.75,
+      "started": 9.75,
+      "status": "DONE"
+    },
+    {
+      "workflow": 10,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.0408340855860843e-16,
+      "ready_at": 9.78581555008771,
+      "started": 9.78581555008771,
+      "status": "DONE"
+    },
+    {
+      "workflow": 10,
+      "service": "service-b",
+      "cluster": 2,
+      "remaining": 1.0408340855860843e-16,
+      "ready_at": 9.78581555008771,
+      "started": 9.78581555008771,
+      "status": "DONE"
+    },
+    {
+      "workflow": 11,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 15.166666666666666,
+      "started": 15.166666666666666,
+      "status": "DONE"
+    },
+    {
+      "workflow": 11,
+      "service": "service-b",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 15.17230639656514,
+      "started": 15.17230639656514,
+      "status": "DONE"
+    },
+    {
+      "workflow": 11,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -3.660266534311063e-16,
+      "ready_at": 15.198596243568026,
+      "started": 15.198596243568026,
+      "status": "DONE"
+    },
+    {
+      "workflow": 12,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 15.5,
+      "started": 15.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 12,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -3.660266534311063e-16,
+      "ready_at": 15.535012142255045,
+      "started": 15.535012142255045,
+      "status": "DONE"
+    },
+    {
+      "workflow": 12,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -3.660266534311063e-16,
+      "ready_at": 15.535012142255045,
+      "started": 15.535012142255045,
+      "status": "DONE"
+    },
+    {
+      "workflow": 13,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": -3.7470027081099033e-16,
+      "ready_at": 15.833333333333334,
+      "started": 15.833333333333334,
+      "status": "DONE"
+    },
+    {
+      "workflow": 13,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -3.660266534311063e-16,
+      "ready_at": 15.868345475588379,
+      "started": 15.868345475588379,
+      "status": "DONE"
+    },
+    {
+      "workflow": 13,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -3.660266534311063e-16,
+      "ready_at": 15.868345475588379,
+      "started": 15.868345475588379,
+      "status": "DONE"
+    },
+    {
+      "workflow": 14,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 16.5,
+      "started": 16.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 14,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": 1.4311468676808659e-16,
+      "ready_at": 16.534191684749494,
+      "started": 16.534191684749494,
+      "status": "DONE"
+    },
+    {
+      "workflow": 14,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.4311468676808659e-16,
+      "ready_at": 16.534191684749494,
+      "started": 16.534191684749494,
+      "status": "DONE"
+    },
+    {
+      "workflow": 15,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 18.25,
+      "started": 18.25,
+      "status": "DONE"
+    },
+    {
+      "workflow": 15,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": 6.617970060851519e-16,
+      "ready_at": 18.280472326890976,
+      "started": 18.280472326890976,
+      "status": "DONE"
+    },
+    {
+      "workflow": 15,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 6.617970060851519e-16,
+      "ready_at": 18.280472326890976,
+      "started": 18.280472326890976,
+      "status": "DONE"
+    },
+    {
+      "workflow": 16,
+      "service": "gateway",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 18.75,
+      "started": 18.75,
+      "status": "DONE"
+    },
+    {
+      "workflow": 16,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": 6.617970060851519e-16,
+      "ready_at": 18.780472326890976,
+      "started": 18.780472326890976,
+      "status": "DONE"
+    },
+    {
+      "workflow": 16,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 6.617970060851519e-16,
+      "ready_at": 18.780472326890976,
+      "started": 18.780472326890976,
+      "status": "DONE"
+    },
+    {
+      "workflow": 17,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 5.178149575790769e-16,
+      "ready_at": 19.5,
+      "started": 19.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 17,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": 5.178149575790769e-16,
+      "ready_at": 19.50742183873469,
+      "started": 19.50742183873469,
+      "status": "DONE"
+    },
+    {
+      "workflow": 17,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 5.178149575790769e-16,
+      "ready_at": 19.50742183873469,
+      "started": 19.50742183873469,
+      "status": "DONE"
+    },
+    {
+      "workflow": 18,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.125,
+      "started": 20.125,
+      "status": "DONE"
+    },
+    {
+      "workflow": 18,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -1.6393136847980827e-16,
+      "ready_at": 20.130942236597154,
+      "started": 20.130942236597154,
+      "status": "DONE"
+    },
+    {
+      "workflow": 18,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": -1.6393136847980827e-16,
+      "ready_at": 20.130942236597154,
+      "started": 20.130942236597154,
+      "status": "DONE"
+    },
+    {
+      "workflow": 19,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.375,
+      "started": 20.375,
+      "status": "DONE"
+    },
+    {
+      "workflow": 19,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.380942236597154,
+      "started": 20.380942236597154,
+      "status": "DONE"
+    },
+    {
+      "workflow": 19,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 20.399935683274833,
+      "started": 20.399935683274833,
+      "status": "DONE"
+    },
+    {
+      "workflow": 20,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.625,
+      "started": 20.625,
+      "status": "DONE"
+    },
+    {
+      "workflow": 20,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.630942236597154,
+      "started": 20.630942236597154,
+      "status": "DONE"
+    },
+    {
+      "workflow": 20,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 20.649935683274833,
+      "started": 20.649935683274833,
+      "status": "DONE"
+    },
+    {
+      "workflow": 21,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.875,
+      "started": 20.875,
+      "status": "DONE"
+    },
+    {
+      "workflow": 21,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.5204851266936714e-15,
+      "ready_at": 20.880942236597154,
+      "started": 20.880942236597154,
+      "status": "DONE"
+    },
+    {
+      "workflow": 21,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 20.899935683274833,
+      "started": 20.899935683274833,
+      "status": "DONE"
+    },
+    {
+      "workflow": 22,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.2125717097077882e-15,
+      "ready_at": 21.25,
+      "started": 21.25,
+      "status": "DONE"
+    },
+    {
+      "workflow": 22,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.2125717097077882e-15,
+      "ready_at": 21.25625279763079,
+      "started": 21.25625279763079,
+      "status": "DONE"
+    },
+    {
+      "workflow": 22,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 21.276523535003037,
+      "started": 21.276523535003037,
+      "status": "DONE"
+    },
+    {
+      "workflow": 23,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.2125717097077882e-15,
+      "ready_at": 21.75,
+      "started": 21.75,
+      "status": "DONE"
+    },
+    {
+      "workflow": 23,
+      "service": "service-b",
+      "cluster": 1,
+      "remaining": 1.2125717097077882e-15,
+      "ready_at": 21.75625279763079,
+      "started": 21.75625279763079,
+      "status": "DONE"
+    },
+    {
+      "workflow": 23,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 21.776523535003037,
+      "started": 21.776523535003037,
+      "status": "DONE"
+    },
+    {
+      "workflow": 24,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 2.498001805406602e-16,
+      "ready_at": 22.5,
+      "started": 22.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 24,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": 1.4338573731120796e-16,
+      "ready_at": 22.52214707330368,
+      "started": 22.52214707330368,
+      "status": "DONE"
+    },
+    {
+      "workflow": 24,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 22.524574714032415,
+      "started": 22.524574714032415,
+      "status": "DONE"
+    },
+    {
+      "workflow": 25,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 23.5,
+      "started": 23.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 25,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": 5.054550528127422e-16,
+      "ready_at": 23.521626785243356,
+      "started": 23.521626785243356,
+      "status": "DONE"
+    },
+    {
+      "workflow": 25,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 23.530252614202706,
+      "started": 23.530252614202706,
+      "status": "DONE"
+    },
+    {
+      "workflow": 26,
+      "service": "gateway",
+      "cluster": 1,
+      "remaining": -5.516420653606247e-16,
+      "ready_at": 24.5,
+      "started": 24.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 26,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": -9.356664748549903e-17,
+      "ready_at": 24.526595265303936,
+      "started": 24.526595265303936,
+      "status": "DONE"
+    },
+    {
+      "workflow": 26,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 24.532283395924082,
+      "started": 24.532283395924082,
+      "status": "DONE"
+    },
+    {
+      "workflow": 27,
+      "service": "gateway",
+      "cluster": 0,
+      "remaining": 4.917941054394248e-16,
+      "ready_at": 25.5,
+      "started": 25.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 27,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": 4.917941054394248e-16,
+      "ready_at": 25.508043504388223,
+      "started": 25.508043504388223,
+      "status": "DONE"
+    },
+    {
+      "workflow": 27,
+      "service": "service-a",
+      "cluster": 2,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 25.536828212511686,
+      "started": 25.536828212511686,
+      "status": "DONE"
+    },
+    {
+      "workflow": 28,
+      "service": "gateway",
+      "cluster": 0,
+      "remaining": 7.225123277443402e-16,
+      "ready_at": 26.5,
+      "started": 26.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 28,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": 7.225123277443402e-16,
+      "ready_at": 26.5064308360498,
+      "started": 26.5064308360498,
+      "status": "DONE"
+    },
+    {
+      "workflow": 28,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": 1.4016565685892601e-15,
+      "ready_at": 26.522621698865738,
+      "started": 26.522621698865738,
+      "status": "DONE"
+    },
+    {
+      "workflow": 29,
+      "service": "gateway",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.166666666666668,
+      "started": 28.166666666666668,
+      "status": "DONE"
+    },
+    {
+      "workflow": 29,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.172768661598237,
+      "started": 28.172768661598237,
+      "status": "DONE"
+    },
+    {
+      "workflow": 29,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -9.532305500492555e-16,
+      "ready_at": 28.188007956013536,
+      "started": 28.188007956013536,
+      "status": "DONE"
+    },
+    {
+      "workflow": 30,
+      "service": "gateway",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.5,
+      "started": 28.5,
+      "status": "DONE"
+    },
+    {
+      "workflow": 30,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.50610199493157,
+      "started": 28.50610199493157,
+      "status": "DONE"
+    },
+    {
+      "workflow": 30,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -9.532305500492555e-16,
+      "ready_at": 28.521341289346868,
+      "started": 28.521341289346868,
+      "status": "DONE"
+    },
+    {
+      "workflow": 31,
+      "service": "gateway",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.833333333333332,
+      "started": 28.833333333333332,
+      "status": "DONE"
+    },
+    {
+      "workflow": 31,
+      "service": "service-b",
+      "cluster": 0,
+      "remaining": -1.3279308208602458e-15,
+      "ready_at": 28.8394353282649,
+      "started": 28.8394353282649,
+      "status": "DONE"
+    },
+    {
+      "workflow": 31,
+      "service": "service-a",
+      "cluster": 1,
+      "remaining": -9.532305500492555e-16,
+      "ready_at": 28.8546746226802,
+      "started": 28.8546746226802,
+      "status": "DONE"
+    }
+  ],
+  "traffic_bytes_by_directed_link": [
+    [
+      0.0,
+      16384.0,
+      4096.0
+    ],
+    [
+      12288.0,
+      0.0,
+      57344.0
+    ],
+    [
+      20480.0,
+      73728.0,
+      0.0
+    ]
+  ]
+}

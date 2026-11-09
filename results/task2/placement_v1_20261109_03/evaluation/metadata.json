@@ -1,0 +1,89 @@
+{
+  "source": "simulated",
+  "action_kind": "workload_placement",
+  "run_count": 150,
+  "unique_trace_count": 30,
+  "baseline_runs": 60,
+  "ippo_runs": 90,
+  "policy_seeds": [
+    7,
+    17,
+    27
+  ],
+  "workload_seeds": [
+    30001,
+    30002,
+    30003,
+    30004,
+    30005
+  ],
+  "scenarios": [
+    "stable",
+    "ramp_up",
+    "spike",
+    "recovery",
+    "periodic",
+    "shift"
+  ],
+  "checkpoints": [
+    {
+      "policy_seed": 7,
+      "path": "D:\\HocTap\\hk7\\VMWare\\cloud_marl_simulator_start\\results\\task2\\placement_v1_20261109_03\\training\\seed_7\\best.pt",
+      "sha256": "f989aaa6d17e656210cf2595b002b396984dd5163ba0cf01bb2e1d376edbe334",
+      "episode": 240
+    },
+    {
+      "policy_seed": 17,
+      "path": "D:\\HocTap\\hk7\\VMWare\\cloud_marl_simulator_start\\results\\task2\\placement_v1_20261109_03\\training\\seed_17\\best.pt",
+      "sha256": "094749e6a80b2438ef53f5a6359e324dfea947e1676ff4049f3ac37db6aff7c0",
+      "episode": 180
+    },
+    {
+      "policy_seed": 27,
+      "path": "D:\\HocTap\\hk7\\VMWare\\cloud_marl_simulator_start\\results\\task2\\placement_v1_20261109_03\\training\\seed_27\\best.pt",
+      "sha256": "8091216fc01cdc6e788f34e6e4413353c4bd3bb266f0b2a80dda5474940eedac",
+      "episode": 140
+    }
+  ],
+  "schema_hash": "bacc255d57fbb1b405f55470a25e17f3e3c0085e338824851ebcdb95357996ab",
+  "config_hash": "64fe5cac8c790d5589bd1a3139063ef622ea1313596c664a1f3d0cc8bfe3c24a",
+  "paired_trace_hashes": [
+    "808418ab8946ef48af75d1f4dccce315d91bb7420814be139963e3e3cb0a5185",
+    "2887866df47090b0b6b3602d382d63ce85092a5f9b0ae4539efeff62563b193d",
+    "943f31b74d36ddc0bacb92082b658ee4e5425d2b3bfc5e454c4d27e165db1cd5",
+    "a705c893830c7ab6373afa2c5ae4427e79586896629d9ef2dace4bcc182a7e7f",
+    "85a9a706311cc25704f2dac0368734d0a62bb7c66c1d0e13347ccc6b514323eb",
+    "cc0908c7e3aab284c33ae559dac5ad608821d503fb389d92a6516fd42a20c2f9",
+    "c304c212c06162c315ca0c329a10dc787c771e948691eedaa998fc75cd3c7be3",
+    "8c1a33d9f66fd77690d0e5bbec1f9ea19850503afd7fadf94478cdb35f6697cc",
+    "38bbe9baa5e86dffe19dbeec5fad01fc900df47ed9c39ae0a6d93e4cad8978d5",
+    "a2f4f4b79dc8bfca69f0271ca5aae85af2f1ec0d8d7cec18d6a5548dab877777",
+    "7280692e8355c86fd5cfa750ad6a6eff30e596f2ce23c07834a57d449456ab19",
+    "b42e687308fcf05c05e81d3497f0cdc2903603ddd2cb96f1bd206a0c1465ca4a",
+    "f059133a0cfb6366b7866de44730dff7fd955f8a9cd176b5ad9d458c92832058",
+    "19afe40c0bf6e69e7a3b0ebb77f513da540f53ddbb985ca5ff0d28991d53dd78",
+    "0049a505bc540102b14f39ed26bb120325e3e0676a46f88ccb8fda6c3900a898",
+    "023c18bddfe5ed4bbff26901178e160c401677787eabea0a7ec8eb27e23bc67a",
+    "b878bb7cbfc7496e0bd6489097c5a012d9640f87945094b6c724ba08ea565d85",
+    "b7a3ea2d1c4242f8a42bec8a6b96b5ba9a110a5ba9a1b582053619b1a706972b",
+    "3f6d6a09ada84894c1f61bee025f7744abf406911b0cdf5d0ff166b1b9efe9ff",
+    "8e561f05595fa274a0890957753601a2ce71c0231620e9272714fbca532c5545",
+    "b08aa8979e75788fde769fbcb7050678af753ab05ee5078a2b78957de5c162d8",
+    "2091daa9174dc381b79b47a0d3c5472aff423ed3d912c01c34844a92cab94564",
+    "5d6685c90899d269e8da6bc4406ec1d47d004e65831c11b6cc79f9ac3e9fe3ea",
+    "56262a3b9c2a772bf905f4087acaaca362f29c3882c25a29cbe903610bcecc7c",
+    "d1f154f086404d77062d6e0cc3b6a779a6b48f02c7868e658a557f3d1638dfa9",
+    "f74a011b9632e02ff906848a209c8b5d398add50ad300624284ad8f7fa5c599c",
+    "f540b205386cd04d66dfa346f38394072d16719213bdca965089a4b2aa33cd78",
+    "c6699de204600cf7216493d1fe98fb58e8c423ee9e5fd8d1d2ef546582eb18a9",
+    "b64984657ed410c6482f2525a95b26b2699e44b0ff6c7b053684841cdc476f7b",
+    "87f88456008dfbcbaabacbedb4972c61f7202497b9f4682c8ae9cee60dca42df"
+  ],
+  "baseline_duplicate_count": 0,
+  "latency_population": "completed requests; unsuccessful/unfinished separately reported",
+  "slo_population": "resolved requests; unfinished cohort explicitly censored",
+  "uncertainty": "policy-seed SD of workload-averaged scores; workload-seed SD of policy-averaged scores; descriptive, n_policy=3",
+  "hysteresis_least_loaded": 0.1,
+  "inference": "sample; isolated per-run RNG",
+  "calibration_warning": "Most experimental loads exceed observed 0.27-3.30 RPS. Capacity, background, WAN, readiness and additional services are simulation assumptions."
+}

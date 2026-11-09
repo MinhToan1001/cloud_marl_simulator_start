@@ -1,0 +1,64 @@
+Task 2. Hiệu chỉnh Simulator và tối ưu MARL
+Trạng thái: ⬜ Chưa thực hiện — Giai đoạn H
+Mục tiêu: Sử dụng dữ liệu thực tế từ Cluster A để cải thiện độ chính xác của Simulator và chuẩn bị policy MARL có thể triển khai lên hệ thống Kubernetes thật.
+Công việc
+
+Phân tích dữ liệu đã thu thập từ Cluster A: CPU, RAM, throughput, latency và error rate.
+
+
+Hiệu chỉnh các tham số Simulator có đủ bằng chứng thực nghiệm, gồm CPU/RAM usage, service rate và latency ở mức tải đã quan sát.
+
+
+Đánh giá mức độ sai lệch giữa Simulator và dữ liệu Cluster A thực tế.
+
+
+Nếu cần, thực hiện thêm các lần thử tải có kiểm soát để xác định capacity, ngưỡng quá tải và quan hệ giữa request rate với latency.
+
+
+Kiểm tra định nghĩa State/Observation, Action, Reward của IPPO hiện tại.
+
+
+Đảm bảo State/Action Schema trong Simulator tương thích với môi trường Kubernetes thật.
+
+
+Xác định rõ action MARL dùng cho placement, điều phối request hoặc cả hai; tránh nhầm lẫn giữa hai bài toán.
+
+
+Bổ sung Reward phản ánh latency, SLO violation, error rate, resource waste và migration cost.
+
+
+Bổ sung domain randomization cho capacity, background load và độ trễ mạng.
+
+
+Huấn luyện lại IPPO với nhiều seed và workload khác nhau nếu thay đổi state/action/reward hoặc tham số môi trường.
+
+
+Đánh giá MARL với Round Robin, Least Loaded trên cùng workload trace.
+
+
+Đánh giá bằng throughput, latency p95/p99, error rate, SLO violation, resource utilization và mức cân bằng tải.
+
+
+Lưu checkpoint, cấu hình huấn luyện, biểu đồ và báo cáo calibration.
+
+Yêu cầu nghiên cứu
+Simulator không cần mô phỏng toàn bộ Kubernetes, nhưng phải tái tạo được xu hướng tài nguyên và hiệu năng của hệ thống thực tế trong phạm vi đã kiểm chứng.
+Nếu không có dữ liệu đủ tốt để suy ra capacity tối đa thì phải ghi nhận giới hạn đó, không tự giả định.
+Sản phẩm:
+
+Simulator đã hiệu chỉnh theo dữ liệu thực tế.
+
+
+Đánh giá sai số Simulator so với Cluster A.
+
+
+Policy IPPO và checkpoint cập nhật.
+
+
+Báo cáo so sánh IPPO, Round Robin, Least Loaded.
+
+
+State/Action Schema dùng được cho giai đoạn Sim-to-Real.
+
+Tiêu chí hoàn thành: Có báo cáo calibration, kết quả đánh giá nhiều seed và xác nhận rõ khả năng tương thích giữa mô phỏng và hệ thống thật.
+

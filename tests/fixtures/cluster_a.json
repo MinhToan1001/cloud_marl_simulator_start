@@ -1,0 +1,7324 @@
+{
+  "fixture": true,
+  "description": "SYNTHETIC development fixture; never real K3s measurements",
+  "snapshots": [
+    {
+      "observed_at_utc": "2026-01-01T00:00:00+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:00:00+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "100m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:00:00+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "20m",
+                  "memory": "16Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:00:00+00:00",
+          "uptime_s": 1,
+          "received_total": 0,
+          "completed_total": 0,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 0,
+          "latency_sum_ms": 0.0,
+          "events": [],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:00:15+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:00:15+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "110m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:00:15+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "30m",
+                  "memory": "17Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:00:15+00:00",
+          "uptime_s": 16,
+          "received_total": 15,
+          "completed_total": 15,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 15,
+          "latency_sum_ms": 82.5,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:00:30+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:00:30+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "120m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:00:30+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "40m",
+                  "memory": "18Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:00:30+00:00",
+          "uptime_s": 31,
+          "received_total": 45,
+          "completed_total": 45,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 45,
+          "latency_sum_ms": 262.5,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:00:45+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:00:45+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "130m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:00:45+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "50m",
+                  "memory": "19Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:00:45+00:00",
+          "uptime_s": 46,
+          "received_total": 90,
+          "completed_total": 90,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 90,
+          "latency_sum_ms": 555.0,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 46,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 47,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 48,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 49,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 50,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 51,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 52,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 53,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 54,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 55,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 56,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 57,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 58,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 59,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 60,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 61,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 62,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 63,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 64,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 65,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 66,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 67,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 68,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 69,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 70,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 71,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 72,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 73,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 74,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 75,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 76,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 77,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 78,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 79,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 80,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 81,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 82,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 83,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 84,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 85,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 86,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 87,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 88,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 89,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 90,
+              "success": true,
+              "latency_ms": 6.5
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:01:00+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:01:00+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "140m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:01:00+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "60m",
+                  "memory": "20Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:01:00+00:00",
+          "uptime_s": 61,
+          "received_total": 150,
+          "completed_total": 150,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 150,
+          "latency_sum_ms": 975.0,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 46,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 47,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 48,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 49,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 50,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 51,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 52,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 53,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 54,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 55,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 56,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 57,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 58,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 59,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 60,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 61,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 62,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 63,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 64,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 65,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 66,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 67,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 68,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 69,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 70,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 71,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 72,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 73,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 74,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 75,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 76,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 77,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 78,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 79,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 80,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 81,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 82,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 83,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 84,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 85,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 86,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 87,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 88,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 89,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 90,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 91,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 92,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 93,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 94,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 95,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 96,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 97,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 98,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 99,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 100,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 101,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 102,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 103,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 104,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 105,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 106,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 107,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 108,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 109,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 110,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 111,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 112,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 113,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 114,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 115,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 116,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 117,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 118,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 119,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 120,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 121,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 122,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 123,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 124,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 125,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 126,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 127,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 128,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 129,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 130,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 131,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 132,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 133,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 134,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 135,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 136,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 137,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 138,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 139,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 140,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 141,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 142,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 143,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 144,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 145,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 146,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 147,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 148,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 149,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 150,
+              "success": true,
+              "latency_ms": 7.0
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:01:15+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:01:15+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "150m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:01:15+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "70m",
+                  "memory": "21Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:01:15+00:00",
+          "uptime_s": 76,
+          "received_total": 225,
+          "completed_total": 225,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 225,
+          "latency_sum_ms": 1537.5,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 46,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 47,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 48,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 49,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 50,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 51,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 52,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 53,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 54,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 55,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 56,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 57,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 58,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 59,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 60,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 61,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 62,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 63,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 64,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 65,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 66,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 67,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 68,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 69,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 70,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 71,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 72,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 73,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 74,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 75,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 76,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 77,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 78,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 79,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 80,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 81,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 82,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 83,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 84,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 85,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 86,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 87,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 88,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 89,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 90,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 91,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 92,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 93,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 94,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 95,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 96,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 97,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 98,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 99,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 100,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 101,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 102,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 103,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 104,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 105,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 106,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 107,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 108,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 109,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 110,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 111,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 112,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 113,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 114,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 115,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 116,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 117,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 118,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 119,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 120,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 121,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 122,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 123,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 124,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 125,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 126,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 127,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 128,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 129,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 130,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 131,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 132,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 133,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 134,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 135,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 136,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 137,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 138,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 139,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 140,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 141,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 142,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 143,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 144,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 145,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 146,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 147,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 148,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 149,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 150,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 151,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 152,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 153,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 154,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 155,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 156,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 157,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 158,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 159,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 160,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 161,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 162,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 163,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 164,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 165,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 166,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 167,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 168,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 169,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 170,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 171,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 172,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 173,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 174,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 175,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 176,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 177,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 178,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 179,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 180,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 181,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 182,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 183,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 184,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 185,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 186,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 187,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 188,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 189,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 190,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 191,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 192,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 193,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 194,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 195,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 196,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 197,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 198,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 199,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 200,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 201,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 202,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 203,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 204,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 205,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 206,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 207,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 208,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 209,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 210,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 211,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 212,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 213,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 214,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 215,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 216,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 217,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 218,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 219,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 220,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 221,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 222,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 223,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 224,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 225,
+              "success": true,
+              "latency_ms": 7.5
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:01:30+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:01:30+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "160m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:01:30+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "80m",
+                  "memory": "22Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:01:30+00:00",
+          "uptime_s": 91,
+          "received_total": 315,
+          "completed_total": 315,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 315,
+          "latency_sum_ms": 2257.5,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 46,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 47,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 48,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 49,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 50,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 51,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 52,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 53,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 54,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 55,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 56,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 57,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 58,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 59,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 60,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 61,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 62,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 63,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 64,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 65,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 66,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 67,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 68,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 69,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 70,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 71,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 72,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 73,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 74,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 75,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 76,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 77,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 78,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 79,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 80,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 81,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 82,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 83,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 84,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 85,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 86,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 87,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 88,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 89,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 90,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 91,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 92,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 93,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 94,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 95,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 96,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 97,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 98,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 99,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 100,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 101,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 102,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 103,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 104,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 105,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 106,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 107,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 108,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 109,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 110,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 111,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 112,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 113,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 114,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 115,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 116,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 117,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 118,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 119,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 120,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 121,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 122,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 123,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 124,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 125,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 126,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 127,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 128,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 129,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 130,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 131,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 132,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 133,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 134,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 135,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 136,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 137,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 138,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 139,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 140,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 141,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 142,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 143,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 144,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 145,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 146,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 147,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 148,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 149,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 150,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 151,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 152,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 153,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 154,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 155,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 156,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 157,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 158,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 159,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 160,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 161,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 162,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 163,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 164,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 165,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 166,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 167,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 168,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 169,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 170,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 171,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 172,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 173,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 174,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 175,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 176,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 177,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 178,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 179,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 180,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 181,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 182,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 183,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 184,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 185,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 186,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 187,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 188,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 189,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 190,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 191,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 192,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 193,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 194,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 195,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 196,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 197,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 198,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 199,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 200,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 201,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 202,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 203,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 204,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 205,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 206,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 207,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 208,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 209,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 210,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 211,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 212,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 213,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 214,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 215,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 216,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 217,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 218,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 219,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 220,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 221,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 222,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 223,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 224,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 225,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 226,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 227,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 228,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 229,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 230,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 231,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 232,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 233,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 234,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 235,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 236,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 237,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 238,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 239,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 240,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 241,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 242,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 243,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 244,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 245,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 246,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 247,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 248,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 249,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 250,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 251,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 252,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 253,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 254,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 255,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 256,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 257,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 258,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 259,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 260,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 261,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 262,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 263,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 264,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 265,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 266,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 267,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 268,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 269,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 270,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 271,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 272,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 273,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 274,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 275,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 276,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 277,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 278,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 279,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 280,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 281,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 282,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 283,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 284,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 285,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 286,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 287,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 288,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 289,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 290,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 291,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 292,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 293,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 294,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 295,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 296,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 297,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 298,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 299,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 300,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 301,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 302,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 303,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 304,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 305,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 306,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 307,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 308,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 309,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 310,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 311,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 312,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 313,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 314,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 315,
+              "success": true,
+              "latency_ms": 8.0
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "observed_at_utc": "2026-01-01T00:01:45+00:00",
+      "nodes": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a",
+              "uid": "fixture-node-uid"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "memory": "2Gi"
+              },
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "pods": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration",
+              "uid": "fixture-pod-uid"
+            },
+            "spec": {
+              "nodeName": "fixture-k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    }
+                  }
+                }
+              ]
+            },
+            "status": {
+              "phase": "Running",
+              "conditions": [
+                {
+                  "type": "Ready",
+                  "status": "True"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "node_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-k3s-a"
+            },
+            "timestamp": "2026-01-01T00:01:45+00:00",
+            "window": "15s",
+            "usage": {
+              "cpu": "180m",
+              "memory": "300Mi"
+            }
+          }
+        ]
+      },
+      "pod_metrics": {
+        "items": [
+          {
+            "metadata": {
+              "name": "fixture-api-1",
+              "namespace": "cloud-calibration"
+            },
+            "timestamp": "2026-01-01T00:01:45+00:00",
+            "window": "15s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "100m",
+                  "memory": "24Mi"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "apps": [
+        {
+          "instance_id": "fixture-instance",
+          "namespace": "cloud-calibration",
+          "pod_name": "fixture-api-1",
+          "timestamp_utc": "2026-01-01T00:01:45+00:00",
+          "uptime_s": 106,
+          "received_total": 435,
+          "completed_total": 435,
+          "errors_total": 0,
+          "inflight": 0,
+          "sequence": 435,
+          "latency_sum_ms": 3337.5,
+          "events": [
+            {
+              "sequence": 1,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 2,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 3,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 4,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 5,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 6,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 7,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 8,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 9,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 10,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 11,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 12,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 13,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 14,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 15,
+              "success": true,
+              "latency_ms": 5.5
+            },
+            {
+              "sequence": 16,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 17,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 18,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 19,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 20,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 21,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 22,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 23,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 24,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 25,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 26,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 27,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 28,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 29,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 30,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 31,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 32,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 33,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 34,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 35,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 36,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 37,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 38,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 39,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 40,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 41,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 42,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 43,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 44,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 45,
+              "success": true,
+              "latency_ms": 6.0
+            },
+            {
+              "sequence": 46,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 47,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 48,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 49,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 50,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 51,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 52,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 53,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 54,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 55,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 56,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 57,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 58,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 59,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 60,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 61,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 62,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 63,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 64,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 65,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 66,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 67,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 68,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 69,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 70,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 71,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 72,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 73,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 74,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 75,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 76,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 77,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 78,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 79,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 80,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 81,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 82,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 83,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 84,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 85,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 86,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 87,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 88,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 89,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 90,
+              "success": true,
+              "latency_ms": 6.5
+            },
+            {
+              "sequence": 91,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 92,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 93,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 94,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 95,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 96,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 97,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 98,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 99,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 100,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 101,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 102,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 103,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 104,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 105,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 106,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 107,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 108,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 109,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 110,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 111,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 112,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 113,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 114,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 115,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 116,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 117,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 118,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 119,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 120,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 121,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 122,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 123,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 124,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 125,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 126,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 127,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 128,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 129,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 130,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 131,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 132,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 133,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 134,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 135,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 136,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 137,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 138,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 139,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 140,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 141,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 142,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 143,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 144,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 145,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 146,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 147,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 148,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 149,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 150,
+              "success": true,
+              "latency_ms": 7.0
+            },
+            {
+              "sequence": 151,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 152,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 153,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 154,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 155,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 156,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 157,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 158,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 159,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 160,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 161,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 162,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 163,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 164,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 165,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 166,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 167,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 168,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 169,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 170,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 171,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 172,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 173,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 174,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 175,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 176,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 177,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 178,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 179,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 180,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 181,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 182,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 183,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 184,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 185,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 186,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 187,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 188,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 189,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 190,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 191,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 192,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 193,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 194,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 195,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 196,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 197,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 198,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 199,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 200,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 201,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 202,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 203,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 204,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 205,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 206,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 207,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 208,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 209,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 210,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 211,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 212,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 213,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 214,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 215,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 216,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 217,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 218,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 219,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 220,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 221,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 222,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 223,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 224,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 225,
+              "success": true,
+              "latency_ms": 7.5
+            },
+            {
+              "sequence": 226,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 227,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 228,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 229,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 230,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 231,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 232,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 233,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 234,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 235,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 236,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 237,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 238,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 239,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 240,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 241,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 242,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 243,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 244,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 245,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 246,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 247,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 248,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 249,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 250,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 251,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 252,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 253,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 254,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 255,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 256,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 257,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 258,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 259,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 260,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 261,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 262,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 263,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 264,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 265,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 266,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 267,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 268,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 269,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 270,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 271,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 272,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 273,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 274,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 275,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 276,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 277,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 278,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 279,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 280,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 281,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 282,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 283,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 284,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 285,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 286,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 287,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 288,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 289,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 290,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 291,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 292,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 293,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 294,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 295,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 296,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 297,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 298,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 299,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 300,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 301,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 302,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 303,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 304,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 305,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 306,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 307,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 308,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 309,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 310,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 311,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 312,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 313,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 314,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 315,
+              "success": true,
+              "latency_ms": 8.0
+            },
+            {
+              "sequence": 316,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 317,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 318,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 319,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 320,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 321,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 322,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 323,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 324,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 325,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 326,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 327,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 328,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 329,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 330,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 331,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 332,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 333,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 334,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 335,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 336,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 337,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 338,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 339,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 340,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 341,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 342,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 343,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 344,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 345,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 346,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 347,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 348,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 349,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 350,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 351,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 352,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 353,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 354,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 355,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 356,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 357,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 358,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 359,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 360,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 361,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 362,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 363,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 364,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 365,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 366,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 367,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 368,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 369,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 370,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 371,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 372,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 373,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 374,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 375,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 376,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 377,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 378,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 379,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 380,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 381,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 382,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 383,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 384,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 385,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 386,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 387,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 388,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 389,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 390,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 391,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 392,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 393,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 394,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 395,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 396,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 397,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 398,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 399,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 400,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 401,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 402,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 403,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 404,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 405,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 406,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 407,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 408,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 409,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 410,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 411,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 412,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 413,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 414,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 415,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 416,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 417,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 418,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 419,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 420,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 421,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 422,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 423,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 424,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 425,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 426,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 427,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 428,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 429,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 430,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 431,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 432,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 433,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 434,
+              "success": true,
+              "latency_ms": 9.0
+            },
+            {
+              "sequence": 435,
+              "success": true,
+              "latency_ms": 9.0
+            }
+          ],
+          "work_config": {
+            "cpu_ms": 5,
+            "memory_kib": 64,
+            "max_concurrency": 2
+          }
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS_HISTORICAL_WITH_DECLARED_TRANSITION",
+  "source": "OFFLINE_ARTIFACT_VERIFICATION",
+  "episodes": 192,
+  "shared_traces": 12,
+  "protected_files": 954,
+  "protected_changes": [
+    "src/placement_v2/config.py",
+    "src/placement_v2/env.py"
+  ],
+  "feature_rows": 286,
+  "immutable_original_232_verified": 232,
+  "current_runtime_compatible": false,
+  "historical_source_snapshot": "results\\task3\\review_20261109_01\\before_source",
+  "versioned_source_deltas": {
+    "src/placement_v2/config.py": {
+      "old_sha256": "25fbd244b7b84eb6e3deb68d0d0fc7b7ab11b624170ef5f32471b7f7d7fffde1",
+      "new_sha256": "6680971ca3fe375f195d46cf090ec1288b14f84d9ffc8f470def5f3168cf36fb",
+      "reason": "Review được người dùng yêu cầu: reward interval-v1, workflow-time accounting và migration cost tường minh; giữ chế độ legacy chỉ để audit."
+    },
+    "src/placement_v2/env.py": {
+      "old_sha256": "23876563537ce94eab1c47a05acb2da61c93458c485d128db800baeec70cfe96",
+      "new_sha256": "81d1fd620dd518e22af8714462340f82fb20a7d91b944329023828fde2994039",
+      "reason": "Review được người dùng yêu cầu: reward interval-v1, workflow-time accounting và migration cost tường minh; giữ chế độ legacy chỉ để audit."
+    }
+  },
+  "unexpected_changes": [],
+  "current_identical_files": 935,
+  "archived_original_documents": 17,
+  "execution_cli_provenance": "archived_execution_provenance_only",
+  "totals": {
+    "arrivals": 13568,
+    "completed": 13185,
+    "failed": 380,
+    "unfinished": 3,
+    "invocations": 49306
+  },
+  "recorded_code_fingerprints": {
+    "__init__.py": "1fd8bcf40802737edd6e9f6ee6e5cad6835bd62606f6e44ec7ac1f853c13a58c",
+    "config.py": "25fbd244b7b84eb6e3deb68d0d0fc7b7ab11b624170ef5f32471b7f7d7fffde1",
+    "dag.py": "92d3bd7e7e38b5b8ab6ab1c5749627de2b0eba867d4dd9a2168724abba257efb",
+    "env.py": "23876563537ce94eab1c47a05acb2da61c93458c485d128db800baeec70cfe96",
+    "policies.py": "40f170e4e36299d7a340c91baa23551e016995b283a7888d3d8041fb139ab554",
+    "schema.py": "45f4f7f9495ef6dba8b63b06e847415ef37483d3375ecd9690e9e3b39160c5ff",
+    "trace.py": "a245756acbfb9a7544bae442cfab65613847e1160a40905c243427ce07f20ee3"
+  },
+  "current_code_fingerprints": {
+    "__init__.py": "1fd8bcf40802737edd6e9f6ee6e5cad6835bd62606f6e44ec7ac1f853c13a58c",
+    "config.py": "6680971ca3fe375f195d46cf090ec1288b14f84d9ffc8f470def5f3168cf36fb",
+    "dag.py": "92d3bd7e7e38b5b8ab6ab1c5749627de2b0eba867d4dd9a2168724abba257efb",
+    "env.py": "81d1fd620dd518e22af8714462340f82fb20a7d91b944329023828fde2994039",
+    "policies.py": "40f170e4e36299d7a340c91baa23551e016995b283a7888d3d8041fb139ab554",
+    "schema.py": "45f4f7f9495ef6dba8b63b06e847415ef37483d3375ecd9690e9e3b39160c5ff",
+    "trace.py": "a245756acbfb9a7544bae442cfab65613847e1160a40905c243427ce07f20ee3"
+  },
+  "schema_hash": "934b66378221ba50d0347189ca27a135d2139127257da8e5d4edd329f6de45dd"
+}

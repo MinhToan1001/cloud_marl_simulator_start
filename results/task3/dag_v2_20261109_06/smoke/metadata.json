@@ -1,0 +1,57 @@
+{
+  "source": "SIMULATED",
+  "utc": "2026-11-09T11:55:08.409893+00:00",
+  "seed_list": [
+    51001,
+    51002
+  ],
+  "scenarios": [
+    "stable",
+    "ramp_up",
+    "spike",
+    "recovery",
+    "periodic",
+    "shift"
+  ],
+  "methods": [
+    "round_robin",
+    "least_loaded",
+    "random_valid",
+    "traffic_aware"
+  ],
+  "episodes": 192,
+  "seconds_per_episode": 30,
+  "wall_seconds": 99.41211590000012,
+  "code_fingerprints": {
+    "__init__.py": "1fd8bcf40802737edd6e9f6ee6e5cad6835bd62606f6e44ec7ac1f853c13a58c",
+    "config.py": "6680971ca3fe375f195d46cf090ec1288b14f84d9ffc8f470def5f3168cf36fb",
+    "dag.py": "92d3bd7e7e38b5b8ab6ab1c5749627de2b0eba867d4dd9a2168724abba257efb",
+    "env.py": "81d1fd620dd518e22af8714462340f82fb20a7d91b944329023828fde2994039",
+    "policies.py": "40f170e4e36299d7a340c91baa23551e016995b283a7888d3d8041fb139ab554",
+    "schema.py": "45f4f7f9495ef6dba8b63b06e847415ef37483d3375ecd9690e9e3b39160c5ff",
+    "trace.py": "a245756acbfb9a7544bae442cfab65613847e1160a40905c243427ce07f20ee3"
+  },
+  "cli_fingerprint": "eb11e4bbde5ad16f7a5b9abc5fbb3ed4b4d139b7416262340dba0e480ae6ca1f",
+  "schema_hash": "934b66378221ba50d0347189ca27a135d2139127257da8e5d4edd329f6de45dd",
+  "config_fingerprint": "20d121ec6ef7618d7067f1b8b21b37cbc542e224be86946f788a7a5f93fe49b3",
+  "trace_hashes": {
+    "periodic_51001.json": "8900189644f0ca5088df875038ab62ed57f04c9bceabb50d7504fad0fc446e72",
+    "periodic_51002.json": "3dc36ee2ee77ce66c521b4d60e99f51c3f9f317857227e036e58bfc84fd5f955",
+    "ramp_up_51001.json": "704fd4b91df610d4ef1fd26b5437978b845e20e12bc7e7206dc7fbb1f25c6529",
+    "ramp_up_51002.json": "6b3ceb34e497db66cbe46aa546725e0e933d2012e64116d2a00555479cefc21a",
+    "recovery_51001.json": "aaa4e33f2ac8bab478ed0608b04e4395a1b990b5e7d06d2e04dc63ff99deb5b3",
+    "recovery_51002.json": "fdeabbe8cbe9e3c2fca390c7bf6a2f3cab47490e5c7b85c948c597504cf7907e",
+    "shift_51001.json": "af4d74d5a7c4e07d82366516ee2bb12be80a6ae12746a838f15e50cf36d6b559",
+    "shift_51002.json": "49735fd0c5e977deb3f7e8b8ca138f612ed41162ef4d34de460cfc97b14c4fc4",
+    "spike_51001.json": "e71f216cab3369cf0caf747f3db2ae3335f9d05e9a6eddd405be2c5f8efa4284",
+    "spike_51002.json": "437e6fcc85f30f75a652805e2d1b6f272be35190ed004c1a6817045feb438a47",
+    "stable_51001.json": "ca1d784491623e2844e8e8560b1a3e28ccfcbc8309b623f434cd08f038632f3d",
+    "stable_51002.json": "7c76fa848b08dbddb08249b7bc22b999c2b47bea72073211f7ec7232641096aa"
+  },
+  "machine": {
+    "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "training": false,
+  "closed_loop_ready": false
+}

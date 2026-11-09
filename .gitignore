@@ -1,0 +1,25 @@
+.venv/
+.venv*/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+build/
+dist/
+data/demo/
+configs/integration/*.local.json
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+.ssh/
+.aws/
+.codex/
+.agents/
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*kubeconfig*

@@ -1,0 +1,39 @@
+{
+  "policy_seed": 27,
+  "episodes": 300,
+  "best_episode": 120,
+  "best_score": 0.519159841917311,
+  "elapsed_s": 49.67199999999957,
+  "weights_changed": {
+    "service_0": true,
+    "service_1": true,
+    "service_2": true
+  },
+  "environment_steps": 10800,
+  "device": "cpu",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "numpy": "2.2.6"
+  },
+  "training_config": {
+    "episodes": 300,
+    "hidden": 32,
+    "lr": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "entropy": 0.02,
+    "epochs": 4,
+    "batch_size": 64,
+    "validation_interval": 20,
+    "train_seed_start": 1000,
+    "validation_seeds": [
+      20001,
+      20002,
+      20003
+    ]
+  },
+  "schema_hash": "bacc255d57fbb1b405f55470a25e17f3e3c0085e338824851ebcdb95357996ab",
+  "config_hash": "64fe5cac8c790d5589bd1a3139063ef622ea1313596c664a1f3d0cc8bfe3c24a",
+  "source": "simulated"
+}

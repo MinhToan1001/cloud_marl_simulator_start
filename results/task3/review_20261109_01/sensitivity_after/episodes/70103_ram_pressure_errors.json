@@ -1,0 +1,1442 @@
+{
+  "config": {
+    "seconds": 6,
+    "decision_s": 0.25,
+    "dag_arrival_s": 0,
+    "cpu_cores": [
+      1.0,
+      1.25,
+      1.5
+    ],
+    "memory_bytes": [
+      268435456,
+      402653184,
+      536870912
+    ],
+    "latency_s": [
+      [
+        0,
+        0.015,
+        0.03
+      ],
+      [
+        0.015,
+        0,
+        0.02
+      ],
+      [
+        0.03,
+        0.02,
+        0
+      ]
+    ],
+    "bandwidth_Bps": [
+      [
+        null,
+        2000000.0,
+        1000000.0
+      ],
+      [
+        2000000.0,
+        null,
+        1500000.0
+      ],
+      [
+        1000000.0,
+        1500000.0,
+        null
+      ]
+    ],
+    "price_per_byte": [
+      [
+        0,
+        1e-07,
+        2e-07
+      ],
+      [
+        1e-07,
+        0,
+        1e-07
+      ],
+      [
+        2e-07,
+        1e-07,
+        0
+      ]
+    ],
+    "intra_latency_s": 0,
+    "readiness_s": 0.2,
+    "grace_s": 0.3,
+    "cooldown_s": 1,
+    "migration_timeout_s": 3.0,
+    "max_moves": 8,
+    "max_concurrent_moves": 1,
+    "pending_retries": 15,
+    "pending_timeout_s": 20.0,
+    "workflow_queue_limit": 256,
+    "workflow_sla_s": 0.4,
+    "workflow_timeout_s": 2,
+    "cpu_range": [
+      0.85,
+      1.15
+    ],
+    "ram_range": [
+      0.85,
+      1.15
+    ],
+    "bandwidth_range": [
+      0.75,
+      1.25
+    ],
+    "latency_range": [
+      0.8,
+      1.2
+    ],
+    "readiness_range": [
+      0.7,
+      1.5
+    ],
+    "background_cpu_range": [
+      0.05,
+      0.35
+    ],
+    "background_ram_fraction": 0,
+    "ram_latency_penalty": 2.0,
+    "ram_error_coefficient": 0.05,
+    "invocation_memory_bytes": 4096,
+    "memory_baseline_fraction": 0.9649505615234375,
+    "profile_id": "cluster-a-real-003-low-load-v1",
+    "profile_sha256": "",
+    "objectives": [
+      1.0,
+      0.2,
+      0.3,
+      2.0
+    ],
+    "reward_mode": "interval-v1",
+    "migration_start_cost": 0.02,
+    "migration_overlap_cost_per_s": 0.01,
+    "migration_failure_cost": 0.1
+  },
+  "dag": {
+    "name": "sensitivity_chain",
+    "services": [
+      {
+        "name": "a",
+        "cpu_request": 0.05,
+        "memory_bytes": 8388608,
+        "work_core_s": 0.05,
+        "cpu_limit": 1.0,
+        "concurrency": 2,
+        "queue_limit": 128
+      },
+      {
+        "name": "b",
+        "cpu_request": 0.05,
+        "memory_bytes": 8388608,
+        "work_core_s": 0.05,
+        "cpu_limit": 1.0,
+        "concurrency": 2,
+        "queue_limit": 128
+      }
+    ],
+    "edges": [
+      {
+        "parent": "a",
+        "child": "b",
+        "bytes_per_workflow": 10000
+      }
+    ]
+  },
+  "trace": {
+    "source": "SIMULATED",
+    "seed": 70103,
+    "scenario": "ram_pressure_errors",
+    "cpu_capacity": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "ram_capacity": [
+      1073741824,
+      1073741824,
+      1073741824
+    ],
+    "background_ram_bytes": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "workflow_arrivals_s": [
+      0.20083301405102547,
+      0.40356048500140984,
+      0.6114074137222483,
+      0.8129510195734614,
+      1.0000758297927275,
+      1.203532133376585,
+      1.4037767461400674,
+      1.6112134713218669,
+      1.8017508661363186,
+      2.011304737719007,
+      2.2018297570728946,
+      2.4044220769456746,
+      2.613275689098123,
+      2.810323583232199,
+      3.00859796705777,
+      3.200010682510669,
+      3.4086441557910545,
+      3.610118259741758,
+      3.8010656187463656,
+      4.009835576425593,
+      4.2077548828545615,
+      4.400669767186191,
+      4.611814895108548,
+      4.80957513230168
+    ],
+    "faults": [
+      {
+        "kind": "capacity",
+        "time": 0.1,
+        "cluster": 0,
+        "memory_bytes": 1048576
+      }
+    ],
+    "environment": [
+      {
+        "latency_s": [
+          [
+            0,
+            0.01,
+            0.01
+          ],
+          [
+            0.01,
+            0,
+            0.01
+          ],
+          [
+            0.01,
+            0.01,
+            0
+          ]
+        ],
+        "bandwidth_Bps": [
+          [
+            null,
+            1000000.0,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            null,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            1000000.0,
+            null
+          ]
+        ],
+        "background_cpu": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      }
+    ]
+  },
+  "placement": {
+    "a": 0,
+    "b": 1
+  },
+  "ticks": [
+    {
+      "start_s": 0.0,
+      "end_s": 0.25,
+      "reward": -0.7967051506037754,
+      "components": {
+        "latency": -0.12291746487243634,
+        "traffic": -0.0,
+        "balance": -0.6737876857313391,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 1,
+        "workflow_time_s": 0.049166985948974534,
+        "mean_workflow_time_in_interval_s": 0.049166985948974534,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 2.245958952437797,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.25,
+      "end_s": 0.5,
+      "reward": -3.4985175937426023,
+      "components": {
+        "latency": -0.31249999999999994,
+        "traffic": -0.0,
+        "balance": -1.1860175937426025,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 2,
+        "workflow_time_s": 0.24999999999999997,
+        "mean_workflow_time_in_interval_s": 0.12499999999999999,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9533919791420082,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.5,
+      "end_s": 0.75,
+      "reward": -1.6720645757227632,
+      "components": {
+        "latency": -0.48574073284718966,
+        "traffic": -0.0,
+        "balance": -1.1863238428755736,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 2,
+        "workflow_time_s": 0.38859258627775173,
+        "mean_workflow_time_in_interval_s": 0.19429629313887586,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.954412809585245,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.75,
+      "end_s": 1.0,
+      "reward": -1.7595241613502068,
+      "components": {
+        "latency": -0.5725408170221155,
+        "traffic": -0.0,
+        "balance": -1.1869833443280915,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 3,
+        "workflow_time_s": 0.6870489804265385,
+        "mean_workflow_time_in_interval_s": 0.22901632680884618,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9566111477603054,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.0,
+      "end_s": 1.25,
+      "reward": -1.711028327327069,
+      "components": {
+        "latency": -0.5231960184153441,
+        "traffic": -8.65848302540284e-05,
+        "balance": -1.1877457240814708,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 2,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 5,
+        "workflow_time_s": 1.0463920368306883,
+        "mean_workflow_time_in_interval_s": 0.20927840736613765,
+        "traffic_cost": 0.000432924151270142,
+        "cpu_ram_std": 3.9591524136049028,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.25,
+      "end_s": 1.5,
+      "reward": -3.667956699732554,
+      "components": {
+        "latency": -0.479955838478013,
+        "traffic": -0.00011341516974597163,
+        "balance": -1.187887446084795,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 1,
+        "workflow_failed": 0,
+        "workflow_present": 6,
+        "workflow_time_s": 1.1518940123472312,
+        "mean_workflow_time_in_interval_s": 0.1919823353912052,
+        "traffic_cost": 0.0005670758487298581,
+        "cpu_ram_std": 3.95962482028265,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.5,
+      "end_s": 1.75,
+      "reward": -1.7671950329505384,
+      "components": {
+        "latency": -0.5786610536158887,
+        "traffic": -0.0,
+        "balance": -1.1885339793346497,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 6,
+        "workflow_time_s": 1.388786528678133,
+        "mean_workflow_time_in_interval_s": 0.23146442144635548,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9617799311154993,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.75,
+      "end_s": 2.0,
+      "reward": -1.7957353491081112,
+      "components": {
+        "latency": -0.6065175478084577,
+        "traffic": -0.0,
+        "balance": -1.1892178012996535,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 7,
+        "workflow_time_s": 1.6982491338636816,
+        "mean_workflow_time_in_interval_s": 0.2426070191233831,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9640593376655118,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.0,
+      "end_s": 2.25,
+      "reward": -3.7219037717847483,
+      "components": {
+        "latency": -0.5321600328129881,
+        "traffic": -0.0002,
+        "balance": -1.18954373897176,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 2,
+        "workflow_completed": 1,
+        "workflow_failed": 0,
+        "workflow_present": 9,
+        "workflow_time_s": 1.9157761181267574,
+        "mean_workflow_time_in_interval_s": 0.21286401312519526,
+        "traffic_cost": 0.001,
+        "cpu_ram_std": 3.9651457965725334,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.25,
+      "end_s": 2.5,
+      "reward": -1.7722007604927077,
+      "components": {
+        "latency": -0.5821049786262014,
+        "traffic": -0.0,
+        "balance": -1.1900957818665063,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 9,
+        "workflow_time_s": 2.095577923054325,
+        "mean_workflow_time_in_interval_s": 0.23284199145048057,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.966985939555021,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.5,
+      "end_s": 2.75,
+      "reward": -1.7874763890628882,
+      "components": {
+        "latency": -0.596681077725469,
+        "traffic": -0.0002,
+        "balance": -1.1905953113374192,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 10,
+        "workflow_time_s": 2.386724310901876,
+        "mean_workflow_time_in_interval_s": 0.2386724310901876,
+        "traffic_cost": 0.001,
+        "cpu_ram_std": 3.9686510377913975,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.75,
+      "end_s": 3.0,
+      "reward": -3.7464500687799767,
+      "components": {
+        "latency": -0.5555939350699298,
+        "traffic": -0.0,
+        "balance": -1.190856133710047,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 1,
+        "workflow_failed": 0,
+        "workflow_present": 11,
+        "workflow_time_s": 2.4446133143076914,
+        "mean_workflow_time_in_interval_s": 0.22223757402797195,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9695204457001565,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.0,
+      "end_s": 3.25,
+      "reward": -3.7009864241795682,
+      "components": {
+        "latency": -0.5101107181203038,
+        "traffic": -0.0,
+        "balance": -1.1908757060592645,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 2,
+        "workflow_completed": 0,
+        "workflow_failed": 3,
+        "workflow_present": 12,
+        "workflow_time_s": 2.4485314469774586,
+        "mean_workflow_time_in_interval_s": 0.20404428724812154,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.969585686864215,
+        "sla_violations": 3,
+        "resolved": 3,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.25,
+      "end_s": 3.5,
+      "reward": -3.7517094015846,
+      "components": {
+        "latency": -0.561283147587253,
+        "traffic": -0.0,
+        "balance": -1.1904262539973474,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 10,
+        "workflow_time_s": 2.2451325903490122,
+        "mean_workflow_time_in_interval_s": 0.2245132590349012,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9680875133244915,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.5,
+      "end_s": 3.75,
+      "reward": -1.7882165424030974,
+      "components": {
+        "latency": -0.5974704350645608,
+        "traffic": -0.0,
+        "balance": -1.1907461073385366,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 10,
+        "workflow_time_s": 2.389881740258243,
+        "mean_workflow_time_in_interval_s": 0.2389881740258243,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9691536911284553,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.75,
+      "end_s": 4.0,
+      "reward": -3.7593285069494415,
+      "components": {
+        "latency": -0.5683375562249893,
+        "traffic": -0.0,
+        "balance": -1.1909909507244523,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 11,
+        "workflow_time_s": 2.500685247389953,
+        "mean_workflow_time_in_interval_s": 0.2273350224899957,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9699698357481745,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.0,
+      "end_s": 4.25,
+      "reward": -3.7007426881030017,
+      "components": {
+        "latency": -0.5098695401218004,
+        "traffic": -0.0,
+        "balance": -1.1908731479812014,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 2,
+        "workflow_completed": 0,
+        "workflow_failed": 3,
+        "workflow_present": 12,
+        "workflow_time_s": 2.447373792584642,
+        "mean_workflow_time_in_interval_s": 0.20394781604872017,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.969577159937338,
+        "sla_violations": 3,
+        "resolved": 3,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.25,
+      "end_s": 4.5,
+      "reward": -3.753883378499361,
+      "components": {
+        "latency": -0.563438077439871,
+        "traffic": -0.0,
+        "balance": -1.1904453010594898,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 10,
+        "workflow_time_s": 2.2537523097594843,
+        "mean_workflow_time_in_interval_s": 0.22537523097594842,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9681510035316325,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.5,
+      "end_s": 4.75,
+      "reward": -1.7877886344928182,
+      "components": {
+        "latency": -0.5970462762228638,
+        "traffic": -0.0,
+        "balance": -1.1907423582699546,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 10,
+        "workflow_time_s": 2.3881851048914555,
+        "mean_workflow_time_in_interval_s": 0.23881851048914554,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.969141194233182,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.75,
+      "end_s": 5.0,
+      "reward": -3.7593430110518407,
+      "components": {
+        "latency": -0.5683519206660262,
+        "traffic": -0.0,
+        "balance": -1.1909910903858143,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 1,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 11,
+        "workflow_time_s": 2.500748450930516,
+        "mean_workflow_time_in_interval_s": 0.22734076826641053,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9699703012860477,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.0,
+      "end_s": 5.25,
+      "reward": -3.729889917986319,
+      "components": {
+        "latency": -0.5396548330197781,
+        "traffic": -0.0,
+        "balance": -1.1902350849665406,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 0,
+        "workflow_completed": 0,
+        "workflow_failed": 3,
+        "workflow_present": 10,
+        "workflow_time_s": 2.1586193320791125,
+        "mean_workflow_time_in_interval_s": 0.21586193320791125,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.967450283221802,
+        "sla_violations": 3,
+        "resolved": 3,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.25,
+      "end_s": 5.5,
+      "reward": -3.7815031986490366,
+      "components": {
+        "latency": -0.592372912782521,
+        "traffic": -0.0,
+        "balance": -1.1891302858665154,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 0,
+        "workflow_completed": 0,
+        "workflow_failed": 1,
+        "workflow_present": 7,
+        "workflow_time_s": 1.658644155791059,
+        "mean_workflow_time_in_interval_s": 0.23694916511300843,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.9637676195550515,
+        "sla_violations": 1,
+        "resolved": 1,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.5,
+      "end_s": 5.75,
+      "reward": -1.8137797286213266,
+      "components": {
+        "latency": -0.625,
+        "traffic": -0.0,
+        "balance": -1.1887797286213266,
+        "sla": -0.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 0,
+        "workflow_completed": 0,
+        "workflow_failed": 0,
+        "workflow_present": 6,
+        "workflow_time_s": 1.5,
+        "mean_workflow_time_in_interval_s": 0.25,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.962599095404422,
+        "sla_violations": 0,
+        "resolved": 0,
+        "sla_resolved": 0.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.75,
+      "end_s": 6,
+      "reward": -3.397135166637435,
+      "components": {
+        "latency": -0.21055337238826094,
+        "traffic": -0.0,
+        "balance": -1.186581794249174,
+        "sla": -2.0,
+        "migration": -0.0
+      },
+      "interval": {
+        "elapsed_s": 0.25,
+        "workflow_arrivals": 0,
+        "workflow_completed": 0,
+        "workflow_failed": 5,
+        "workflow_present": 6,
+        "workflow_time_s": 0.5053280937318263,
+        "mean_workflow_time_in_interval_s": 0.08422134895530438,
+        "traffic_cost": 0.0,
+        "cpu_ram_std": 3.955272647497247,
+        "sla_violations": 5,
+        "resolved": 5,
+        "sla_resolved": 1.0,
+        "migration_started": 0,
+        "migration_failed": 0,
+        "migration_overlap_service_s": 0.0
+      },
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    }
+  ],
+  "workflow_ledger": [
+    {
+      "id": 0,
+      "arrival": 0.20083301405102547,
+      "finish": 1.3056707584872986,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 1,
+      "arrival": 0.40356048500140984,
+      "finish": 0.40356048500140984,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 2,
+      "arrival": 0.6114074137222483,
+      "finish": 2.1289106129186584,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 3,
+      "arrival": 0.8129510195734614,
+      "finish": 2.75493689753989,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 4,
+      "arrival": 1.0000758297927275,
+      "finish": 3.0000758297927277,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 5,
+      "arrival": 1.203532133376585,
+      "finish": 3.203532133376585,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 6,
+      "arrival": 1.4037767461400674,
+      "finish": 3.4037767461400676,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 7,
+      "arrival": 1.6112134713218669,
+      "finish": 3.203532133376585,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 8,
+      "arrival": 1.8017508661363186,
+      "finish": 3.8017508661363184,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 9,
+      "arrival": 2.011304737719007,
+      "finish": 4.011304737719007,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 10,
+      "arrival": 2.2018297570728946,
+      "finish": 4.201829757072895,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 11,
+      "arrival": 2.4044220769456746,
+      "finish": 4.404422076945675,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 12,
+      "arrival": 2.613275689098123,
+      "finish": 4.201829757072895,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 13,
+      "arrival": 2.810323583232199,
+      "finish": 4.810323583232199,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 14,
+      "arrival": 3.00859796705777,
+      "finish": 5.00859796705777,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 15,
+      "arrival": 3.200010682510669,
+      "finish": 5.200010682510669,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 16,
+      "arrival": 3.4086441557910545,
+      "finish": 5.4086441557910545,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 17,
+      "arrival": 3.610118259741758,
+      "finish": 5.200010682510669,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 18,
+      "arrival": 3.8010656187463656,
+      "finish": 5.801065618746366,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 19,
+      "arrival": 4.009835576425593,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 20,
+      "arrival": 4.2077548828545615,
+      "finish": 5.801065618746366,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 21,
+      "arrival": 4.400669767186191,
+      "finish": 5.801065618746366,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 22,
+      "arrival": 4.611814895108548,
+      "finish": 5.801065618746366,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 23,
+      "arrival": 4.80957513230168,
+      "finish": 5.801065618746366,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    }
+  ],
+  "events": [
+    {
+      "time_s": 0.0,
+      "event": "DAG_ARRIVAL",
+      "dag": "sensitivity_chain"
+    },
+    {
+      "time_s": 0.1,
+      "event": "FAULT",
+      "detail": {
+        "kind": "capacity",
+        "time": 0.1,
+        "cluster": 0,
+        "memory_bytes": 1048576
+      }
+    },
+    {
+      "time_s": 0.1,
+      "event": "OVERLOADED",
+      "cluster": 0,
+      "cpu_reserved": 0.05,
+      "ram_reserved": 8388608.0,
+      "cpu_capacity": 1.5,
+      "ram_capacity": 1048576.0
+    },
+    {
+      "time_s": 0.40356048500140984,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 1,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 3.0000758297927277,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 4,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.203532133376585,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 5,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.203532133376585,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 7,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 3.4037767461400676,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 6,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.8017508661363184,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 8,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.011304737719007,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 9,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.201829757072895,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 10,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.201829757072895,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 12,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 4.404422076945675,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 11,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.810323583232199,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 13,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.00859796705777,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 14,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.200010682510669,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 15,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.200010682510669,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 17,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.4086441557910545,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 16,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.801065618746366,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 18,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.801065618746366,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 20,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.801065618746366,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 21,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.801065618746366,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 22,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.801065618746366,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 23,
+      "reason": "ram_pressure"
+    }
+  ],
+  "summary": {
+    "source": "SIMULATED",
+    "seed": 70103,
+    "case": "ram_pressure_errors",
+    "arrivals_hash": "34d03a82faa008b02079eafc3eba76887305ac4da00a22cc577c3a0da4c6d3f0",
+    "trace_hash": "7331e11bdf9800cb7384621cf903ca8f17f8eeb1dbc1b3c98b767d1ea0f09e03",
+    "dag_hash": "c75678d5f1314496936f1647f501e6a5b44c7e5f82ac1a242c222912d443752d",
+    "workflow_arrivals": 24,
+    "workflow_completed": 3,
+    "workflow_failed": 20,
+    "workflow_unfinished": 1,
+    "service_invocations": 27,
+    "invocations_completed": 6,
+    "invocations_failed": 8,
+    "invocations_cancelled": 12,
+    "e2e_mean_s": 1.5214422738663707,
+    "e2e_p95_s": 1.9419858779664283,
+    "e2e_p99_s": 1.9419858779664283,
+    "completed_latency_samples": 3,
+    "traffic_bytes": 30000.0,
+    "traffic_cost": 0.003,
+    "cpu_usage_std": 0.303750392666494,
+    "ram_usage_std": 3.589083800789551,
+    "cpu_reservation_std": 0.015713484026367734,
+    "ram_reservation_std": 3.706634204377389,
+    "cpu_utilization": 0.28700618466477684,
+    "ram_utilization": 2.541613036573018,
+    "cpu_reservation": 0.022222222222222213,
+    "ram_reservation": 2.6248697916666663,
+    "resource_waste": 0.04162837754682428,
+    "sla_violation_resolved": 1.0,
+    "sla_violations": 23,
+    "sla_censored": 1,
+    "throughput_workflows_s": 0.5,
+    "migration_started": 0,
+    "migration_completed": 0,
+    "migration_failed": 0,
+    "migration_latency_mean_s": 0.0,
+    "migration_overlap_service_s": 0.0,
+    "workflow_time_s": 40.49970419550641,
+    "migration_downtime_service_s": 0.0,
+    "overloaded_cluster_s": 5.9,
+    "pending_service_s": 0.0,
+    "overloaded_ticks": 24,
+    "pending_ticks": 0,
+    "queue_mean_s": 1.0187192659052857,
+    "errors_by_type": {
+      "ram_pressure": 8,
+      "workflow_timeout": 12
+    },
+    "workflow_time_mean_s": 1.6874876748127665,
+    "transfer_mean_s": 0.020000000666666445,
+    "reward_sum": -66.42106447981578,
+    "first_tick_reward": -0.7967051506037754,
+    "late_idle_reward": -49.75233758927816
+  }
+}

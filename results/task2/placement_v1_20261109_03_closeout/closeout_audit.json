@@ -1,0 +1,667 @@
+{
+  "utc": "2026-11-09T07:11:30.553034+00:00",
+  "status": "PASS",
+  "protected_files": 232,
+  "changed": [],
+  "config_fingerprint": "64fe5cac8c790d5589bd1a3139063ef622ea1313596c664a1f3d0cc8bfe3c24a",
+  "schema_version": "placement-v1",
+  "schema_hash": "bacc255d57fbb1b405f55470a25e17f3e3c0085e338824851ebcdb95357996ab",
+  "schema": {
+    "env_version": "placement-v1",
+    "action_kind": "workload_placement",
+    "agent_ownership": [
+      "service_0",
+      "service_1",
+      "service_2"
+    ],
+    "cluster_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "actions": {
+      "KEEP": 0,
+      "MOVE_A": 1,
+      "MOVE_B": 2,
+      "MOVE_C": 3
+    },
+    "features": [
+      {
+        "name": "cluster.A.available",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.cpu_capacity",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.memory_capacity",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.A.cpu_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.memory_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.cpu_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.memory_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.A.completed_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.A.latency_mean_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.A.latency_p95_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.A.error_fraction",
+        "unit": "fraction",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.resource_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.app_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.A.age_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "cluster.A.reservation_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.available",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.cpu_capacity",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.memory_capacity",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.B.cpu_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.memory_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.cpu_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.memory_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.B.completed_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.B.latency_mean_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.B.latency_p95_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.B.error_fraction",
+        "unit": "fraction",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.resource_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.app_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.B.age_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "cluster.B.reservation_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.available",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.cpu_capacity",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.memory_capacity",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "cluster.C.cpu_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.memory_utilization",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.cpu_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.memory_reservation",
+        "unit": "fraction of allocatable",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.C.completed_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "cluster.C.latency_mean_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.C.latency_p95_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "cluster.C.error_fraction",
+        "unit": "fraction",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.resource_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.app_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "cluster.C.age_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "cluster.C.reservation_valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.active.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.active.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.active.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.active.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.target.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.target.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.target.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.target.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.source.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.source.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.source.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.source.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.phase.IDLE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.phase.PREPARING",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.phase.GRACE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.remaining_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_0.cooldown_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_0.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "service.service_0.cpu_request",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.memory_request",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.service_0.ready",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.migration_count",
+        "unit": "completed moves",
+        "scale": 20
+      },
+      {
+        "name": "service.service_0.valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_0.slo_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "service.service_1.active.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.active.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.active.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.active.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.target.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.target.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.target.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.target.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.source.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.source.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.source.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.source.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.phase.IDLE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.phase.PREPARING",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.phase.GRACE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.remaining_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_1.cooldown_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_1.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "service.service_1.cpu_request",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.memory_request",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.service_1.ready",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.migration_count",
+        "unit": "completed moves",
+        "scale": 20
+      },
+      {
+        "name": "service.service_1.valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_1.slo_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "service.service_2.active.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.active.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.active.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.active.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.target.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.target.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.target.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.target.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.source.NONE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.source.A",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.source.B",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.source.C",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.phase.IDLE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.phase.PREPARING",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.phase.GRACE",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.remaining_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_2.cooldown_s",
+        "unit": "seconds",
+        "scale": 30
+      },
+      {
+        "name": "service.service_2.incoming_rps",
+        "unit": "requests/second",
+        "scale": 100
+      },
+      {
+        "name": "service.service_2.cpu_request",
+        "unit": "cores",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.memory_request",
+        "unit": "bytes",
+        "scale": 1073741824
+      },
+      {
+        "name": "service.service_2.ready",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.migration_count",
+        "unit": "completed moves",
+        "scale": 20
+      },
+      {
+        "name": "service.service_2.valid",
+        "unit": "boolean",
+        "scale": 1
+      },
+      {
+        "name": "service.service_2.slo_ms",
+        "unit": "milliseconds",
+        "scale": 100
+      },
+      {
+        "name": "own_workload.service_0",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "own_workload.service_1",
+        "unit": "one_hot",
+        "scale": 1
+      },
+      {
+        "name": "own_workload.service_2",
+        "unit": "one_hot",
+        "scale": 1
+      }
+    ],
+    "dtype": "float32",
+    "clip": [
+      0,
+      10
+    ],
+    "missing_value": "zero placeholder plus explicit validity masks; invalid resources disable moves",
+    "freshness_max_s": 30,
+    "size": 123,
+    "horizon_feature": false
+  },
+  "statuses": {
+    "A1": "DONE",
+    "A2": "DONE",
+    "A3": "DONE",
+    "A4": "BLOCKED",
+    "A5": "PENDING",
+    "A6": "DONE"
+  },
+  "closed_loop_ready": false,
+  "A4_diagnostics": "connectivity.json",
+  "training_executed": false,
+  "note": "150 replay assertions đã chạy; thay đổi sau tính toán chỉ ở console UTF-8 và nội dung báo cáo/SSH diagnostics. Source Placement V1 và toàn bộ artifacts cũ khớp hash."
+}

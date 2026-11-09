@@ -1,0 +1,123 @@
+{
+  "env_version": "placement-v1",
+  "action_kind": "workload_placement",
+  "source": "real_fresh_capture",
+  "timestamp_utc": "2026-11-09T12:12:43.063793+00:00",
+  "historical_only": true,
+  "clusters": {
+    "A": {
+      "available": 1,
+      "cpu_capacity": 2.0,
+      "memory_capacity": 2063224832,
+      "cpu_utilization": 0.049250012,
+      "memory_utilization": 0.594704963302807,
+      "cpu_reservation": 0.125,
+      "memory_reservation": 0.08741416311142963,
+      "incoming_rps": null,
+      "completed_rps": null,
+      "latency_mean_ms": null,
+      "latency_p95_ms": null,
+      "error_fraction": null,
+      "resource_valid": 1,
+      "app_valid": 0,
+      "age_s": 20.063793,
+      "reservation_valid": 1
+    },
+    "B": {
+      "available": 0,
+      "cpu_capacity": null,
+      "memory_capacity": null,
+      "cpu_utilization": null,
+      "memory_utilization": null,
+      "cpu_reservation": null,
+      "memory_reservation": null,
+      "incoming_rps": null,
+      "completed_rps": null,
+      "latency_mean_ms": null,
+      "latency_p95_ms": null,
+      "error_fraction": null,
+      "resource_valid": 0,
+      "app_valid": 0,
+      "age_s": 30,
+      "reservation_valid": 0
+    },
+    "C": {
+      "available": 0,
+      "cpu_capacity": null,
+      "memory_capacity": null,
+      "cpu_utilization": null,
+      "memory_utilization": null,
+      "cpu_reservation": null,
+      "memory_reservation": null,
+      "incoming_rps": null,
+      "completed_rps": null,
+      "latency_mean_ms": null,
+      "latency_p95_ms": null,
+      "error_fraction": null,
+      "resource_valid": 0,
+      "app_valid": 0,
+      "age_s": 30,
+      "reservation_valid": 0
+    }
+  },
+  "services": {
+    "service_0": {
+      "active": "A",
+      "source": null,
+      "target": null,
+      "phase": "IDLE",
+      "remaining_s": 0,
+      "cooldown_s": 0,
+      "incoming_rps": null,
+      "cpu_request": 0.05,
+      "memory_request": 33554432.0,
+      "ready": 1,
+      "migration_count": 0,
+      "valid": 1,
+      "slo_ms": 100
+    },
+    "service_1": {
+      "active": null,
+      "source": null,
+      "target": null,
+      "phase": "IDLE",
+      "remaining_s": 0,
+      "cooldown_s": 0,
+      "incoming_rps": null,
+      "cpu_request": null,
+      "memory_request": null,
+      "ready": 0,
+      "migration_count": 0,
+      "valid": 0,
+      "slo_ms": 100
+    },
+    "service_2": {
+      "active": null,
+      "source": null,
+      "target": null,
+      "phase": "IDLE",
+      "remaining_s": 0,
+      "cooldown_s": 0,
+      "incoming_rps": null,
+      "cpu_request": null,
+      "memory_request": null,
+      "ready": 0,
+      "migration_count": 0,
+      "valid": 0,
+      "slo_ms": 100
+    }
+  },
+  "mapping": {
+    "service_0": {
+      "namespace": "cloud-calibration",
+      "pod_name": "calibration-work-66587db7cb-7w7dc",
+      "pod_uid": "9102087d-4f66-4f76-9dd2-474b21532780",
+      "replicaset_name": "calibration-work-66587db7cb",
+      "replicaset_uid": "c0e2688d-c171-40e9-b906-abd08d588c59",
+      "deployment_name": "calibration-work",
+      "deployment_uid": "5f078926-e1e0-477b-8470-b9401469f1af",
+      "deployment_identity_verified": true,
+      "pod_identity_verified": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "max_users": 8,
+  "spawn_rate": 1,
+  "wait_min_s": 1,
+  "wait_max_s": 2,
+  "stop_error_fraction": 0.1,
+  "stop_latency_ms": 1000,
+  "phases": [
+    {"name": "stable", "seconds": 30, "start_users": 1, "end_users": 1},
+    {"name": "ramp_up", "seconds": 30, "start_users": 1, "end_users": 3},
+    {"name": "spike", "seconds": 15, "start_users": 6, "end_users": 6},
+    {"name": "recovery", "seconds": 45, "start_users": 1, "end_users": 1}
+  ]
+}

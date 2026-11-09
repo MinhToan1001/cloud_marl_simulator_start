@@ -1,0 +1,26 @@
+[
+  {
+    "case": "old_without_source_snapshot",
+    "result": "REJECTED_AS_REQUIRED",
+    "exit_code": 1,
+    "diagnostic": "AssertionError: Code hiện tại khác run; chỉ audit lịch sử bằng --source-snapshot tường minh"
+  },
+  {
+    "case": "old_without_declared_transition",
+    "result": "REJECTED_AS_REQUIRED",
+    "exit_code": 1,
+    "diagnostic": "AssertionError: Mọi delta phải có transition old/new/reason tường minh; không có ngoại lệ theo prefix"
+  },
+  {
+    "case": "tampered_new_hash",
+    "result": "REJECTED_AS_REQUIRED",
+    "exit_code": 1,
+    "diagnostic": "AssertionError"
+  },
+  {
+    "case": "optimized_python",
+    "result": "REJECTED_AS_REQUIRED",
+    "exit_code": 1,
+    "diagnostic": "RuntimeError: Không chạy verifier bằng python -O vì các assert sẽ bị bỏ qua"
+  }
+]

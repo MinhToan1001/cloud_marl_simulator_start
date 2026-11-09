@@ -1,0 +1,22 @@
+--- CLI executed for run _05 (archived)
++++ current CLI
+@@ -82,16 +82,9 @@
+         'code_fingerprints':code_fingerprints(),'cli_fingerprint':file_hash(__file__),'schema_hash':manifest()['schema_hash'],
+         'config_fingerprint':fingerprint(config.to_dict()),'trace_hashes':{p.name:file_hash(p) for p in traces_dir.glob('*.json')},
+         'machine':{'python':sys.version,'platform':platform.platform()},'training':False,'closed_loop_ready':False})
+-    lines=['# Kết quả smoke Task 3 — SIMULATED','','192 episode: 4 mẫu DAG × 6 scenario × 2 seed mới × 4 heuristic; không huấn luyện MARL. Một trace dùng chung mọi DAG/policy trong cùng scenario và seed.','',
+-           '| Heuristic | E2E mean (s) | Traffic (bytes) | CPU std | RAM std | SLA resolved |','|---|---:|---:|---:|---:|---:|']
+-    for method in METHODS:
+-        metrics={r['metric']:r['mean'] for r in aggregate if r['method']==method}
+-        lines.append('| '+method+' | '+' | '.join(f'{metrics[k]:.6f}' for k in ('e2e_mean_s','traffic_bytes','cpu_usage_std','ram_usage_std','sla_violation_resolved'))+' |')
+-    lines += ['','Trung bình đều giữa episode; p95/p99 trong metrics.csv là phân vị workflow từng episode, không phải phân vị gộp. Completed-only latency phải đọc cùng failed/unfinished. Heuristic random-valid có thể migration nhiều hơn và chịu overlap; không kết luận thứ hạng MARL.','',
+-              'Calibration V1 low-load, CPU sai số 60,86%; capacity tối đa chưa biết. B/C, WAN, workload DAG, capacity và faults đều giả lập. Không dùng seed test 30001–30005 để tune.','',
+-              'Bằng chứng: [metrics](smoke/metrics.csv), [aggregate](smoke/aggregate.csv), [contract](smoke/contract.json), [metadata](smoke/metadata.json), [traces](smoke/traces/), [ledgers](smoke/episodes/), [JUnit](validation/junit.xml).',
+-              '', 'Tái hiện: `.venv-task2\\Scripts\\python.exe -X utf8 -m cli.task3 --output results/task3/<run_moi>`; stage từ chối ghi đè.']
+-    (output/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
++    write_json(output/'report_summary.json',{'canonical_report':'docs/task3/REPORT.md','source':'SIMULATED',
++        'episodes':len(rows),'aggregate':aggregate,
++        'note':'Mỗi task có một báo cáo tổng hợp trong docs; không sinh Markdown lẻ trong results.'})
+ 
+ 
+ def validate(output,test_python=None):

@@ -1,0 +1,59 @@
+# Optional read-only identity for the collector. No exec/proxy/write permissions.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: calibration-reader
+  namespace: cloud-calibration
+automountServiceAccountToken: false
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cloud-calibration-node-reader
+rules:
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["get", "list"]
+  - apiGroups: ["metrics.k8s.io"]
+    resources: ["nodes"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cloud-calibration-node-reader
+subjects:
+  - kind: ServiceAccount
+    name: calibration-reader
+    namespace: cloud-calibration
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cloud-calibration-node-reader
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: calibration-pod-reader
+  namespace: cloud-calibration
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+  - apiGroups: ["metrics.k8s.io"]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: calibration-pod-reader
+  namespace: cloud-calibration
+subjects:
+  - kind: ServiceAccount
+    name: calibration-reader
+    namespace: cloud-calibration
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: calibration-pod-reader

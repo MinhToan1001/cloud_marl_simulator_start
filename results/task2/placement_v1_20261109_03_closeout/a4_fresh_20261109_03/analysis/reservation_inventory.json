@@ -1,0 +1,162 @@
+{
+  "source": "REAL_DERIVED",
+  "nodes": {
+    "k3s-a": {
+      "cpu": 0.25,
+      "memory": 180355072.0
+    }
+  },
+  "pods": [
+    {
+      "namespace": "cloud-calibration",
+      "name": "calibration-work-66587db7cb-7w7dc",
+      "uid": "9102087d-4f66-4f76-9dd2-474b21532780",
+      "node": "k3s-a",
+      "included": true,
+      "effective_request": {
+        "cpu": 0.05,
+        "memory": 33554432.0
+      },
+      "raw_resources": {
+        "nodeName": "k3s-a",
+        "containers": [
+          {
+            "name": "api",
+            "resources": {
+              "limits": {
+                "cpu": "250m",
+                "memory": "96Mi"
+              },
+              "requests": {
+                "cpu": "50m",
+                "memory": "32Mi"
+              }
+            }
+          }
+        ],
+        "initContainers": [],
+        "ephemeralContainers": []
+      },
+      "resize_status": null
+    },
+    {
+      "namespace": "kube-system",
+      "name": "coredns-577d995dff-lt7cc",
+      "uid": "abf8f602-024a-431d-8be8-e1a13e57d497",
+      "node": "k3s-a",
+      "included": true,
+      "effective_request": {
+        "cpu": 0.1,
+        "memory": 73400320.0
+      },
+      "raw_resources": {
+        "nodeName": "k3s-a",
+        "containers": [
+          {
+            "name": "coredns",
+            "resources": {
+              "limits": {
+                "memory": "170Mi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "70Mi"
+              }
+            }
+          }
+        ],
+        "initContainers": [],
+        "ephemeralContainers": []
+      },
+      "resize_status": null
+    },
+    {
+      "namespace": "kube-system",
+      "name": "helm-install-gateway-api-crd-df4fr",
+      "uid": "5c693e25-5e91-4503-bcac-de5440e4eb6c",
+      "node": "k3s-a",
+      "included": false,
+      "effective_request": {
+        "cpu": 0.1,
+        "memory": 10000000.0
+      },
+      "raw_resources": {
+        "nodeName": "k3s-a",
+        "containers": [
+          {
+            "name": "helm",
+            "resources": {
+              "limits": {
+                "cpu": "32",
+                "memory": "32G"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "10M"
+              }
+            }
+          }
+        ],
+        "initContainers": [],
+        "ephemeralContainers": []
+      },
+      "resize_status": null
+    },
+    {
+      "namespace": "kube-system",
+      "name": "local-path-provisioner-56c6584955-xlhnv",
+      "uid": "0b1e155e-6e14-437d-9d25-2bea1a969639",
+      "node": "k3s-a",
+      "included": true,
+      "effective_request": {
+        "cpu": 0.0,
+        "memory": 0.0
+      },
+      "raw_resources": {
+        "nodeName": "k3s-a",
+        "containers": [
+          {
+            "name": "local-path-provisioner",
+            "resources": {}
+          }
+        ],
+        "initContainers": [],
+        "ephemeralContainers": []
+      },
+      "resize_status": null
+    },
+    {
+      "namespace": "kube-system",
+      "name": "metrics-server-778c4649b4-5hpmp",
+      "uid": "bf88e82e-d0af-46f7-b7e3-3749458dd7da",
+      "node": "k3s-a",
+      "included": true,
+      "effective_request": {
+        "cpu": 0.1,
+        "memory": 73400320.0
+      },
+      "raw_resources": {
+        "nodeName": "k3s-a",
+        "containers": [
+          {
+            "name": "metrics-server",
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "70Mi"
+              }
+            }
+          }
+        ],
+        "initContainers": [],
+        "ephemeralContainers": []
+      },
+      "resize_status": null
+    }
+  ],
+  "sources": [
+    "https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/",
+    "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/"
+  ],
+  "note": "Terminal pods excluded; terminating non-terminal remain. allocatedResources max is conservative for resize."
+}

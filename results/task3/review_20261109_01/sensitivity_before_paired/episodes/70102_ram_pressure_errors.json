@@ -1,0 +1,896 @@
+{
+  "config": {
+    "seconds": 6,
+    "decision_s": 0.25,
+    "dag_arrival_s": 0,
+    "cpu_cores": [
+      1.0,
+      1.25,
+      1.5
+    ],
+    "memory_bytes": [
+      268435456,
+      402653184,
+      536870912
+    ],
+    "latency_s": [
+      [
+        0,
+        0.015,
+        0.03
+      ],
+      [
+        0.015,
+        0,
+        0.02
+      ],
+      [
+        0.03,
+        0.02,
+        0
+      ]
+    ],
+    "bandwidth_Bps": [
+      [
+        null,
+        2000000.0,
+        1000000.0
+      ],
+      [
+        2000000.0,
+        null,
+        1500000.0
+      ],
+      [
+        1000000.0,
+        1500000.0,
+        null
+      ]
+    ],
+    "price_per_byte": [
+      [
+        0,
+        1e-07,
+        2e-07
+      ],
+      [
+        1e-07,
+        0,
+        1e-07
+      ],
+      [
+        2e-07,
+        1e-07,
+        0
+      ]
+    ],
+    "intra_latency_s": 0,
+    "readiness_s": 0.2,
+    "grace_s": 0.3,
+    "cooldown_s": 1,
+    "migration_timeout_s": 3.0,
+    "max_moves": 8,
+    "max_concurrent_moves": 1,
+    "pending_retries": 15,
+    "pending_timeout_s": 20.0,
+    "workflow_queue_limit": 256,
+    "workflow_sla_s": 0.4,
+    "workflow_timeout_s": 2,
+    "cpu_range": [
+      0.85,
+      1.15
+    ],
+    "ram_range": [
+      0.85,
+      1.15
+    ],
+    "bandwidth_range": [
+      0.75,
+      1.25
+    ],
+    "latency_range": [
+      0.8,
+      1.2
+    ],
+    "readiness_range": [
+      0.7,
+      1.5
+    ],
+    "background_cpu_range": [
+      0.05,
+      0.35
+    ],
+    "background_ram_fraction": 0,
+    "ram_latency_penalty": 2.0,
+    "ram_error_coefficient": 0.05,
+    "invocation_memory_bytes": 4096,
+    "memory_baseline_fraction": 0.9649505615234375,
+    "profile_id": "cluster-a-real-003-low-load-v1",
+    "profile_sha256": "",
+    "objectives": [
+      1.0,
+      0.2,
+      0.3,
+      2.0
+    ]
+  },
+  "dag": {
+    "name": "sensitivity_chain",
+    "services": [
+      {
+        "name": "a",
+        "cpu_request": 0.05,
+        "memory_bytes": 8388608,
+        "work_core_s": 0.05,
+        "cpu_limit": 1.0,
+        "concurrency": 2,
+        "queue_limit": 128
+      },
+      {
+        "name": "b",
+        "cpu_request": 0.05,
+        "memory_bytes": 8388608,
+        "work_core_s": 0.05,
+        "cpu_limit": 1.0,
+        "concurrency": 2,
+        "queue_limit": 128
+      }
+    ],
+    "edges": [
+      {
+        "parent": "a",
+        "child": "b",
+        "bytes_per_workflow": 10000
+      }
+    ]
+  },
+  "trace": {
+    "source": "SIMULATED",
+    "seed": 70102,
+    "scenario": "ram_pressure_errors",
+    "cpu_capacity": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "ram_capacity": [
+      1073741824,
+      1073741824,
+      1073741824
+    ],
+    "background_ram_bytes": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "workflow_arrivals_s": [
+      0.2104359004865933,
+      0.41263566819855146,
+      0.6095753275691879,
+      0.812256258091943,
+      1.005504256159841,
+      1.2113959060208808,
+      1.4133911787553481,
+      1.6069757457102956,
+      1.814218569359075,
+      2.0076561311642527,
+      2.201654303545324,
+      2.4054508586443326,
+      2.6146119139102844,
+      2.807073587309988,
+      3.009811472906087,
+      3.2091038081992522,
+      3.4061389284626107,
+      3.602140469303315,
+      3.810407337206308,
+      4.00584064520758,
+      4.201760065090832,
+      4.40917727661687,
+      4.608021652146839,
+      4.805275289691645
+    ],
+    "faults": [
+      {
+        "kind": "capacity",
+        "time": 0.1,
+        "cluster": 0,
+        "memory_bytes": 1048576
+      }
+    ],
+    "environment": [
+      {
+        "latency_s": [
+          [
+            0,
+            0.01,
+            0.01
+          ],
+          [
+            0.01,
+            0,
+            0.01
+          ],
+          [
+            0.01,
+            0.01,
+            0
+          ]
+        ],
+        "bandwidth_Bps": [
+          [
+            null,
+            1000000.0,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            null,
+            1000000.0
+          ],
+          [
+            1000000.0,
+            1000000.0,
+            null
+          ]
+        ],
+        "background_cpu": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      }
+    ]
+  },
+  "placement": {
+    "a": 0,
+    "b": 1
+  },
+  "ticks": [
+    {
+      "start_s": 0.0,
+      "end_s": 0.25,
+      "reward": -0.6701449908946183,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.25,
+      "end_s": 0.5,
+      "reward": -0.9281778171457505,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.5,
+      "end_s": 0.75,
+      "reward": -1.0144119841725936,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 0.75,
+      "end_s": 1.0,
+      "reward": -1.057693314760376,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.0,
+      "end_s": 1.25,
+      "reward": -1.0838147403319915,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.25,
+      "end_s": 1.5,
+      "reward": -3.101507430155185,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.5,
+      "end_s": 1.75,
+      "reward": -6.39942839139333,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 1.75,
+      "end_s": 2.0,
+      "reward": -6.663062049031698,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.0,
+      "end_s": 2.25,
+      "reward": -6.6702246532946425,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.25,
+      "end_s": 2.5,
+      "reward": -6.676181880795766,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.5,
+      "end_s": 2.75,
+      "reward": -6.681114400489042,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 2.75,
+      "end_s": 3.0,
+      "reward": -6.685246892820197,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.0,
+      "end_s": 3.25,
+      "reward": -6.688742393637879,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.25,
+      "end_s": 3.5,
+      "reward": -6.691739999922968,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.5,
+      "end_s": 3.75,
+      "reward": -6.694337569316289,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 3.75,
+      "end_s": 4.0,
+      "reward": -6.696610301108029,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.0,
+      "end_s": 4.25,
+      "reward": -6.698615379529077,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.25,
+      "end_s": 4.5,
+      "reward": -6.700385397110445,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.5,
+      "end_s": 4.75,
+      "reward": -6.701936472195503,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 4.75,
+      "end_s": 5.0,
+      "reward": -6.703340562938362,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.0,
+      "end_s": 5.25,
+      "reward": -6.704566199766182,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.25,
+      "end_s": 5.5,
+      "reward": -6.705659589060473,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.5,
+      "end_s": 5.75,
+      "reward": -6.706627899161826,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    },
+    {
+      "start_s": 5.75,
+      "end_s": 6,
+      "reward": -6.707498060737839,
+      "components": null,
+      "interval": null,
+      "actions": {
+        "agent_0": 0,
+        "agent_1": 0
+      }
+    }
+  ],
+  "workflow_ledger": [
+    {
+      "id": 0,
+      "arrival": 0.2104359004865933,
+      "finish": 1.5246993771701598,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 1,
+      "arrival": 0.41263566819855146,
+      "finish": 1.9301349273121162,
+      "status": "COMPLETED",
+      "sla": true,
+      "failure": ""
+    },
+    {
+      "id": 2,
+      "arrival": 0.6095753275691879,
+      "finish": 1.4546993771701597,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 3,
+      "arrival": 0.812256258091943,
+      "finish": 2.812256258091943,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 4,
+      "arrival": 1.005504256159841,
+      "finish": 3.005504256159841,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 5,
+      "arrival": 1.2113959060208808,
+      "finish": 3.211395906020881,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 6,
+      "arrival": 1.4133911787553481,
+      "finish": 3.413391178755348,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 7,
+      "arrival": 1.6069757457102956,
+      "finish": 3.6069757457102956,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 8,
+      "arrival": 1.814218569359075,
+      "finish": 3.814218569359075,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 9,
+      "arrival": 2.0076561311642527,
+      "finish": 4.007656131164253,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 10,
+      "arrival": 2.201654303545324,
+      "finish": 4.2016543035453235,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 11,
+      "arrival": 2.4054508586443326,
+      "finish": 4.405450858644333,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 12,
+      "arrival": 2.6146119139102844,
+      "finish": 4.614611913910284,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 13,
+      "arrival": 2.807073587309988,
+      "finish": 4.405450858644333,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 14,
+      "arrival": 3.009811472906087,
+      "finish": 5.009811472906087,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 15,
+      "arrival": 3.2091038081992522,
+      "finish": 4.614611913910284,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 16,
+      "arrival": 3.4061389284626107,
+      "finish": 5.40613892846261,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 17,
+      "arrival": 3.602140469303315,
+      "finish": 5.009811472906087,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 18,
+      "arrival": 3.810407337206308,
+      "finish": 5.810407337206308,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "workflow_timeout"
+    },
+    {
+      "id": 19,
+      "arrival": 4.00584064520758,
+      "finish": 5.40613892846261,
+      "status": "FAILED",
+      "sla": true,
+      "failure": "ram_pressure"
+    },
+    {
+      "id": 20,
+      "arrival": 4.201760065090832,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 21,
+      "arrival": 4.40917727661687,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 22,
+      "arrival": 4.608021652146839,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    },
+    {
+      "id": 23,
+      "arrival": 4.805275289691645,
+      "finish": null,
+      "status": "RUNNING",
+      "sla": false,
+      "failure": ""
+    }
+  ],
+  "events": [
+    {
+      "time_s": 0.0,
+      "event": "DAG_ARRIVAL",
+      "dag": "sensitivity_chain"
+    },
+    {
+      "time_s": 0.1,
+      "event": "FAULT",
+      "detail": {
+        "kind": "capacity",
+        "time": 0.1,
+        "cluster": 0,
+        "memory_bytes": 1048576
+      }
+    },
+    {
+      "time_s": 0.1,
+      "event": "OVERLOADED",
+      "cluster": 0,
+      "cpu_reserved": 0.05,
+      "ram_reserved": 8388608.0,
+      "cpu_capacity": 1.5,
+      "ram_capacity": 1048576.0
+    },
+    {
+      "time_s": 1.4546993771701597,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 2,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 2.812256258091943,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 3,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.005504256159841,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 4,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.211395906020881,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 5,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.413391178755348,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 6,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.6069757457102956,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 7,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 3.814218569359075,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 8,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.007656131164253,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 9,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.2016543035453235,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 10,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.405450858644333,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 11,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.405450858644333,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 13,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 4.614611913910284,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 12,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 4.614611913910284,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 15,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.009811472906087,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 14,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.009811472906087,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 17,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.40613892846261,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 16,
+      "reason": "workflow_timeout"
+    },
+    {
+      "time_s": 5.40613892846261,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 19,
+      "reason": "ram_pressure"
+    },
+    {
+      "time_s": 5.810407337206308,
+      "event": "WORKFLOW_FAILED",
+      "workflow_id": 18,
+      "reason": "workflow_timeout"
+    }
+  ],
+  "summary": {
+    "source": "SIMULATED",
+    "seed": 70102,
+    "case": "ram_pressure_errors",
+    "arrivals_hash": "081ef67560dc822c0b9afdd48e3c7f1731fe78b66be17d54455ac94c850ff90c",
+    "trace_hash": "85eaa0129cbf7f650178bf1a491d8a9a3da74b9b461a4e8f59c789b3fa6427e3",
+    "dag_hash": "c75678d5f1314496936f1647f501e6a5b44c7e5f82ac1a242c222912d443752d",
+    "workflow_arrivals": 24,
+    "workflow_completed": 2,
+    "workflow_failed": 18,
+    "workflow_unfinished": 4,
+    "service_invocations": 26,
+    "invocations_completed": 4,
+    "invocations_failed": 5,
+    "invocations_cancelled": 13,
+    "e2e_mean_s": 1.4158813678985656,
+    "e2e_p95_s": 1.5174992591135648,
+    "e2e_p99_s": 1.5174992591135648,
+    "completed_latency_samples": 2,
+    "traffic_bytes": 20000.0,
+    "traffic_cost": 0.002,
+    "cpu_usage_std": 0.30324740999111993,
+    "ram_usage_std": 3.5894013933136293,
+    "cpu_reservation_std": 0.015713484026367734,
+    "ram_reservation_std": 3.7066342043773894,
+    "cpu_utilization": 0.28479867035234846,
+    "ram_utilization": 2.541837592593878,
+    "cpu_reservation": 0.022222222222222223,
+    "ram_reservation": 2.6248697916666672,
+    "resource_waste": 0.041516099536394194,
+    "sla_violation_resolved": 1.0,
+    "sla_violations": 20,
+    "sla_censored": 4,
+    "throughput_workflows_s": 0.3333333333333333,
+    "migration_started": 0,
+    "migration_completed": 0,
+    "migration_failed": 0,
+    "migration_latency_mean_s": 0.0,
+    "migration_downtime_service_s": 0.0,
+    "overloaded_cluster_s": 5.9,
+    "pending_service_s": 0.0,
+    "overloaded_ticks": 24,
+    "pending_ticks": 0,
+    "queue_mean_s": 1.0896787875144514,
+    "errors_by_type": {
+      "ram_pressure": 5,
+      "workflow_timeout": 13
+    },
+    "workflow_time_mean_s": 1.727687798573129,
+    "transfer_mean_s": 0.020000000000000018,
+    "reward_sum": -128.03106836977005,
+    "first_tick_reward": -0.6701449908946183,
+    "late_idle_reward": -107.1128276518845
+  }
+}

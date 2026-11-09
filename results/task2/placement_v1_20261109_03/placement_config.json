@@ -1,0 +1,91 @@
+{
+  "clusters": [
+    {
+      "name": "A",
+      "cpu_cores": 0.5,
+      "memory_bytes": 268435456,
+      "network_ms": 1
+    },
+    {
+      "name": "B",
+      "cpu_cores": 0.75,
+      "memory_bytes": 402653184,
+      "network_ms": 12
+    },
+    {
+      "name": "C",
+      "cpu_cores": 1,
+      "memory_bytes": 536870912,
+      "network_ms": 25
+    }
+  ],
+  "services": [
+    {
+      "name": "service_0",
+      "cpu_request": 0.1,
+      "memory_request": 67108864,
+      "cpu_limit": 0.25,
+      "cpu_work_s": 0.005,
+      "slo_ms": 100,
+      "queue_limit": 80
+    },
+    {
+      "name": "service_1",
+      "cpu_request": 0.1,
+      "memory_request": 67108864,
+      "cpu_limit": 0.25,
+      "cpu_work_s": 0.005,
+      "slo_ms": 100,
+      "queue_limit": 80
+    },
+    {
+      "name": "service_2",
+      "cpu_request": 0.1,
+      "memory_request": 67108864,
+      "cpu_limit": 0.25,
+      "cpu_work_s": 0.005,
+      "slo_ms": 100,
+      "queue_limit": 80
+    }
+  ],
+  "seconds": 180,
+  "decision_s": 5,
+  "cooldown_s": 30,
+  "readiness_s": 5,
+  "timeout_s": 30,
+  "grace_s": 5,
+  "max_moves": 20,
+  "max_concurrent_moves": 1,
+  "background_fraction": [
+    0.1,
+    0.65
+  ],
+  "background_memory_fraction": 0.2,
+  "capacity_factor": [
+    0.8,
+    1.2
+  ],
+  "network_factor": [
+    0.8,
+    1.3
+  ],
+  "readiness_factor": [
+    0.6,
+    1.6
+  ],
+  "latency_mean_ms": 5.5397298984743575,
+  "memory_baseline_bytes": 32378368.0,
+  "cpu_idle_cores": 0.0016481166447472814,
+  "cpu_cores_per_rps": 0.005507892404743891,
+  "profile_id": "cluster-a-real-003-low-load-v1",
+  "profile_sha256": "c054b962e3c0a6e07636b525f86136449e2b13b1153a0143edfe37141ec9f1ad",
+  "reward": {
+    "success": 1.0,
+    "latency": 0.2,
+    "error": 2.0,
+    "slo": 1.0,
+    "waste": 0.1,
+    "move": 0.1,
+    "failed_move": 0.5
+  }
+}

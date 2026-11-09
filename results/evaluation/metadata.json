@@ -1,0 +1,693 @@
+{
+  "data_source": "simulation",
+  "created_at_utc": "2026-11-06T16:50:06.331272+00:00",
+  "model_version": "fifo-batch-v1",
+  "algorithm": "IPPO",
+  "inference": "sample",
+  "policy_rng": "(policy_seed * 1000003 + workload_seed * 9176) modulo (2**63-1); isolated torch RNG",
+  "checkpoint": "D:\\HocTap\\hk7\\VMWare\\cloud_marl_simulator_start\\results\\training\\checkpoints\\best.pt",
+  "checkpoint_episode": 20,
+  "checkpoint_sha256": "a6b191cf4b6b2c7583c8ac09dff562200be5e4015d21c3ea4b3107fb87166455",
+  "policy_seed": 7,
+  "training_seed_range": [
+    1000,
+    1299
+  ],
+  "validation_seeds": [
+    20001,
+    20002,
+    20003
+  ],
+  "testing_seeds": [
+    30001,
+    30002,
+    30003,
+    30004,
+    30005
+  ],
+  "scenarios": [
+    "mixed",
+    "stable",
+    "ramp_up",
+    "spike",
+    "recovery"
+  ],
+  "config": {
+    "seed": 42,
+    "jitter": 0.15,
+    "clusters": [
+      {
+        "name": "A",
+        "capacity": 60,
+        "base_latency_ms": 40,
+        "cpu_cores": 2,
+        "requests_per_core": 30,
+        "memory_mb": 512,
+        "idle_memory_mb": 128,
+        "memory_per_request_mb": 1,
+        "queue_limit": 120
+      },
+      {
+        "name": "B",
+        "capacity": 90,
+        "base_latency_ms": 45,
+        "cpu_cores": 3,
+        "requests_per_core": 30,
+        "memory_mb": 768,
+        "idle_memory_mb": 192,
+        "memory_per_request_mb": 1,
+        "queue_limit": 180
+      },
+      {
+        "name": "C",
+        "capacity": 120,
+        "base_latency_ms": 50,
+        "cpu_cores": 4,
+        "requests_per_core": 30,
+        "memory_mb": 1024,
+        "idle_memory_mb": 256,
+        "memory_per_request_mb": 1,
+        "queue_limit": 240
+      }
+    ],
+    "phases": [
+      {
+        "name": "stable",
+        "seconds": 45,
+        "start_rate": 90,
+        "end_rate": 90
+      },
+      {
+        "name": "ramp_up",
+        "seconds": 45,
+        "start_rate": 90,
+        "end_rate": 190
+      },
+      {
+        "name": "spike",
+        "seconds": 45,
+        "start_rate": 350,
+        "end_rate": 350
+      },
+      {
+        "name": "recovery",
+        "seconds": 45,
+        "start_rate": 180,
+        "end_rate": 180
+      }
+    ]
+  },
+  "scenario_configs": {
+    "mixed": {
+      "seed": 42,
+      "jitter": 0.15,
+      "clusters": [
+        {
+          "name": "A",
+          "capacity": 60,
+          "base_latency_ms": 40,
+          "cpu_cores": 2,
+          "requests_per_core": 30,
+          "memory_mb": 512,
+          "idle_memory_mb": 128,
+          "memory_per_request_mb": 1,
+          "queue_limit": 120
+        },
+        {
+          "name": "B",
+          "capacity": 90,
+          "base_latency_ms": 45,
+          "cpu_cores": 3,
+          "requests_per_core": 30,
+          "memory_mb": 768,
+          "idle_memory_mb": 192,
+          "memory_per_request_mb": 1,
+          "queue_limit": 180
+        },
+        {
+          "name": "C",
+          "capacity": 120,
+          "base_latency_ms": 50,
+          "cpu_cores": 4,
+          "requests_per_core": 30,
+          "memory_mb": 1024,
+          "idle_memory_mb": 256,
+          "memory_per_request_mb": 1,
+          "queue_limit": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "stable",
+          "seconds": 45,
+          "start_rate": 90,
+          "end_rate": 90
+        },
+        {
+          "name": "ramp_up",
+          "seconds": 45,
+          "start_rate": 90,
+          "end_rate": 190
+        },
+        {
+          "name": "spike",
+          "seconds": 45,
+          "start_rate": 350,
+          "end_rate": 350
+        },
+        {
+          "name": "recovery",
+          "seconds": 45,
+          "start_rate": 180,
+          "end_rate": 180
+        }
+      ]
+    },
+    "stable": {
+      "seed": 42,
+      "jitter": 0.15,
+      "clusters": [
+        {
+          "name": "A",
+          "capacity": 60,
+          "base_latency_ms": 40,
+          "cpu_cores": 2,
+          "requests_per_core": 30,
+          "memory_mb": 512,
+          "idle_memory_mb": 128,
+          "memory_per_request_mb": 1,
+          "queue_limit": 120
+        },
+        {
+          "name": "B",
+          "capacity": 90,
+          "base_latency_ms": 45,
+          "cpu_cores": 3,
+          "requests_per_core": 30,
+          "memory_mb": 768,
+          "idle_memory_mb": 192,
+          "memory_per_request_mb": 1,
+          "queue_limit": 180
+        },
+        {
+          "name": "C",
+          "capacity": 120,
+          "base_latency_ms": 50,
+          "cpu_cores": 4,
+          "requests_per_core": 30,
+          "memory_mb": 1024,
+          "idle_memory_mb": 256,
+          "memory_per_request_mb": 1,
+          "queue_limit": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "stable",
+          "seconds": 45,
+          "start_rate": 90,
+          "end_rate": 90
+        }
+      ]
+    },
+    "ramp_up": {
+      "seed": 42,
+      "jitter": 0.15,
+      "clusters": [
+        {
+          "name": "A",
+          "capacity": 60,
+          "base_latency_ms": 40,
+          "cpu_cores": 2,
+          "requests_per_core": 30,
+          "memory_mb": 512,
+          "idle_memory_mb": 128,
+          "memory_per_request_mb": 1,
+          "queue_limit": 120
+        },
+        {
+          "name": "B",
+          "capacity": 90,
+          "base_latency_ms": 45,
+          "cpu_cores": 3,
+          "requests_per_core": 30,
+          "memory_mb": 768,
+          "idle_memory_mb": 192,
+          "memory_per_request_mb": 1,
+          "queue_limit": 180
+        },
+        {
+          "name": "C",
+          "capacity": 120,
+          "base_latency_ms": 50,
+          "cpu_cores": 4,
+          "requests_per_core": 30,
+          "memory_mb": 1024,
+          "idle_memory_mb": 256,
+          "memory_per_request_mb": 1,
+          "queue_limit": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "ramp_up",
+          "seconds": 45,
+          "start_rate": 90,
+          "end_rate": 190
+        }
+      ]
+    },
+    "spike": {
+      "seed": 42,
+      "jitter": 0.15,
+      "clusters": [
+        {
+          "name": "A",
+          "capacity": 60,
+          "base_latency_ms": 40,
+          "cpu_cores": 2,
+          "requests_per_core": 30,
+          "memory_mb": 512,
+          "idle_memory_mb": 128,
+          "memory_per_request_mb": 1,
+          "queue_limit": 120
+        },
+        {
+          "name": "B",
+          "capacity": 90,
+          "base_latency_ms": 45,
+          "cpu_cores": 3,
+          "requests_per_core": 30,
+          "memory_mb": 768,
+          "idle_memory_mb": 192,
+          "memory_per_request_mb": 1,
+          "queue_limit": 180
+        },
+        {
+          "name": "C",
+          "capacity": 120,
+          "base_latency_ms": 50,
+          "cpu_cores": 4,
+          "requests_per_core": 30,
+          "memory_mb": 1024,
+          "idle_memory_mb": 256,
+          "memory_per_request_mb": 1,
+          "queue_limit": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "spike",
+          "seconds": 45,
+          "start_rate": 350,
+          "end_rate": 350
+        }
+      ]
+    },
+    "recovery": {
+      "seed": 42,
+      "jitter": 0.15,
+      "clusters": [
+        {
+          "name": "A",
+          "capacity": 60,
+          "base_latency_ms": 40,
+          "cpu_cores": 2,
+          "requests_per_core": 30,
+          "memory_mb": 512,
+          "idle_memory_mb": 128,
+          "memory_per_request_mb": 1,
+          "queue_limit": 120
+        },
+        {
+          "name": "B",
+          "capacity": 90,
+          "base_latency_ms": 45,
+          "cpu_cores": 3,
+          "requests_per_core": 30,
+          "memory_mb": 768,
+          "idle_memory_mb": 192,
+          "memory_per_request_mb": 1,
+          "queue_limit": 180
+        },
+        {
+          "name": "C",
+          "capacity": 120,
+          "base_latency_ms": 50,
+          "cpu_cores": 4,
+          "requests_per_core": 30,
+          "memory_mb": 1024,
+          "idle_memory_mb": 256,
+          "memory_per_request_mb": 1,
+          "queue_limit": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "spike",
+          "seconds": 45,
+          "start_rate": 350,
+          "end_rate": 350
+        },
+        {
+          "name": "recovery",
+          "seconds": 45,
+          "start_rate": 180,
+          "end_rate": 180
+        }
+      ]
+    }
+  },
+  "workload_runs": [
+    {
+      "scenario": "mixed",
+      "seed": 30001,
+      "seconds": 180,
+      "received": 34002,
+      "workload_sha256": "d9efb06c07ad098353dde0f6ba99e44ed409ce99a79baf84713714b43e05d755",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "mixed",
+      "seed": 30002,
+      "seconds": 180,
+      "received": 34003,
+      "workload_sha256": "05032e2a8e56dc235136e2980d6e53cafc24dadc904347b27d86bcb783109893",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "mixed",
+      "seed": 30003,
+      "seconds": 180,
+      "received": 34077,
+      "workload_sha256": "34c85d58b09066658090aeea8b064e84102d527f4854b81ee1cc04c7aefed5ce",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "mixed",
+      "seed": 30004,
+      "seconds": 180,
+      "received": 34103,
+      "workload_sha256": "9469226fb8bf869477f3cf1ffd249b6cbb2cae856a99e1f1462a6c85651cba86",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "mixed",
+      "seed": 30005,
+      "seconds": 180,
+      "received": 34047,
+      "workload_sha256": "677085cefcdad79e37a0df1bdfcffdaca2b89cecf6a7894b423a3b32328e38f8",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "stable",
+      "seed": 30001,
+      "seconds": 45,
+      "received": 4031,
+      "workload_sha256": "6500497151f25342f2bde5a16e78381dc3ecf5ed476d4f944ea59177a2607757",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "stable",
+      "seed": 30002,
+      "seconds": 45,
+      "received": 4026,
+      "workload_sha256": "b9179dad44f5c1b34714538448e61570578bb619d85b3b06cb011b83939f641c",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "stable",
+      "seed": 30003,
+      "seconds": 45,
+      "received": 3998,
+      "workload_sha256": "eb0744035916d72d4d9e01b7ab8295e7c9d5a029b8b6af4f58ff7982673aeed5",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "stable",
+      "seed": 30004,
+      "seconds": 45,
+      "received": 3975,
+      "workload_sha256": "729f151086cce2a0e2f529b55903da7ede2ee4c215be76faab0a4defaf678c82",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "stable",
+      "seed": 30005,
+      "seconds": 45,
+      "received": 4122,
+      "workload_sha256": "7e3c3e8d02efc540c7367fa4c2bafdec7c27c0abffdd93dabb4d9cdc6d6b8f0a",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "ramp_up",
+      "seed": 30001,
+      "seconds": 45,
+      "received": 6283,
+      "workload_sha256": "ddb0524243d4d8082745ace01e3061ef608c238646c2a2044e1786dce22a1c88",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "ramp_up",
+      "seed": 30002,
+      "seconds": 45,
+      "received": 6290,
+      "workload_sha256": "e12545982aa17c6026e62c5b5287964643eb5b4548180fa35ff1deac426ce70f",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "ramp_up",
+      "seed": 30003,
+      "seconds": 45,
+      "received": 6197,
+      "workload_sha256": "b4779b188d859ff539801f2b6617e58c725121dd99490239ca6fbb771e1e1444",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "ramp_up",
+      "seed": 30004,
+      "seconds": 45,
+      "received": 6163,
+      "workload_sha256": "2344eb088a1f345cdd21e2c9ab3d0cff89cfe20f41f53936438ee828fba2242c",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "ramp_up",
+      "seed": 30005,
+      "seconds": 45,
+      "received": 6421,
+      "workload_sha256": "d6468a40f7fec15e84404f2adc5f5c15b68445b1e49c2a403ddb270609d0dce3",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "spike",
+      "seed": 30001,
+      "seconds": 45,
+      "received": 15687,
+      "workload_sha256": "4c0753dc6d4bc798e7307f915df52d15adcc9215811eaded6610a181364548c0",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "spike",
+      "seed": 30002,
+      "seconds": 45,
+      "received": 15655,
+      "workload_sha256": "842ef5d42a88fe4c2b53cca4da5a5eff57e91c304ef55b861c9ce2a8fe263e51",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "spike",
+      "seed": 30003,
+      "seconds": 45,
+      "received": 15548,
+      "workload_sha256": "8407c6b3b6d76d651a021a2754cf88e96ef0788384bca4f218136b320b08b033",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "spike",
+      "seed": 30004,
+      "seconds": 45,
+      "received": 15456,
+      "workload_sha256": "be63f5647d02ec48c06a7554d8347c9906c19e5393333a96ae2b1f8c9f16e90f",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "spike",
+      "seed": 30005,
+      "seconds": 45,
+      "received": 16028,
+      "workload_sha256": "9ae4632f7e0141b2b333eb62c2d31bd909c01bb7ffc76b99eabcb9a84dba619a",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "seed": 30001,
+      "seconds": 90,
+      "received": 23708,
+      "workload_sha256": "547802eb30aea23e6f5ae4d8828e670f2619de656349286e0e667699ea4709a2",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "seed": 30002,
+      "seconds": 90,
+      "received": 23850,
+      "workload_sha256": "fc98678f535f517695ec0845587f1493c4b8e9d11fc53044f8396be2869defde",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "seed": 30003,
+      "seconds": 90,
+      "received": 23593,
+      "workload_sha256": "437dff6f127c29be9c292098f07c997fd228e96b77adabee2711c233c1fdb5c9",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "seed": 30004,
+      "seconds": 90,
+      "received": 23560,
+      "workload_sha256": "c144ec10c40a3ad32c1a9034a8aea268896db9d3b34c1b912efe35c3c93f9e11",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "seed": 30005,
+      "seconds": 90,
+      "received": 24160,
+      "workload_sha256": "6cb0242593834daced66792a57325c11968c45d3762221198b6012aaa699c144",
+      "methods": [
+        "round_robin",
+        "least_loaded",
+        "marl"
+      ]
+    }
+  ],
+  "policies": [
+    "round_robin",
+    "least_loaded",
+    "marl"
+  ],
+  "drain_at_end": false,
+  "tick_seconds": 1,
+  "python": "3.11.5",
+  "packages": {
+    "matplotlib": "3.10.6",
+    "pytest": "9.0.2",
+    "numpy": "2.2.6",
+    "gymnasium": "1.3.0",
+    "torch": "2.5.1+cu121",
+    "fastapi": "0.121.3",
+    "uvicorn": "0.38.0",
+    "httpx": "0.28.1"
+  },
+  "reward_config": {
+    "throughput": 2.0,
+    "latency": 0.4,
+    "error": 4.0,
+    "queue": 0.5,
+    "overload": 0.2,
+    "imbalance": 0.3,
+    "switching": 0.1,
+    "terminal_queue": 1.0,
+    "latency_scale_ms": 1000.0
+  },
+  "action_step": 0.03
+}

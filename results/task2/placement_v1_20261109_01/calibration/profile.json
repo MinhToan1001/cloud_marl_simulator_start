@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "profile_id": "cluster-a-real-003-low-load-v1",
+  "source": "real",
+  "scope": "one Sample API pod, successful_server_work latency; smoothed pod resource metrics",
+  "run_id": "cluster-a-real-003",
+  "work_config": {
+    "cpu_ms": 5.0,
+    "memory_kib": 64,
+    "max_concurrency": 2
+  },
+  "pod_budget_cpu_cores": 0.25,
+  "pod_budget_memory_bytes": 100663296,
+  "observed_rps_range": [
+    0.27328710947026363,
+    3.2988002429303647
+  ],
+  "samples": 8,
+  "response": {
+    "cpu_idle_cores": 0.0016481166447472814,
+    "cpu_cores_per_rps": 0.005507892404743891,
+    "memory_baseline_bytes": 32378368.0,
+    "service_latency_mean_ms": 5.5397298984743575,
+    "error_fraction": 0.0
+  },
+  "maximum_capacity_rps": null,
+  "input_hashes": {
+    "client/requests.csv": "c7bc74594684f65a9ca3c061c4d0261ce031dfb4ff9f8d35d042076c79f908e6",
+    "client/workload.json": "41437d2d40a9dff7bf5f8e06da82f9d8e98b0fd5eb9f778e407ec4a63bb2a545",
+    "collector/metrics.csv": "77e578a52ef514ac6487863c995faee5960293cc141fb921920616bb39e7bbba",
+    "collector/raw.jsonl": "a31fdfb1916ee77b52bf4839b59714e6de828f5586d08c73fdd0d9e1fdcd1674",
+    "collector/session.json": "9fb3e587a5d01e352782dff09927bd3c3362159b85008d694a6e9ba2134c4144",
+    "processed/aligned.csv": "e86d8ff77d522a583a50f4aee4a9f634f013906167dc7c9840bbe7e126521cf9",
+    "processed/quality.json": "cccb34209f4ffd8fbd71b696a4bd722951c68e45a69bbf640155994b5cd185f4"
+  },
+  "queue_capacity": null,
+  "memory_per_queued_request": null,
+  "calibrated_parameters": [
+    "cpu_idle_cores",
+    "cpu_cores_per_rps",
+    "memory_baseline_bytes",
+    "service_latency_mean_ms"
+  ],
+  "assumptions": [
+    "CPU OLS describes observed windows, not a causal service demand or saturation estimate",
+    "constant RAM and mean latency apply only in observed low-load domain",
+    "error_fraction=0 observed, not proof zero failure risk",
+    "B/C and additional services are SIMULATED"
+  ]
+}

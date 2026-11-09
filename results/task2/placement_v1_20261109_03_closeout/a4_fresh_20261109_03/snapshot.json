@@ -1,0 +1,990 @@
+{
+  "source": "REAL",
+  "mode": "READ_ONLY_GET",
+  "capture_started_utc": "2026-11-09T12:12:41.333206+00:00",
+  "queries": {
+    "nodes": {
+      "captured_at_utc": "2026-11-09T12:12:41.514042+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+              "name": "k3s-a",
+              "uid": "dd5bc036-0aa0-42eb-a537-63f1e6d9a961",
+              "resourceVersion": "5491",
+              "creationTimestamp": "2026-11-07T18:06:47Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "spec": {
+              "providerID": "k3s://k3s-a"
+            },
+            "status": {
+              "capacity": {
+                "cpu": "2",
+                "ephemeral-storage": "11362635776",
+                "hugepages-2Mi": "0",
+                "memory": "2014868Ki",
+                "pods": "110"
+              },
+              "allocatable": {
+                "cpu": "2",
+                "ephemeral-storage": "10794503979",
+                "hugepages-2Mi": "0",
+                "memory": "2014868Ki",
+                "pods": "110"
+              },
+              "nodeInfo": {
+                "architecture": "amd64",
+                "bootID": "ebf46fc3-501c-43e6-a5a2-54e7485cc5de",
+                "containerRuntimeVersion": "containerd://2.3.7-k3s1",
+                "kernelVersion": "6.8.0-142-generic",
+                "kubeProxyVersion": "",
+                "kubeletVersion": "v1.37.2+k3s1",
+                "machineID": "78b15c4c9f474a959b239b48b6fbfd0f",
+                "operatingSystem": "linux",
+                "osImage": "Ubuntu 24.04.5 LTS",
+                "runningInUserNamespace": false,
+                "systemUUID": "78b15c4c-9f47-4a95-9b23-9b48b6fbfd0f"
+              },
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:47Z",
+                  "reason": "KubeletHasSufficientMemory",
+                  "status": "False",
+                  "type": "MemoryPressure"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:47Z",
+                  "reason": "KubeletHasNoDiskPressure",
+                  "status": "False",
+                  "type": "DiskPressure"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:47Z",
+                  "reason": "KubeletHasSufficientPID",
+                  "status": "False",
+                  "type": "PIDPressure"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:47Z",
+                  "reason": "KubeletReady",
+                  "status": "True",
+                  "type": "Ready"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "namespace": {
+      "captured_at_utc": "2026-11-09T12:12:41.683843+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "Namespace",
+        "metadata": {
+          "name": "cloud-calibration",
+          "uid": "11921751-86d6-4c56-9fe7-ef288d475981",
+          "resourceVersion": "909",
+          "creationTimestamp": "2026-11-07T18:20:01Z",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "status": {
+          "phase": "Active"
+        }
+      },
+      "error": null
+    },
+    "pods_all": {
+      "captured_at_utc": "2026-11-09T12:12:41.871052+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+              "name": "calibration-work-66587db7cb-7w7dc",
+              "namespace": "cloud-calibration",
+              "uid": "9102087d-4f66-4f76-9dd2-474b21532780",
+              "resourceVersion": "4912",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:20:14Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "apps/v1",
+                  "controller": true,
+                  "kind": "ReplicaSet",
+                  "name": "calibration-work-66587db7cb",
+                  "uid": "c0e2688d-c171-40e9-b906-abd08d588c59"
+                }
+              ],
+              "labels": {
+                "app": "calibration-work"
+              }
+            },
+            "spec": {
+              "nodeName": "k3s-a",
+              "containers": [
+                {
+                  "name": "api",
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    },
+                    "requests": {
+                      "cpu": "50m",
+                      "memory": "32Mi"
+                    }
+                  }
+                }
+              ],
+              "initContainers": [],
+              "ephemeralContainers": []
+            },
+            "status": {
+              "phase": "Running",
+              "containerStatuses": [
+                {
+                  "allocatedResources": {
+                    "cpu": "50m",
+                    "memory": "32Mi"
+                  },
+                  "name": "api",
+                  "ready": true,
+                  "resources": {
+                    "limits": {
+                      "cpu": "250m",
+                      "memory": "96Mi"
+                    },
+                    "requests": {
+                      "cpu": "50m",
+                      "memory": "32Mi"
+                    }
+                  },
+                  "restartCount": 3,
+                  "started": true
+                }
+              ],
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:53Z",
+                  "status": "True",
+                  "type": "PodReadyToStartContainers"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:20:14Z",
+                  "status": "True",
+                  "type": "Initialized"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:49:01Z",
+                  "status": "True",
+                  "type": "Ready"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:49:01Z",
+                  "status": "True",
+                  "type": "ContainersReady"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:20:14Z",
+                  "status": "True",
+                  "type": "PodScheduled"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+              "name": "coredns-577d995dff-lt7cc",
+              "namespace": "kube-system",
+              "uid": "abf8f602-024a-431d-8be8-e1a13e57d497",
+              "resourceVersion": "4900",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:06:53Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "apps/v1",
+                  "controller": true,
+                  "kind": "ReplicaSet",
+                  "name": "coredns-577d995dff",
+                  "uid": "19381f79-2127-4bb1-85f1-6a1eae4e4d50"
+                }
+              ],
+              "labels": {}
+            },
+            "spec": {
+              "nodeName": "k3s-a",
+              "containers": [
+                {
+                  "name": "coredns",
+                  "resources": {
+                    "limits": {
+                      "memory": "170Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "70Mi"
+                    }
+                  }
+                }
+              ],
+              "initContainers": [],
+              "ephemeralContainers": []
+            },
+            "status": {
+              "phase": "Running",
+              "containerStatuses": [
+                {
+                  "allocatedResources": {
+                    "cpu": "100m",
+                    "memory": "70Mi"
+                  },
+                  "name": "coredns",
+                  "ready": true,
+                  "resources": {
+                    "limits": {
+                      "memory": "170Mi"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "70Mi"
+                    }
+                  },
+                  "restartCount": 3,
+                  "started": true
+                }
+              ],
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:53Z",
+                  "status": "True",
+                  "type": "PodReadyToStartContainers"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "Initialized"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:58Z",
+                  "status": "True",
+                  "type": "Ready"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:58Z",
+                  "status": "True",
+                  "type": "ContainersReady"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "PodScheduled"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+              "name": "helm-install-gateway-api-crd-df4fr",
+              "namespace": "kube-system",
+              "uid": "5c693e25-5e91-4503-bcac-de5440e4eb6c",
+              "resourceVersion": "1083",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:06:52Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "batch/v1",
+                  "controller": true,
+                  "kind": "Job",
+                  "name": "helm-install-gateway-api-crd",
+                  "uid": "74f8a29a-5225-4651-8c68-1a25ca9f2be0"
+                }
+              ],
+              "labels": {}
+            },
+            "spec": {
+              "nodeName": "k3s-a",
+              "containers": [
+                {
+                  "name": "helm",
+                  "resources": {
+                    "limits": {
+                      "cpu": "32",
+                      "memory": "32G"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "10M"
+                    }
+                  }
+                }
+              ],
+              "initContainers": [],
+              "ephemeralContainers": []
+            },
+            "status": {
+              "phase": "Succeeded",
+              "containerStatuses": [
+                {
+                  "allocatedResources": {
+                    "cpu": "100m",
+                    "memory": "10M"
+                  },
+                  "name": "helm",
+                  "ready": false,
+                  "resources": {
+                    "limits": {
+                      "cpu": "32",
+                      "memory": "32G"
+                    },
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "10M"
+                    }
+                  },
+                  "restartCount": 0,
+                  "started": false
+                }
+              ],
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-07T18:07:40Z",
+                  "reason": "PodSandboxNotReady",
+                  "status": "False",
+                  "type": "PodReadyToStartContainers"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:52Z",
+                  "reason": "PodCompleted",
+                  "status": "True",
+                  "type": "Initialized"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:07:38Z",
+                  "reason": "PodCompleted",
+                  "status": "False",
+                  "type": "Ready"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:07:38Z",
+                  "reason": "PodCompleted",
+                  "status": "False",
+                  "type": "ContainersReady"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:52Z",
+                  "status": "True",
+                  "type": "PodScheduled"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+              "name": "local-path-provisioner-56c6584955-xlhnv",
+              "namespace": "kube-system",
+              "uid": "0b1e155e-6e14-437d-9d25-2bea1a969639",
+              "resourceVersion": "4835",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:06:53Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "apps/v1",
+                  "controller": true,
+                  "kind": "ReplicaSet",
+                  "name": "local-path-provisioner-56c6584955",
+                  "uid": "2e13fd9a-fb00-4286-a9ef-ed8eacd86187"
+                }
+              ],
+              "labels": {
+                "app": "local-path-provisioner"
+              }
+            },
+            "spec": {
+              "nodeName": "k3s-a",
+              "containers": [
+                {
+                  "name": "local-path-provisioner",
+                  "resources": {}
+                }
+              ],
+              "initContainers": [],
+              "ephemeralContainers": []
+            },
+            "status": {
+              "phase": "Running",
+              "containerStatuses": [
+                {
+                  "name": "local-path-provisioner",
+                  "ready": true,
+                  "resources": {},
+                  "restartCount": 3,
+                  "started": true
+                }
+              ],
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:52Z",
+                  "status": "True",
+                  "type": "PodReadyToStartContainers"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "Initialized"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:53Z",
+                  "status": "True",
+                  "type": "Ready"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:53Z",
+                  "status": "True",
+                  "type": "ContainersReady"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "PodScheduled"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+              "name": "metrics-server-778c4649b4-5hpmp",
+              "namespace": "kube-system",
+              "uid": "bf88e82e-d0af-46f7-b7e3-3749458dd7da",
+              "resourceVersion": "4926",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:06:53Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "apps/v1",
+                  "controller": true,
+                  "kind": "ReplicaSet",
+                  "name": "metrics-server-778c4649b4",
+                  "uid": "e1fa8c0d-84b5-4360-9a4e-45a3303cf57d"
+                }
+              ],
+              "labels": {}
+            },
+            "spec": {
+              "nodeName": "k3s-a",
+              "containers": [
+                {
+                  "name": "metrics-server",
+                  "resources": {
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "70Mi"
+                    }
+                  }
+                }
+              ],
+              "initContainers": [],
+              "ephemeralContainers": []
+            },
+            "status": {
+              "phase": "Running",
+              "containerStatuses": [
+                {
+                  "allocatedResources": {
+                    "cpu": "100m",
+                    "memory": "70Mi"
+                  },
+                  "name": "metrics-server",
+                  "ready": true,
+                  "resources": {
+                    "requests": {
+                      "cpu": "100m",
+                      "memory": "70Mi"
+                    }
+                  },
+                  "restartCount": 3,
+                  "started": true
+                }
+              ],
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-09T11:48:53Z",
+                  "status": "True",
+                  "type": "PodReadyToStartContainers"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "Initialized"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:49:13Z",
+                  "status": "True",
+                  "type": "Ready"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:49:13Z",
+                  "status": "True",
+                  "type": "ContainersReady"
+                },
+                {
+                  "lastTransitionTime": "2026-11-07T18:06:53Z",
+                  "status": "True",
+                  "type": "PodScheduled"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "deployments": {
+      "captured_at_utc": "2026-11-09T12:12:42.181951+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "metadata": {
+              "name": "calibration-work",
+              "namespace": "cloud-calibration",
+              "uid": "5f078926-e1e0-477b-8470-b9401469f1af",
+              "resourceVersion": "4916",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:20:14Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "spec": {
+              "replicas": 1,
+              "selector": {
+                "matchLabels": {
+                  "app": "calibration-work"
+                }
+              },
+              "template": {
+                "metadata": {
+                  "ownerReferences": [],
+                  "labels": {
+                    "app": "calibration-work"
+                  }
+                },
+                "spec": {
+                  "containers": [
+                    {
+                      "name": "api",
+                      "resources": {
+                        "limits": {
+                          "cpu": "250m",
+                          "memory": "96Mi"
+                        },
+                        "requests": {
+                          "cpu": "50m",
+                          "memory": "32Mi"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "status": {
+              "replicas": 1,
+              "readyReplicas": 1,
+              "availableReplicas": 1,
+              "observedGeneration": 1,
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-11-07T18:20:14Z",
+                  "reason": "NewReplicaSetAvailable",
+                  "status": "True",
+                  "type": "Progressing"
+                },
+                {
+                  "lastTransitionTime": "2026-11-09T11:49:01Z",
+                  "reason": "MinimumReplicasAvailable",
+                  "status": "True",
+                  "type": "Available"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "replicasets": {
+      "captured_at_utc": "2026-11-09T12:12:42.354805+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "ReplicaSet",
+            "metadata": {
+              "name": "calibration-work-66587db7cb",
+              "namespace": "cloud-calibration",
+              "uid": "c0e2688d-c171-40e9-b906-abd08d588c59",
+              "resourceVersion": "4914",
+              "generation": 1,
+              "creationTimestamp": "2026-11-07T18:20:14Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "apps/v1",
+                  "controller": true,
+                  "kind": "Deployment",
+                  "name": "calibration-work",
+                  "uid": "5f078926-e1e0-477b-8470-b9401469f1af"
+                }
+              ],
+              "labels": {
+                "app": "calibration-work"
+              }
+            },
+            "spec": {
+              "replicas": 1,
+              "selector": {
+                "matchLabels": {
+                  "app": "calibration-work",
+                  "pod-template-hash": "66587db7cb"
+                }
+              },
+              "template": {
+                "metadata": {
+                  "ownerReferences": [],
+                  "labels": {
+                    "app": "calibration-work"
+                  }
+                },
+                "spec": {
+                  "containers": [
+                    {
+                      "name": "api",
+                      "resources": {
+                        "limits": {
+                          "cpu": "250m",
+                          "memory": "96Mi"
+                        },
+                        "requests": {
+                          "cpu": "50m",
+                          "memory": "32Mi"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "status": {
+              "replicas": 1,
+              "readyReplicas": 1,
+              "availableReplicas": 1,
+              "observedGeneration": 1
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "services": {
+      "captured_at_utc": "2026-11-09T12:12:42.581225+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+              "name": "calibration-work",
+              "namespace": "cloud-calibration",
+              "uid": "904d376d-93ad-495c-b753-661f4ef64fd4",
+              "resourceVersion": "922",
+              "creationTimestamp": "2026-11-07T18:20:14Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "spec": {
+              "selector": {
+                "app": "calibration-work"
+              },
+              "ports": [
+                {
+                  "name": "http",
+                  "port": 8080,
+                  "protocol": "TCP",
+                  "targetPort": "http"
+                }
+              ],
+              "clusterIP": "10.43.214.140",
+              "type": "ClusterIP"
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "endpointslices": {
+      "captured_at_utc": "2026-11-09T12:12:42.768235+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "v1",
+        "kind": "List",
+        "metadata": {
+          "resourceVersion": "",
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": "discovery.k8s.io/v1",
+            "kind": "EndpointSlice",
+            "metadata": {
+              "name": "calibration-work-vg87s",
+              "namespace": "cloud-calibration",
+              "uid": "ee0be0cc-745d-409d-9124-42df95c6b62b",
+              "resourceVersion": "4915",
+              "generation": 12,
+              "creationTimestamp": "2026-11-07T18:20:14Z",
+              "ownerReferences": [
+                {
+                  "apiVersion": "v1",
+                  "controller": true,
+                  "kind": "Service",
+                  "name": "calibration-work",
+                  "uid": "904d376d-93ad-495c-b753-661f4ef64fd4"
+                }
+              ],
+              "labels": {
+                "kubernetes.io/service-name": "calibration-work"
+              }
+            },
+            "addressType": "IPv4",
+            "ports": [
+              {
+                "name": "http",
+                "port": 8080,
+                "protocol": "TCP"
+              }
+            ],
+            "endpoints": [
+              {
+                "addresses": [
+                  "10.42.0.16"
+                ],
+                "conditions": {
+                  "ready": true,
+                  "serving": true,
+                  "terminating": false
+                },
+                "nodeName": "k3s-a",
+                "targetRef": {
+                  "kind": "Pod",
+                  "name": "calibration-work-66587db7cb-7w7dc",
+                  "namespace": "cloud-calibration",
+                  "uid": "9102087d-4f66-4f76-9dd2-474b21532780"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "error": null
+    },
+    "node_metrics": {
+      "captured_at_utc": "2026-11-09T12:12:42.921925+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "metrics.k8s.io/v1beta1",
+        "kind": "NodeMetricsList",
+        "metadata": {
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": null,
+            "kind": null,
+            "metadata": {
+              "name": "k3s-a",
+              "creationTimestamp": "2026-11-09T12:12:42Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "timestamp": "2026-11-09T12:12:23Z",
+            "window": "20.053s",
+            "usage": {
+              "cpu": "98500024n",
+              "memory": "1198252Ki"
+            }
+          }
+        ]
+      },
+      "error": null
+    },
+    "pod_metrics": {
+      "captured_at_utc": "2026-11-09T12:12:43.063727+00:00",
+      "exit_code": 0,
+      "data": {
+        "apiVersion": "metrics.k8s.io/v1beta1",
+        "kind": "PodMetricsList",
+        "metadata": {
+          "ownerReferences": [],
+          "labels": {}
+        },
+        "items": [
+          {
+            "apiVersion": null,
+            "kind": null,
+            "metadata": {
+              "name": "calibration-work-66587db7cb-7w7dc",
+              "namespace": "cloud-calibration",
+              "creationTimestamp": "2026-11-09T12:12:43Z",
+              "ownerReferences": [],
+              "labels": {
+                "app": "calibration-work"
+              }
+            },
+            "timestamp": "2026-11-09T12:12:21Z",
+            "window": "10.739s",
+            "containers": [
+              {
+                "name": "api",
+                "usage": {
+                  "cpu": "1553496n",
+                  "memory": "31420Ki"
+                }
+              }
+            ]
+          },
+          {
+            "apiVersion": null,
+            "kind": null,
+            "metadata": {
+              "name": "coredns-577d995dff-lt7cc",
+              "namespace": "kube-system",
+              "creationTimestamp": "2026-11-09T12:12:43Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "timestamp": "2026-11-09T12:12:18Z",
+            "window": "13.019s",
+            "containers": [
+              {
+                "name": "coredns",
+                "usage": {
+                  "cpu": "3454720n",
+                  "memory": "73716Ki"
+                }
+              }
+            ]
+          },
+          {
+            "apiVersion": null,
+            "kind": null,
+            "metadata": {
+              "name": "local-path-provisioner-56c6584955-xlhnv",
+              "namespace": "kube-system",
+              "creationTimestamp": "2026-11-09T12:12:43Z",
+              "ownerReferences": [],
+              "labels": {
+                "app": "local-path-provisioner"
+              }
+            },
+            "timestamp": "2026-11-09T12:12:24Z",
+            "window": "14.398s",
+            "containers": [
+              {
+                "name": "local-path-provisioner",
+                "usage": {
+                  "cpu": "1192874n",
+                  "memory": "46944Ki"
+                }
+              }
+            ]
+          },
+          {
+            "apiVersion": null,
+            "kind": null,
+            "metadata": {
+              "name": "metrics-server-778c4649b4-5hpmp",
+              "namespace": "kube-system",
+              "creationTimestamp": "2026-11-09T12:12:43Z",
+              "ownerReferences": [],
+              "labels": {}
+            },
+            "timestamp": "2026-11-09T12:12:28Z",
+            "window": "16.278s",
+            "containers": [
+              {
+                "name": "metrics-server",
+                "usage": {
+                  "cpu": "10491460n",
+                  "memory": "79728Ki"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "error": null
+    }
+  },
+  "probe_errors": [],
+  "capture_finished_utc": "2026-11-09T12:12:43.063793+00:00",
+  "status": "CAPTURED"
+}

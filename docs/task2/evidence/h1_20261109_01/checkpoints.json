@@ -1,0 +1,328 @@
+[
+  {
+    "path": "results/training/checkpoints/best.pt",
+    "sha256": "a6b191cf4b6b2c7583c8ac09dff562200be5e4015d21c3ea4b3107fb87166455",
+    "schema_version": 1,
+    "algorithm": "IPPO",
+    "env_version": "parallel-ratios-v1",
+    "episode": 20,
+    "best_episode": 20,
+    "best_score": 0.5109455215939511,
+    "history_length": 20,
+    "agents": [
+      "cluster_A",
+      "cluster_B",
+      "cluster_C"
+    ],
+    "parameter_count_per_agent": {
+      "cluster_A": 2052,
+      "cluster_B": 2052,
+      "cluster_C": 2052
+    },
+    "shapes": {
+      "cluster_A": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      },
+      "cluster_B": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      },
+      "cluster_C": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      }
+    },
+    "matches_current_simulation": true,
+    "matches_current_training": true,
+    "training_config": {
+      "seed": 7,
+      "episodes": 300,
+      "train_seed_start": 1000,
+      "validation_seeds": [
+        20001,
+        20002,
+        20003
+      ],
+      "hidden_size": 32,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "clip_ratio": 0.2,
+      "value_coef": 0.5,
+      "entropy_coef": 0.02,
+      "max_grad_norm": 0.5,
+      "update_epochs": 4,
+      "minibatch_size": 64,
+      "validation_interval": 20,
+      "torch_threads": 1,
+      "action_step": 0.03,
+      "inference_mode": "sample",
+      "reward": {
+        "throughput": 2.0,
+        "latency": 0.4,
+        "error": 4.0,
+        "queue": 0.5,
+        "overload": 0.2,
+        "imbalance": 0.3,
+        "switching": 0.1,
+        "terminal_queue": 1.0,
+        "latency_scale_ms": 1000.0
+      }
+    },
+    "load_and_one_step_routing_inference": "passed",
+    "greedy_probe_actions": {
+      "cluster_A": 0,
+      "cluster_B": 0,
+      "cluster_C": 2
+    },
+    "greedy_probe_allocation": [
+      88,
+      88,
+      94
+    ],
+    "placement_compatible": false,
+    "placement_reason": "parallel-ratios-v1 actions adjust routing ratios; no workload placement state or transition"
+  },
+  {
+    "path": "results/training/checkpoints/last.pt",
+    "sha256": "e8afb1f844bc09a59e6eafb9147439bfec1e0b8efe0e989eecd341c411adc38c",
+    "schema_version": 1,
+    "algorithm": "IPPO",
+    "env_version": "parallel-ratios-v1",
+    "episode": 300,
+    "best_episode": 20,
+    "best_score": 0.5109455215939511,
+    "history_length": 300,
+    "agents": [
+      "cluster_A",
+      "cluster_B",
+      "cluster_C"
+    ],
+    "parameter_count_per_agent": {
+      "cluster_A": 2052,
+      "cluster_B": 2052,
+      "cluster_C": 2052
+    },
+    "shapes": {
+      "cluster_A": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      },
+      "cluster_B": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      },
+      "cluster_C": {
+        "trunk.0.weight": [
+          32,
+          26
+        ],
+        "trunk.0.bias": [
+          32
+        ],
+        "trunk.2.weight": [
+          32,
+          32
+        ],
+        "trunk.2.bias": [
+          32
+        ],
+        "actor.weight": [
+          3,
+          32
+        ],
+        "actor.bias": [
+          3
+        ],
+        "critic.weight": [
+          1,
+          32
+        ],
+        "critic.bias": [
+          1
+        ]
+      }
+    },
+    "matches_current_simulation": true,
+    "matches_current_training": true,
+    "training_config": {
+      "seed": 7,
+      "episodes": 300,
+      "train_seed_start": 1000,
+      "validation_seeds": [
+        20001,
+        20002,
+        20003
+      ],
+      "hidden_size": 32,
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "clip_ratio": 0.2,
+      "value_coef": 0.5,
+      "entropy_coef": 0.02,
+      "max_grad_norm": 0.5,
+      "update_epochs": 4,
+      "minibatch_size": 64,
+      "validation_interval": 20,
+      "torch_threads": 1,
+      "action_step": 0.03,
+      "inference_mode": "sample",
+      "reward": {
+        "throughput": 2.0,
+        "latency": 0.4,
+        "error": 4.0,
+        "queue": 0.5,
+        "overload": 0.2,
+        "imbalance": 0.3,
+        "switching": 0.1,
+        "terminal_queue": 1.0,
+        "latency_scale_ms": 1000.0
+      }
+    },
+    "load_and_one_step_routing_inference": "passed",
+    "greedy_probe_actions": {
+      "cluster_A": 0,
+      "cluster_B": 1,
+      "cluster_C": 0
+    },
+    "greedy_probe_allocation": [
+      89,
+      92,
+      89
+    ],
+    "placement_compatible": false,
+    "placement_reason": "parallel-ratios-v1 actions adjust routing ratios; no workload placement state or transition"
+  }
+]

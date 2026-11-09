@@ -1,0 +1,93 @@
+{
+  "method": "contiguous pairs held out; purge around test timestamps; full simulator pod-scoped replay",
+  "margin_s": 30,
+  "max_resource_window_s": 19.796,
+  "folds": [
+    {
+      "holdout_indices": [
+        0,
+        1
+      ],
+      "training_indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "excluded_margin_s": 30
+    },
+    {
+      "holdout_indices": [
+        2,
+        3
+      ],
+      "training_indices": [
+        0,
+        5,
+        6,
+        7
+      ],
+      "excluded_margin_s": 30
+    },
+    {
+      "holdout_indices": [
+        4,
+        5
+      ],
+      "training_indices": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "excluded_margin_s": 30
+    },
+    {
+      "holdout_indices": [
+        6,
+        7
+      ],
+      "training_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "excluded_margin_s": 30
+    }
+  ],
+  "errors": {
+    "cpu_usage_cores": {
+      "n": 8,
+      "mae": 0.00543623863758203,
+      "rmse": 0.008377572860471257,
+      "relative_mae_pct": 60.86472127643963
+    },
+    "memory_usage_bytes": {
+      "n": 8,
+      "mae": 102400.0,
+      "rmse": 106927.12733446083,
+      "relative_mae_pct": 0.3162605354290865
+    },
+    "latency_mean_ms": {
+      "n": 8,
+      "mae": 0.33616728100848114,
+      "rmse": 0.4553790581549187,
+      "relative_mae_pct": 6.068297320796483
+    },
+    "completed_rps": {
+      "n": 8,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_mae_pct": 0.0
+    },
+    "error_rate_pct": {
+      "n": 8,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_mae_pct": null
+    }
+  },
+  "independent_external_validation": false,
+  "limitations": "Single short run, 8 windows; purging reduces temporal leakage but does not establish extrapolation or capacity accuracy"
+}

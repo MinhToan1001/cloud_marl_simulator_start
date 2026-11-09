@@ -1,0 +1,145 @@
+{
+  "run_id": "cluster-a-real-003",
+  "source": "real",
+  "raw_replay_matches_metrics": true,
+  "snapshot_count": 18,
+  "record_count": 54,
+  "aligned_windows": 8,
+  "rejected_windows": [
+    {
+      "timestamp_utc": "2026-11-08T17:44:29.583183+00:00",
+      "reason": "warmup"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:44:40.322809+00:00",
+      "reason": "no_complete_latency_window"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:45:02.102699+00:00",
+      "reason": "repeated_cached_resource_sample"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:45:44.868889+00:00",
+      "reason": "repeated_cached_resource_sample"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:46:27.825141+00:00",
+      "reason": "repeated_cached_resource_sample"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:46:49.256157+00:00",
+      "reason": "repeated_cached_resource_sample"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:46:59.877514+00:00",
+      "reason": "no_complete_latency_window"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:47:10.514347+00:00",
+      "reason": "no_complete_latency_window"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:47:21.182067+00:00",
+      "reason": "no_complete_latency_window"
+    },
+    {
+      "timestamp_utc": "2026-11-08T17:47:31.824912+00:00",
+      "reason": "no_complete_latency_window"
+    }
+  ],
+  "rejection_reasons": {
+    "warmup": 1,
+    "no_complete_latency_window": 5,
+    "repeated_cached_resource_sample": 4
+  },
+  "request_count": 152,
+  "client_failures": 0,
+  "client_latency_mean_ms": 47.690917105249376,
+  "client_latency_p95_ms": 124.00699999989229,
+  "first_snapshot_utc": "2026-11-08T17:44:28.398220+00:00",
+  "last_snapshot_utc": "2026-11-08T17:47:31.184605+00:00",
+  "client_start_utc": "2026-11-08T17:44:33.276581+00:00",
+  "last_client_request_utc": "2026-11-08T17:46:33.904481+00:00",
+  "observed_rps_range": [
+    0.27328710947026363,
+    3.2988002429303647
+  ],
+  "cpu_usage_cores_range": [
+    0.001456152,
+    0.026319387
+  ],
+  "memory_usage_bytes_range": [
+    32325632,
+    32464896
+  ],
+  "server_latency_mean_ms_range": [
+    5.044989571420696,
+    6.485284333393793
+  ],
+  "cpu_limit_utilization_max_pct": 10.5277548,
+  "errors_grouped_holdout": {
+    "cpu_usage_cores": {
+      "n": 8,
+      "mae": 0.0029586996451829283,
+      "rmse": 0.004067692710885636,
+      "relative_mae_pct": 33.125924237361524
+    },
+    "memory_usage_bytes": {
+      "n": 8,
+      "mae": 79701.33333333395,
+      "rmse": 83109.58506026247,
+      "relative_mae_pct": 0.24615611674230756
+    },
+    "latency_mean_ms": {
+      "n": 8,
+      "mae": 0.30506491398765234,
+      "rmse": 0.4256829491578445,
+      "relative_mae_pct": 5.506855380650729
+    },
+    "completed_rps": {
+      "n": 8,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_mae_pct": 0.0
+    },
+    "error_rate_pct": {
+      "n": 8,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_mae_pct": null
+    }
+  },
+  "old_model_analytic_low_load_errors": {
+    "cpu_usage_cores": {
+      "n": 8,
+      "mae": 0.03514784576736918,
+      "rmse": 0.04776503151956666,
+      "relative_mae_pct": 393.5191184045833
+    },
+    "memory_usage_bytes": {
+      "n": 8,
+      "mae": 96944017.60052107,
+      "rmse": 96950823.70569581,
+      "relative_mae_pct": 299.4098331346443
+    },
+    "latency_mean_ms": {
+      "n": 8,
+      "mae": 51.126936768192316,
+      "rmse": 51.12852547116577,
+      "relative_mae_pct": 922.9138912038417
+    }
+  },
+  "validation_design": "4 contiguous held-out blocks of 2 windows; no independent external run; residuals are descriptive",
+  "scope_warning": "Original model A budget differs from measured app pod budget; prior errors quantify mismatch, not whole-cluster accuracy",
+  "capacity_identified": false,
+  "live_load_test_executed": false,
+  "input_hashes": {
+    "client/requests.csv": "c7bc74594684f65a9ca3c061c4d0261ce031dfb4ff9f8d35d042076c79f908e6",
+    "client/workload.json": "41437d2d40a9dff7bf5f8e06da82f9d8e98b0fd5eb9f778e407ec4a63bb2a545",
+    "collector/metrics.csv": "77e578a52ef514ac6487863c995faee5960293cc141fb921920616bb39e7bbba",
+    "collector/raw.jsonl": "a31fdfb1916ee77b52bf4839b59714e6de828f5586d08c73fdd0d9e1fdcd1674",
+    "collector/session.json": "9fb3e587a5d01e352782dff09927bd3c3362159b85008d694a6e9ba2134c4144",
+    "processed/aligned.csv": "e86d8ff77d522a583a50f4aee4a9f634f013906167dc7c9840bbe7e126521cf9",
+    "processed/quality.json": "cccb34209f4ffd8fbd71b696a4bd722951c68e45a69bbf640155994b5cd185f4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "date_local": "2026-11-09",
+  "timezone": "Asia/Saigon",
+  "purpose": "Read-only PHAN 0 SSH reachability check",
+  "first_hop": "nguyenminhtoan@192.168.107.128:22",
+  "command": "ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=5 -o ConnectionAttempts=1 -o LogLevel=ERROR nguyenminhtoan@192.168.107.128 uname -srmo",
+  "sandbox_attempt": {"exit_code": 1, "result": "ssh: connect to host 192.168.107.128 port 22: Permission denied"},
+  "network_enabled_attempt": {"exit_code": 1, "result": "ssh: connect to host 192.168.107.128 port 22: Connection timed out"},
+  "authentication_reached": false,
+  "password_prompt_seen": false,
+  "remote_command_executed": false,
+  "second_hop": "172.24.4.16",
+  "second_hop_checked": false,
+  "second_hop_username": "unverified",
+  "private_key_path_supplied_by_user_on_ubuntu": "~/.ssh/openstack_key",
+  "private_key_contents_read": false,
+  "infrastructure_changes": false,
+  "note": "Observed tool results recorded for the audit; timeout does not identify whether VM, routing, firewall or another condition is responsible."
+}

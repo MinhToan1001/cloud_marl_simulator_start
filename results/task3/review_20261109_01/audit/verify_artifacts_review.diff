@@ -1,0 +1,91 @@
+--- before_review/docs/task3/verify_artifacts.py
++++ after_review/docs/task3/verify_artifacts.py
+@@ -9,20 +9,34 @@
+ 
+ ROOT=Path(__file__).resolve().parents[2]
+ sys.path.insert(0,str(ROOT/'tools'))
+-from retained_documents import retained_location
++from retained_documents import retained_location,archived_content_matches
+ 
+ 
+ def read(p): return json.loads(p.read_text(encoding='utf-8'))
+ 
+ 
+-def verify(run_id,output=None):
++def verify(run_id,output=None,source_snapshot=None,source_transition=None):
++    if not __debug__: raise RuntimeError('Không chạy verifier bằng python -O vì các assert sẽ bị bỏ qua')
+     run=ROOT/'results/task3'/run_id
+-    meta=read(run/'smoke/metadata.json'); assert meta['code_fingerprints']==code_fingerprints()
++    meta=read(run/'smoke/metadata.json')
++    current_compatible=meta['code_fingerprints']==code_fingerprints()
++    if source_snapshot:
++        snapshot=Path(source_snapshot)
++        actual={p.name:file_hash(p) for p in snapshot.glob('*.py')}
++        assert actual==meta['code_fingerprints'], 'Snapshot source lịch sử phải khớp TẤT CẢ hash đã ghi'
++    else:
++        assert current_compatible, 'Code hiện tại khác run; chỉ audit lịch sử bằng --source-snapshot tường minh'
+     cli_location=retained_location(ROOT,'src/cli/task3.py',meta['cli_fingerprint'])
++    if cli_location is None and archived_content_matches(ROOT,'src/cli/task3.py',meta['cli_fingerprint']): cli_location='archived_execution_provenance_only'
+     assert cli_location, 'CLI đã chạy phải khớp file hiện tại hoặc bản gốc được lưu trữ'
+-    load_contract(run/'smoke/contract.json')
++    contract=read(run/'smoke/contract.json')
++    assert contract['code_fingerprints']==meta['code_fingerprints']
++    assert contract['schema']==read(run/'smoke/schema.json')
++    spec=contract['schema']; assert spec['version']=='placement-v2'
++    assert spec['schema_hash']==fingerprint({k:v for k,v in spec.items() if k!='schema_hash'})==meta['schema_hash']
++    if current_compatible: load_contract(run/'smoke/contract.json')
+     assert read(run/'validation/status.json')['exit_code']==0
+-    assert read(run/'validation/status.json')['code_fingerprints']==code_fingerprints()
++    assert read(run/'validation/status.json')['code_fingerprints']==meta['code_fingerprints']
+     traces={}
+     for path in (run/'smoke/traces').glob('*.json'):
+         t=read(path); sha=t.pop('sha256'); assert fingerprint(t)==sha
+@@ -48,21 +62,36 @@
+             for agent,a in decision['actions'].items(): assert decision['action_mask'][int(agent.split('_')[1])][a]
+         assert abs(sum(sum(row) for row in packet['traffic_bytes_by_directed_link'])-s['traffic_bytes'])<1e-6
+         for k,col in [('arrivals','workflow_arrivals'),('completed','workflow_completed'),('failed','workflow_failed'),('unfinished','workflow_unfinished'),('invocations','service_invocations')]: totals[k]+=s[col]
+-    spec=manifest()
+     with (ROOT/'docs/task3/SCHEMA_REAL_FEASIBILITY.csv').open(encoding='utf-8',newline='') as stream: features=list(csv.DictReader(stream))
+     assert len(features)==len(spec['actor_features'])+len(spec['critic_features'])
+     for scope,key in [('actor','actor_features'),('critic','critic_features')]:
+         selected=[f for f in features if f['scope']==scope]
+         assert [f['name'] for f in selected]==[f['name'] for f in spec[key]]
+     before=read(ROOT/'results/task2/placement_v1_20261109_03_closeout/protected_before.json')
++    extension=read(ROOT/'results/task2/placement_v1_20261109_03_closeout/manual_recovery_20261109_01/protected_before.json')
++    assert all(before[n]==extension[n] for n in set(before)&set(extension))
++    immutable_locations={name:retained_location(ROOT,name,sha) for name,sha in before.items()}
++    assert all(immutable_locations.values()),[n for n,v in immutable_locations.items() if v is None]
++    union={**extension,**before}
++    before=union
+     locations={name:retained_location(ROOT,name,sha) for name,sha in before.items()}
+     changed=[name for name,location in locations.items() if location is None]
+-    assert not changed,changed
+-    outcome={'status':'PASS','source':'OFFLINE_ARTIFACT_VERIFICATION','episodes':len(paths),'shared_traces':len(traces),
++    transitions=read(Path(source_transition)) if source_transition else {}
++    assert set(transitions)==set(changed), 'Mọi delta phải có transition old/new/reason tường minh; không có ngoại lệ theo prefix'
++    for n in changed:
++        entry=transitions[n]
++        assert (current_compatible or source_snapshot is not None) and n.startswith('src/placement_v2/')
++        assert entry['old_sha256']==before[n] and entry['new_sha256']==file_hash(ROOT/n) and entry['reason']
++    outcome={'status':'PASS_HISTORICAL_WITH_DECLARED_TRANSITION' if changed else 'PASS',
++             'source':'OFFLINE_ARTIFACT_VERIFICATION','episodes':len(paths),'shared_traces':len(traces),
+              'protected_files':len(before),'protected_changes':changed,'feature_rows':len(features),
++             'immutable_original_232_verified':len(immutable_locations),
++             'current_runtime_compatible':current_compatible,'historical_source_snapshot':str(source_snapshot) if source_snapshot else None,
++             'versioned_source_deltas':transitions,'unexpected_changes':[],
++             'current_identical_files':sum(v=='current_file' for v in locations.values()),
+              'archived_original_documents':sum(v=='archived_original' for v in locations.values()),
+              'execution_cli_provenance':cli_location,
+-             'totals':totals,'code_fingerprints':code_fingerprints(),'schema_hash':spec['schema_hash']}
++             'totals':totals,'recorded_code_fingerprints':meta['code_fingerprints'],'current_code_fingerprints':code_fingerprints(),'schema_hash':spec['schema_hash']}
+     target=Path(output) if output else run/'artifact_verification.json'
+     if target.exists(): raise FileExistsError(target)
+     write_json(target,outcome); print(json.dumps(outcome,indent=2))
+@@ -71,4 +100,6 @@
+ if __name__=='__main__':
+     parser=argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('run_id'); parser.add_argument('--output',type=Path)
+-    args=parser.parse_args(); verify(args.run_id,args.output)
++    parser.add_argument('--source-snapshot',type=Path,help='Audit lịch sử bằng source snapshot có hash trùng run, không nạp model vào code mới')
++    parser.add_argument('--source-transition',type=Path,help='Danh sách chính xác old/new hash và lý do cho thay đổi source V2 được review')
++    args=parser.parse_args(); verify(args.run_id,args.output,args.source_snapshot,args.source_transition)

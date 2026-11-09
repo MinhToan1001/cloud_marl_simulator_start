@@ -1,0 +1,119 @@
+{
+  "seconds": 30,
+  "decision_s": 1.0,
+  "dag_arrival_s": 4.0,
+  "cpu_cores": [
+    1.0,
+    1.25,
+    1.5
+  ],
+  "memory_bytes": [
+    268435456,
+    402653184,
+    536870912
+  ],
+  "latency_s": [
+    [
+      0,
+      0.015,
+      0.03
+    ],
+    [
+      0.015,
+      0,
+      0.02
+    ],
+    [
+      0.03,
+      0.02,
+      0
+    ]
+  ],
+  "bandwidth_Bps": [
+    [
+      null,
+      2000000.0,
+      1000000.0
+    ],
+    [
+      2000000.0,
+      null,
+      1500000.0
+    ],
+    [
+      1000000.0,
+      1500000.0,
+      null
+    ]
+  ],
+  "price_per_byte": [
+    [
+      0,
+      1e-07,
+      2e-07
+    ],
+    [
+      1e-07,
+      0,
+      1e-07
+    ],
+    [
+      2e-07,
+      1e-07,
+      0
+    ]
+  ],
+  "intra_latency_s": 0.0001,
+  "readiness_s": 0.3,
+  "grace_s": 0.5,
+  "cooldown_s": 5.0,
+  "migration_timeout_s": 3.0,
+  "max_moves": 8,
+  "max_concurrent_moves": 1,
+  "pending_retries": 15,
+  "pending_timeout_s": 20.0,
+  "workflow_queue_limit": 256,
+  "workflow_sla_s": 0.25,
+  "workflow_timeout_s": 2.0,
+  "cpu_range": [
+    0.85,
+    1.15
+  ],
+  "ram_range": [
+    0.85,
+    1.15
+  ],
+  "bandwidth_range": [
+    0.75,
+    1.25
+  ],
+  "latency_range": [
+    0.8,
+    1.2
+  ],
+  "readiness_range": [
+    0.7,
+    1.5
+  ],
+  "background_cpu_range": [
+    0.05,
+    0.35
+  ],
+  "background_ram_fraction": 0.1,
+  "ram_latency_penalty": 2.0,
+  "ram_error_coefficient": 0.05,
+  "invocation_memory_bytes": 4096,
+  "memory_baseline_fraction": 0.9649505615234375,
+  "profile_id": "cluster-a-real-003-low-load-v1",
+  "profile_sha256": "c054b962e3c0a6e07636b525f86136449e2b13b1153a0143edfe37141ec9f1ad",
+  "objectives": [
+    1.0,
+    0.2,
+    0.3,
+    2.0
+  ],
+  "reward_mode": "interval-v1",
+  "migration_start_cost": 0.02,
+  "migration_overlap_cost_per_s": 0.01,
+  "migration_failure_cost": 0.1
+}

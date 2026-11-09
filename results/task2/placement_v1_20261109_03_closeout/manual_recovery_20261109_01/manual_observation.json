@@ -1,0 +1,64 @@
+{
+  "source": "REAL",
+  "verification_mode": "USER_REPORTED_MANUAL",
+  "independently_verified_by_agent": false,
+  "recorded_at_utc": "2026-11-09T07:16:33.105310+00:00",
+  "captured_at_utc": null,
+  "capture_time_note": "Người dùng không cung cấp timestamp UTC của các lệnh; recorded_at là lúc ghi nhận, không phải giờ đo.",
+  "cluster": "A",
+  "ip": "172.24.4.16",
+  "operational_state": "RECOVERED_USER_REPORTED",
+  "root_cause_user_reported": "VM k3s-a từng SHUTOFF; sau bật lại K3s phục hồi",
+  "manual_results": {
+    "node": {
+      "name": "k3s-a",
+      "status": "Ready",
+      "version": "v1.37.2+k3s1"
+    },
+    "coredns": {
+      "ready": "1/1",
+      "phase": "Running",
+      "deployment_available": "1/1"
+    },
+    "metrics_server": {
+      "ready": "1/1",
+      "phase": "Running"
+    },
+    "local_path_provisioner": {
+      "ready": "1/1",
+      "phase": "Running"
+    },
+    "calibration_workload": {
+      "ready": "1/1",
+      "phase": "Running",
+      "recency": "Lần kiểm tra trước; chưa xác nhận lại ở thời điểm snapshot mới"
+    },
+    "node_cpu": {
+      "usage": "196m",
+      "reported_percent": 9
+    },
+    "node_ram": {
+      "usage": "1180Mi",
+      "reported_percent": 60
+    },
+    "ssh": {
+      "origin": "Ubuntu VMware",
+      "local_user": "stack",
+      "destination": "ubuntu@172.24.4.16",
+      "status": "SUCCESS_USER_REPORTED"
+    }
+  },
+  "A4_status": "PENDING",
+  "closed_loop_ready": false,
+  "missing_evidence": [
+    "Snapshot JSON UTC Node/namespace/Pod/Deployment kèm UID và ownerReferences",
+    "Requests/limits toàn bộ pod để tính reservation toàn cụm",
+    "Metrics API raw kèm timestamp/window",
+    "Shadow replay placement-v1 trên snapshot mới và feature availability/readiness report"
+  ],
+  "infrastructure_changes_by_agent": false,
+  "ssh_attempted_this_update": false,
+  "load_test_executed": false,
+  "historical_diagnostic": "../connectivity.json",
+  "historical_diagnostic_note": "Kết quả cũ của môi trường agent; không chứng minh Cluster A hiện offline."
+}
